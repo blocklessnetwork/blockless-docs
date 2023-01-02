@@ -1,0 +1,22 @@
+@import '../../../../../../styles/colors';
+@import '../../../../../../styles/breakpoints';
+
+.result_item {
+  margin-bottom: 28px;
+
+  .title {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 19px;
+    letter-spacing: -0.02em;
+    color: #000000;
+  }
+
+  .location {
+    margin-top: 4px;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    color: $primary-gray3;
+  }
+}

@@ -1,0 +1,14 @@
+@import '../../styles/colors';
+
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 12px;
+  background: $primary-blue;
+  border-radius: 4px;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 17px;
+  color: $primary-white;
+}
