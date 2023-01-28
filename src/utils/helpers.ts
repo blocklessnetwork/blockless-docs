@@ -11,8 +11,8 @@ export const getHeadersCount = (str: string) => {
 };
 
 export const getHeaders = (str: string) => {
-  const rule = /#{2}.+/gm;
-  let res = str.match(rule)?.map((item) => item.slice(3));
+  const rule = /#{1,2}.+/gm;
+  let res = str.match(rule)?.map((item) => item.slice(item.indexOf(' ') + 1));
   return res;
 };
 

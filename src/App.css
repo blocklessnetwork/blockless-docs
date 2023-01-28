@@ -95,8 +95,8 @@ h6 {
 }
 
 .container {
-  max-width: 1200px;
-  width: 1200px;
+  max-width: 1248px;
+  padding: 0 24px;
   margin: 122px auto 0;
   height: auto;
   min-height: calc(100vh - 334px);

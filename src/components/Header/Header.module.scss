@@ -53,8 +53,9 @@
   }
 
   header {
-    max-width: 1200px;
-    width: 1200px;
+    max-width: 1248px;
+    padding: 0 24px;
+    flex-grow: 1;
     margin-left: auto;
     margin-right: auto;
     display: flex;
@@ -63,6 +64,7 @@
 
     @media screen and (max-width: $media-md) {
       width: 100%;
+      padding: 0;
     }
 
     & > button {
@@ -126,6 +128,8 @@
 
       @media screen and (max-width: $media-md) {
         display: block;
+        padding: 0 24px;
+        flex-grow: 1;
       }
     }
 

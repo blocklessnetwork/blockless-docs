@@ -8,6 +8,7 @@ import { ConceptsReference } from 'pages/ConceptsReference';
 import { docsRoutes } from 'utils/constants/documentstion';
 import { conceptsRoutes } from 'utils/constants/concepts';
 import { referenceRoutes } from 'utils/constants/reference';
+import "react-loading-skeleton/dist/skeleton.css";
 
 const App = () => {
   return (

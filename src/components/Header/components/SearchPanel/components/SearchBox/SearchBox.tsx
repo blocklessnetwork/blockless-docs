@@ -1,6 +1,7 @@
 import { FC, useEffect } from 'react';
 import { connectSearchBox } from 'react-instantsearch-dom';
 import { useLocation } from 'react-router-dom';
+import styles from './SearchBox.module.scss';
 
 interface SearchBoxProps {
   currentRefinement: string;
@@ -16,11 +17,15 @@ const SearchBox: FC<SearchBoxProps> = ({ currentRefinement, refine }) => {
   }, [pathname]);
 
   return (
-    <input
-      type="search"
-      value={currentRefinement}
-      onChange={(event) => refine(event.currentTarget.value)}
-    />
+    <div className={styles.inputBox}>
+      <input
+        type="search"
+        placeholder='Search'
+        value={currentRefinement}
+        onChange={(event) => refine(event.currentTarget.value)}
+      />
+      {!currentRefinement && <div className={styles.icon} />}
+    </div>
   );
 };
 

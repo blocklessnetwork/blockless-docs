@@ -2,6 +2,8 @@ import { conceptsRoutes } from './concepts';
 import { docsRoutes } from './documentstion';
 import { referenceRoutes } from './reference';
 
+export const IMAGE_BASE_URL = 'https://raw.githubusercontent.com/blocklessnetwork/docs-content/main';
+
 export const contentSource = {
   [docsRoutes.overview]:
     'https://api.github.com/repos/blocklessnetwork/docs-content/contents/index.md',

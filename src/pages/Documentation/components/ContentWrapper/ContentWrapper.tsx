@@ -7,13 +7,13 @@ import { useLocation } from 'react-router-dom';
 import axios from 'axios';
 import { Base64 } from 'js-base64';
 import ReactMarkdown from 'react-markdown';
-import { Loader } from 'components/Loader';
 import useWindowSize from 'components/hooks/useWindowSize';
 import remarkGfm from 'remark-gfm';
-import { contentSource } from 'utils/constants/content-source';
+import { contentSource, IMAGE_BASE_URL } from 'utils/constants/content-source';
 import { desktopWidth } from 'utils/constants/constants';
+import Skeleton from 'react-loading-skeleton';
 
-const IMAGE_BASE_URL = process.env.REACT_APP_IMAGE_BASE_URL;
+// const IMAGE_BASE_URL = process.env.REACT_APP_IMAGE_BASE_URL;
 
 const ContentWrapper: FC = () => {
   const { pathname } = useLocation();
@@ -37,7 +37,7 @@ const ContentWrapper: FC = () => {
   const handleDocumentScroll = () => {
     const body = document.body;
 
-    const headers = contentRef.current?.querySelectorAll('h2');
+    const headers = contentRef.current?.querySelectorAll('h1,h2');
 
     const headersOffsets =
       headers &&
@@ -78,11 +78,11 @@ const ContentWrapper: FC = () => {
     const wrapper = document.querySelector('body');
     const headerList =
       headers &&
-      Array.from(headers).filter((header) => header.tagName === 'H2');
+      Array.from(headers).filter((header) => ['H1', 'H2'].includes(header.tagName));
     const currentHeader = (headerList?.[i + 1] as HTMLElement) || null;
 
     wrapper?.scrollTo({
-      top: currentHeader?.offsetTop,
+      top: i === 0 ? 0 : currentHeader?.offsetTop,
       behavior: 'smooth',
     });
   };
@@ -98,10 +98,9 @@ const ContentWrapper: FC = () => {
         <div
           ref={contentRef}
           className={cls(styles.content_wrapper, 'content')}
-          style={{ paddingBottom: window.innerHeight / 3 }}
         >
           {loading ? (
-            <Loader />
+            <ContentSkeleton />
           ) : (
             <ReactMarkdown
               remarkPlugins={[remarkGfm]}
@@ -141,5 +140,16 @@ const ContentWrapper: FC = () => {
     </>
   );
 };
+
+const ContentSkeleton = () => {
+  return (
+    <div style={{position: 'relative', zIndex: 0}}>
+      <h2><Skeleton /></h2>
+      <Skeleton count={5} style={{marginBottom: '0.5em'}} />
+      <h2 style={{marginTop: '1em'}}><Skeleton /></h2>
+      <Skeleton count={8} style={{marginBottom: '0.5em'}} />
+    </div>
+  )
+} 
 
 export default ContentWrapper;
