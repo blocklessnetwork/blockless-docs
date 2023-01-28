@@ -9,6 +9,7 @@ import styles from './ConceptsReference.module.scss';
 import remarkGfm from 'remark-gfm';
 import { contentSource } from 'utils/constants/content-source';
 import { getRedirect } from 'utils/helpers';
+import Skeleton from 'react-loading-skeleton';
 
 const IMAGE_BASE_URL = process.env.REACT_APP_IMAGE_BASE_URL;
 
@@ -45,7 +46,7 @@ const ConceptsReference: FC = () => {
       </div>
       <div className={styles.content_wrapper}>
         {loading ? (
-          <Loader />
+          <ContentSkeleton />
         ) : (
           <ReactMarkdown
             remarkPlugins={[remarkGfm]}
@@ -63,5 +64,16 @@ const ConceptsReference: FC = () => {
     </div>
   );
 };
+
+const ContentSkeleton = () => {
+  return (
+    <>
+      <h2><Skeleton /></h2>
+      <Skeleton count={5} style={{marginBottom: '0.5em'}} />
+      <h2 style={{marginTop: '1em'}}><Skeleton /></h2>
+      <Skeleton count={8} style={{marginBottom: '0.5em'}} />
+    </>
+  )
+} 
 
 export default ConceptsReference;

@@ -1,0 +1,8 @@
+# dependencies
+/node_modules
+
+# vscode
+.vscode/*
+
+# DS_Store
+.DS_Store

@@ -17,8 +17,9 @@ const DocsNavigation: FC = () => {
     getInitialExpanded(pathname)
   );
 
-  const handleChangeExpanded = (menu: { id: string; route?: string }) => {
+  const handleChangeExpanded = (menu: { id: string; innerArticles: {route?: string}[] | null, route?: string }) => {
     if (menu.route) navigate(menu.route);
+    if (menu.innerArticles && menu.innerArticles[0].route) navigate(menu.innerArticles[0].route);
     if (expanded === menu.id) setExpanded('');
     if (expanded !== menu.id) setExpanded(menu.id);
   };

@@ -162,6 +162,10 @@
   .headers_content_wrapper {
     position: fixed;
     top: 158px;
+    max-height: calc(100vh - 158px);
+    padding-bottom: 30px;
+    overflow: hidden;
+    overflow-y: scroll;
 
     @media screen and (max-width: $media-md) {
       display: none;

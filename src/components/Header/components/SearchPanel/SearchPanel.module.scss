@@ -9,7 +9,7 @@
   input {
     width: 360px;
     height: 33px;
-    padding: 8px 12px;
+    padding: 8px 6px 8px 12px;
     // padding-right: 35px;
     font-weight: 400;
     font-size: 14px;
@@ -21,11 +21,14 @@
     outline: none;
 
     @media screen and (max-width: $media-md) {
-      width: 381px;
+      // max-width: 381px;
+      width: 100%;
     }
 
     @media screen and (max-width: $media-sm) {
-      width: 265px;
+      // width: 265px;
+      width: 100%;
+      min-width: 200px;
     }
 
     &:focus-visible {

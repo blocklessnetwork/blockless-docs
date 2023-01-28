@@ -17,6 +17,7 @@
     "react-dom": "^18.2.0",
     "react-instantsearch-dom": "^6.38.1",
     "react-instantsearch-hooks-web": "^6.38.1",
+    "react-loading-skeleton": "^3.1.0",
     "react-markdown": "^8.0.3",
     "react-router-dom": "^6.4.3",
     "react-scripts": "5.0.1",

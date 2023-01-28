@@ -2,9 +2,9 @@
 @import '../../styles/breakpoints';
 
 .footer_wrapper {
-  padding-top: 38px;
+  position: relative;
+  padding-top: 27px;
   padding-bottom: 31px;
-  height: 212px;
   background: $primary-gray1;
   border-top: 1px solid $primary-gray2;
 
@@ -20,8 +20,9 @@
   }
 
   footer {
-    max-width: 1200px;
+    max-width: 1248px;
     margin: 0 auto;
+    padding: 0 24px;
 
     @media screen and (max-width: $media-md) {
       width: 100%;
@@ -39,6 +40,8 @@
       .logo {
         display: flex;
         align-items: center;
+        height: 35px;
+        margin-top: 11px;
 
         @media screen and (max-width: $media-md) {
           margin-top: 52px;
