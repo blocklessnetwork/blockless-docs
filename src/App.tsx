@@ -3,6 +3,7 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import { Footer } from './components/Footer';
 import { Header } from './components/Header';
 import { Help } from 'pages/Help';
+import SwitchRouterToTop from './components/SwitchRouterToTop';
 import { ContentWrapper } from 'pages/Documentation/components/ContentWrapper';
 import { ConceptsReference } from 'pages/ConceptsReference';
 import { docsRoutes } from 'utils/constants/documentstion';
@@ -31,6 +32,7 @@ const App = () => {
           </Routes>
         </main>
         <Footer />
+        <SwitchRouterToTop />
       </div>
     </BrowserRouter>
   );

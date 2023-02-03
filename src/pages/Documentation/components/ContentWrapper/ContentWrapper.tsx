@@ -82,7 +82,7 @@ const ContentWrapper: FC = () => {
     const currentHeader = (headerList?.[i + 1] as HTMLElement) || null;
 
     wrapper?.scrollTo({
-      top: i === 0 ? 0 : currentHeader?.offsetTop,
+      top: i === 0 ? 0 : currentHeader?.offsetTop - 32,
       behavior: 'smooth',
     });
   };
