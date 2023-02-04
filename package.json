@@ -14,6 +14,7 @@
     "js-base64": "^3.7.2",
     "react": "^18.2.0",
     "react-animate-height": "^3.0.4",
+    "react-code-blocks": "^0.0.9-0",
     "react-dom": "^18.2.0",
     "react-instantsearch-dom": "^6.38.1",
     "react-instantsearch-hooks-web": "^6.38.1",

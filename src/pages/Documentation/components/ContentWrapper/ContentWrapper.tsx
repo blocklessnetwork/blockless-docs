@@ -12,6 +12,7 @@ import remarkGfm from 'remark-gfm';
 import { contentSource, IMAGE_BASE_URL } from 'utils/constants/content-source';
 import { desktopWidth } from 'utils/constants/constants';
 import Skeleton from 'react-loading-skeleton';
+import { CodeBlock, atomOneLight } from "react-code-blocks";
 
 // const IMAGE_BASE_URL = process.env.REACT_APP_IMAGE_BASE_URL;
 
@@ -45,7 +46,7 @@ const ContentWrapper: FC = () => {
         ?.filter((_, i) => i !== 0)
         .map((header: any) => header.offsetTop);
 
-    const idx = headersOffsets?.findIndex((item) => item >= body.scrollTop);
+    const idx = headersOffsets?.findLastIndex((item) => item < body.scrollTop + 32);
     idx !== undefined && idx > -1 && setActiveHeader(idx);
   };
 
@@ -61,7 +62,9 @@ const ContentWrapper: FC = () => {
     axios
       .get(contentPath)
       .then((data) => {
-        const content = Base64.decode(data?.data?.content);
+        let content = Base64.decode(data?.data?.content);
+        // custom callout style
+        content = content.replaceAll(/\{% callout %\}([\s\S]*)\{% \/callout %\}/g, '```callout $1 ```');
         setCurrentContent(content);
       })
       .catch((err) => {
@@ -110,6 +113,28 @@ const ContentWrapper: FC = () => {
               transformLinkUri={(href) =>
                 !href.startsWith('http') ? getRedirect(href) : href
               }
+              components={{
+                code({ node, inline, className, children, ...props }) {
+                  const match = /language-(\w+)/.exec(className || '')
+                  if (className === 'language-callout') {
+                    return <p className='callout'>{children}</p>
+                  } else {
+                    return !inline && match ? (
+                      <CodeBlock
+                        text={children}
+                        language={match[1]}
+                        showLineNumbers={true}
+                        startingLineNumber={true}
+                        theme={atomOneLight}
+                      />
+                    ) : (
+                      <code className={className} {...props}>
+                        {children}
+                      </code>
+                    )
+                  }
+                }
+              }}
             >
               {currentContent}
             </ReactMarkdown>
@@ -143,13 +168,13 @@ const ContentWrapper: FC = () => {
 
 const ContentSkeleton = () => {
   return (
-    <div style={{position: 'relative', zIndex: 0}}>
+    <div style={{ position: 'relative', zIndex: 0 }}>
       <h2><Skeleton /></h2>
-      <Skeleton count={5} style={{marginBottom: '0.5em'}} />
-      <h2 style={{marginTop: '1em'}}><Skeleton /></h2>
-      <Skeleton count={8} style={{marginBottom: '0.5em'}} />
+      <Skeleton count={5} style={{ marginBottom: '0.5em' }} />
+      <h2 style={{ marginTop: '1em' }}><Skeleton /></h2>
+      <Skeleton count={8} style={{ marginBottom: '0.5em' }} />
     </div>
   )
-} 
+}
 
 export default ContentWrapper;

@@ -39,10 +39,10 @@
       margin-right: 0;
     }
 
-    & > hr:first-child {
+    &>hr:first-child {
       display: none;
 
-      & + h2 {
+      &+h2 {
         display: none;
       }
     }
@@ -134,29 +134,20 @@
       margin: 24px 0;
     }
 
-    pre {
-      max-width: 100%;
-      overflow-x: auto;
-      padding: 16px;
-      margin: 8px 0;
-      background: #f2f4f7;
-      border: 1px solid #d0d5df;
-      border-radius: 8px;
-
-      code {
-        padding: 0;
-        background: transparent;
-        border: none;
-        border-radius: 0;
+    :global {
+      .callout {
+        max-width: 100%;
+        overflow-x: auto;
+        padding: 16px;
+        margin: 8px 0;
+        background: #F4F4F4;
+        border: 1px solid #e3e3e3;
+        border-radius: 4px;
+        white-space: initial;
+        color: #3C434F;
+        font-size: 16px;
+        line-height: 18px;
       }
-    }
-
-    code {
-      padding: 0 5px;
-      background: #f2f4f6;
-      border: 0.5px solid #d0d5df;
-      border-radius: 2px;
-      color: #667085;
     }
   }
 
