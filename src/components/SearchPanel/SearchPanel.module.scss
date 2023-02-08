@@ -1,24 +1,16 @@
-@import '../../../../styles/colors';
-@import '../../../../styles/breakpoints';
+@import '../../styles/colors';
+@import '../../styles/breakpoints';
 
 .wrapper {
   display: flex;
   align-items: center;
   position: relative;
-
-  &.hide {
-    @media screen and (max-width: $media-md) {
-      display: none;
-    }
-    @media screen and (max-width: $media-sm) {
-      display: flex;
-    }
-  }
-
+  width: 100%;
+  height: 100%;
   input {
-    width: 360px;
-    height: 33px;
-    padding: 8px 6px 8px 12px;
+    width: 100%;
+    height: 100%;
+    padding: 8px 12px 8px 12px;
     // padding-right: 35px;
     font-weight: 400;
     font-size: 14px;
@@ -54,7 +46,7 @@
 
   .search_results {
     position: absolute;
-    top: 39px;
+    top: 49px;
     left: 0;
     z-index: 10;
     background: $primary-white;
@@ -82,7 +74,8 @@
     }
 
     .results_wrapper {
-      width: 360px;
+      width: 584px;
+      max-width: 95vw;
       max-height: 371px;
       padding: 20px;
       overflow-y: auto;
@@ -90,14 +83,14 @@
 
       ul {
         li:last-child {
-          &>div {
+          & > div {
             margin-bottom: 0;
           }
         }
       }
 
       @media screen and (max-width: $media-md) {
-        width: 381px;
+        width: 584px;
       }
 
       @media screen and (max-width: $media-sm) {

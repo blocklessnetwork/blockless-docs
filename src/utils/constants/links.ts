@@ -1,6 +1,13 @@
 import { conceptsRoutes } from './concepts';
 import { docsRoutes } from './documentstion';
 import { referenceRoutes } from './reference';
+import sitesIcon from 'assets/icons/docIndex/sites.svg';
+import triggersIcon from 'assets/icons/docIndex/triggers.svg';
+import dataIcon from 'assets/icons/docIndex/data.svg';
+import zkIcon from 'assets/icons/docIndex/zk.svg';
+import discordIcon from 'assets/icons/community/discord.svg';
+import githubIcon from 'assets/icons/community/github.svg';
+import telegramIcon from 'assets/icons/community/telegram.svg';
 
 export const twitterLink = 'https://twitter.com/theblockless';
 
@@ -9,30 +16,35 @@ export const communityLinks = [
     id: 'join',
     label: 'Join to our community',
     path: '/',
+    icon: '',
     isExternal: false,
   },
   {
     id: 'twitter',
     label: 'Twitter',
     path: twitterLink,
+    icon: '',
     isExternal: true,
   },
   {
     id: 'telegram',
     label: 'Telegram',
     path: 'https://t.me/blocklessofficial',
+    icon: telegramIcon,
     isExternal: true,
   },
   {
     id: 'discord',
     label: 'Discord',
     path: 'https://discord.com/invite/9eeRHxSCTZ',
+    icon: discordIcon,
     isExternal: true,
   },
   {
     id: 'github',
     label: 'GitHub',
     path: 'https://github.com/txlabs',
+    icon: githubIcon,
     isExternal: true,
   },
 ];
@@ -97,6 +109,37 @@ export const navbarMenu = [
     isExternal: false,
   },
 ];
+
+export const documentationIndexList = [
+  {
+    id: 'sites',
+    title: 'Sites',
+    desc: 'Build your own decentralized website',
+    icon: sitesIcon,
+    link: '',
+  },
+  {
+    id: 'triggers',
+    title: 'Triggers',
+    desc: 'Build your own decentralized website',
+    icon: triggersIcon,
+    link: '',
+  },
+  {
+    id: 'data',
+    title: 'Data',
+    desc: 'Build your own decentralized website',
+    icon: dataIcon,
+    link: '',
+  },
+  {
+    id: 'zk',
+    title: 'ZK',
+    desc: 'Build your own decentralized website',
+    icon: zkIcon,
+    link: '',
+  },
+]
 
 export const documentationItems = [
   {

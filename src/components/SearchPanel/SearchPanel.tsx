@@ -9,7 +9,6 @@ import {
 } from 'react-instantsearch-dom';
 import { Hit } from './components';
 import { SearchBox } from './components/SearchBox';
-import cls from 'classnames';
 
 const APP_ID = process.env.REACT_APP_ALGOLIA_APP_ID;
 const SEARCH_API_KEY = process.env.REACT_APP_SEARCH_API_KEY;
@@ -28,11 +27,7 @@ const Results = connectStateResults(({ searchState, searchResults }) => {
   );
 });
 
-interface ISearchProps {
-  showSearch?: boolean,
-}
-
-const SearchPanel: FC<ISearchProps> = ({showSearch}) => {
+const SearchPanel: FC = () => {
   const algoliaClient = algoliasearch(
     APP_ID as string,
     SEARCH_API_KEY as string
@@ -61,9 +56,7 @@ const SearchPanel: FC<ISearchProps> = ({showSearch}) => {
   };
 
   return (
-    <div className={cls(styles.wrapper, {
-      [styles.hide]: !showSearch,
-    })}>
+    <div className={styles.wrapper}>
       <InstantSearch indexName="docs_search" searchClient={searchClient}>
         <Configure
           attributesToSnippet={['content:80']}

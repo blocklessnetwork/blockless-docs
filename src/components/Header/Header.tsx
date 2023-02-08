@@ -14,10 +14,12 @@ import { loginLink } from 'utils/constants/links';
 const Header: FC = () => {
   const { pathname } = useLocation();
 
+  const [showSearch, setShowSearch] = useState(false);
   const [open, setOpen] = useState(false);
 
   useEffect(() => {
     setOpen(false);
+    setShowSearch(pathname === '/' ? false : true);
   }, [pathname]);
 
   const handleLogin = () => {
@@ -51,7 +53,7 @@ const Header: FC = () => {
             </Link>
           </div>
           <div className={styles.search_wrapper}>
-            <SearchPanel />
+            <SearchPanel showSearch={showSearch} />
           </div>
           <div className={styles.menu_wrapper}>
             <Menu checked={open} handleChangeMenu={() => setOpen(!open)} />
@@ -69,7 +71,7 @@ const Header: FC = () => {
       <div className={styles.header_nav_wrapper}>
         <header>
           <Navbar />
-          <SearchPanel />
+          {!!showSearch && <SearchPanel />}
         </header>
       </div>
     </article>
