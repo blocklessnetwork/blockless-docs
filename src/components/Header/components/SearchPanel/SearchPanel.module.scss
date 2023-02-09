@@ -6,15 +6,6 @@
   align-items: center;
   position: relative;
 
-  &.hide {
-    @media screen and (max-width: $media-md) {
-      display: none;
-    }
-    @media screen and (max-width: $media-sm) {
-      display: flex;
-    }
-  }
-
   input {
     width: 360px;
     height: 33px;

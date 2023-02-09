@@ -53,7 +53,7 @@ const Header: FC = () => {
             </Link>
           </div>
           <div className={styles.search_wrapper}>
-            <SearchPanel showSearch={showSearch} />
+            {!!showSearch && <SearchPanel />}
           </div>
           <div className={styles.menu_wrapper}>
             <Menu checked={open} handleChangeMenu={() => setOpen(!open)} />

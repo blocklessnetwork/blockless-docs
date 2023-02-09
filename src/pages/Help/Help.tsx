@@ -1,7 +1,7 @@
 import { FC } from 'react';
 import styles from './Help.module.scss';
 import { useNavigate } from 'react-router-dom';
-import { communityLinks, documentationItems, documentationIndexList } from 'utils/constants/links';
+import { communityLinks, documentationIndexList } from 'utils/constants/links';
 import { SearchPanel } from 'components/SearchPanel'
 
 const Help: FC = () => {
