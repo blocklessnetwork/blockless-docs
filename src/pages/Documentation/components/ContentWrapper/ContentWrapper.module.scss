@@ -29,10 +29,9 @@
   }
 
   .content_wrapper {
-    max-width: 738px;
-    width: 738px;
-    margin-left: 233px;
-    margin-right: 241px;
+    max-width: 800px;
+    width: 800px;
+    margin: 0 200px 0 200px;
 
     @media screen and (max-width: $media-md) {
       margin-left: 0;
@@ -48,7 +47,7 @@
     }
 
     h1 {
-      margin-bottom: 24px;
+      margin-bottom: 36px;
       font-weight: 600;
       font-size: 42px;
       line-height: 51px;
@@ -66,8 +65,7 @@
     }
 
     h2 {
-      margin-top: 36px;
-      margin-bottom: 24px;
+      margin-bottom: 16px;
       font-weight: 600;
       font-size: 30px;
       line-height: 36px;
@@ -84,11 +82,15 @@
       }
     }
 
-    p {
+    h3{
       margin-bottom: 10px;
+    }
+
+    p {
+      margin-bottom: 36px;
       font-weight: 400;
       font-size: 16px;
-      line-height: 19px;
+      line-height: 24px;
       color: $primary-black;
 
       @media screen and (max-width: $media-sm) {
@@ -96,17 +98,29 @@
         line-height: 17px;
       }
     }
-
+    p+ul {
+      margin-top: -20px;
+    }
+    ul{
+      ul{
+        margin-top: 20px;
+      }
+    }
+    
     li {
       margin-bottom: 20px;
       font-weight: 400;
       font-size: 16px;
-      line-height: 19px;
+      line-height: 24px;
       color: $primary-black;
 
       @media screen and (max-width: $media-sm) {
         font-size: 14px;
         line-height: 17px;
+      }
+
+      p {
+        margin: 0;
       }
     }
 
@@ -130,8 +144,6 @@
       height: fit-content;
       object-position: center;
       border: 1px solid $primary-gray9;
-      border-radius: 3px;
-      margin: 24px 0;
     }
 
     :global {
@@ -147,6 +159,12 @@
         color: #3C434F;
         font-size: 16px;
         line-height: 18px;
+      }
+      .img_box{
+        padding: 20px;
+        background: #FDFDFF;
+        border: 1px solid #D6DAF1;
+        margin: -12px 0 24px;
       }
     }
   }
@@ -175,7 +193,7 @@
           padding-left: 17px;
           font-weight: 400;
           font-size: 14px;
-          line-height: 17px;
+          line-height: 22px;
           color: $primary-gray5;
           cursor: pointer;
 

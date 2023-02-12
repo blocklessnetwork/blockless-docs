@@ -55,6 +55,9 @@ const ConceptsReference: FC = () => {
             transformLinkUri={(href) =>
               !href.startsWith('http') ? getRedirect(href) : href
             }
+            components={{
+              img: ({node, ...props}) => <div className="img_box"><img {...props} /></div>,
+            }}
           >
             {content}
           </ReactMarkdown>

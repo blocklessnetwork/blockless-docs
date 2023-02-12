@@ -133,7 +133,8 @@ const ContentWrapper: FC = () => {
                       </code>
                     )
                   }
-                }
+                },
+                img: ({node, ...props}) => <div className="img_box"><img {...props} /></div>,
               }}
             >
               {currentContent}
