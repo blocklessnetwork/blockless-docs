@@ -74,7 +74,7 @@ const Footer: FC = () => {
           </div>
         </div>
         <p className={styles.block_copyright}>
-          Copyright © 2022 TX Labs, Inc. All rights reserved.
+          Copyright © {new Date().getFullYear()} TX Labs, Inc. All rights reserved.
         </p>
       </footer>
     </article>
