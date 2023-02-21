@@ -69,7 +69,8 @@ export const footerLinks = {
     {
       id: 'blog',
       label: 'Blog',
-      path: '/',
+      path: 'https://blockless.network/blog',
+      isExternal: true
     },
     {
       id: 'careers',
@@ -93,7 +94,7 @@ export const navbarMenu = [
   {
     id: 'documentation',
     label: 'Documentation',
-    path: '/docs',
+    path: docsRoutes.overview,
     isExternal: false,
   },
   {

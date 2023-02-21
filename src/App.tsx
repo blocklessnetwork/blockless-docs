@@ -12,8 +12,17 @@ import { referenceRoutes } from 'utils/constants/reference';
 import "react-loading-skeleton/dist/skeleton.css";
 
 const App = () => {
+  // Redirect all requests to the base name blog
+  if (!window.location.pathname.startsWith('/docs')) {
+    window.history.replaceState(
+      '',
+      '',
+      '/docs' + window.location.pathname
+    )
+  }
+
   return (
-    <BrowserRouter>
+    <BrowserRouter basename='/docs'>
       <div className="App">
         <Header />
         <main className="container">
