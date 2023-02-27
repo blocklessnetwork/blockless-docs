@@ -3,6 +3,7 @@ import styles from './Help.module.scss';
 import { useNavigate } from 'react-router-dom';
 import { communityLinks, documentationIndexList } from 'utils/constants/links';
 import { SearchPanel } from 'components/SearchPanel'
+import DocSearch from 'components/DocSearch'
 
 const Help: FC = () => {
   const navigate = useNavigate();
@@ -25,7 +26,8 @@ const Help: FC = () => {
         </p>
         <div className={styles.search_box}>
           <div className={styles.search_bg} />
-          <SearchPanel />
+          <DocSearch />
+          {/* <SearchPanel /> */}
         </div>
       </div>
 

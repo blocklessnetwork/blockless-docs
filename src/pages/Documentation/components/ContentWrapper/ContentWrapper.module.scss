@@ -126,11 +126,14 @@
 
     a {
       color: $primary-blue;
-      font-weight: 600;
+      font-weight: 500;
       font-size: 16px;
       line-height: 23px;
       text-indent: 9px;
-
+      &:hover{
+        text-decoration:underline
+      }
+      
       @media screen and (max-width: $media-sm) {
         font-size: 14px;
         line-height: 17px;
