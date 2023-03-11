@@ -127,10 +127,17 @@
       display: none;
 
       @media screen and (max-width: $media-md) {
+        width: 360px;
+        height: 33px;
         display: block;
         padding: 0 24px;
         flex-grow: 1;
       }
+    }
+
+    .nav_search_wrapper{
+      width: 360px;
+      height: 33px;
     }
 
     .menu_wrapper {

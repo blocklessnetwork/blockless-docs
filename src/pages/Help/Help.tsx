@@ -2,7 +2,6 @@ import { FC } from 'react';
 import styles from './Help.module.scss';
 import { useNavigate } from 'react-router-dom';
 import { communityLinks, documentationIndexList } from 'utils/constants/links';
-import { SearchPanel } from 'components/SearchPanel'
 import DocSearch from 'components/DocSearch'
 
 const Help: FC = () => {
@@ -25,9 +24,7 @@ const Help: FC = () => {
           Discover solutions in our <strong>documentation</strong> and <strong>community</strong>
         </p>
         <div className={styles.search_box}>
-          <div className={styles.search_bg} />
           <DocSearch />
-          {/* <SearchPanel /> */}
         </div>
       </div>
 

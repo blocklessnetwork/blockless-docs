@@ -82,32 +82,16 @@
 
     .search_box {
       width: 584px;
+      height: 48px;
       max-width: 95vw;
-      height: 41px;
       margin: 59px auto 0;
       position: relative;
+      box-shadow: 0px 0px 17px rgba(228, 64, 255, 0.36);
 
       @media screen and (max-width: $media-sm) {
         width: 344px;
         max-width: 95vw;
         margin: 50px auto 0;
-      }
-
-      .search_bg {
-        position: absolute;
-        width: 676px;
-        height: 133px;
-        top: 50%;
-        left: 50%;
-        transform: translateX(-50%) translateY(-50%);
-        background: url("/assets/imgs/help/input-bg.svg") no-repeat center;
-        background-size: 100% 100%;
-
-        @media screen and (max-width: $media-sm) {
-          width: 375px;
-          background: url("/assets/imgs/help/input-bg-sm.svg") no-repeat center;
-          background-size: 100% 100%;
-        }
       }
     }
   }
@@ -136,17 +120,20 @@
   .documentations_wrapper {
     margin-top: 35px;
     display: grid;
-    justify-content: center;
-    grid-template-columns: repeat(4, auto);
+    grid-template-columns: repeat(4, 1fr);
     gap: 24px;
+    justify-content: center;
+    padding: 0 24px;
 
     @media screen and (max-width: $media-md) {
       margin-top: 44px;
-      grid-template-columns: repeat(2, auto);
+      padding: 0 55px;
+      grid-template-columns: repeat(2, 1fr);
     }
 
     @media screen and (max-width: $media-sm) {
       margin-top: 24px;
+      padding: 0;
       grid-template-columns: repeat(1, 1fr);
     }
 
@@ -157,7 +144,7 @@
       flex-direction: column;
       border: 1px solid $primary-gray6;
       border-radius: 8px;
-      padding: 20px 6px 19px 20px;
+      padding: 20px 10px 19px 20px;
       max-width: 270px;
       cursor: pointer;
 

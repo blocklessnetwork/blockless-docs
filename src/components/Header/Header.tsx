@@ -5,7 +5,7 @@ import { Link, useLocation } from 'react-router-dom';
 import logoIcon from 'assets/icons/logo.svg';
 import logoNameIcon from 'assets/icons/logo-name.svg';
 import { Navbar } from './components/Navbar';
-import { SearchPanel } from './components/SearchPanel';
+import DocSearch from 'components/DocSearch';
 import { Menu } from './components/Menu';
 import cls from 'classnames';
 import { NavbarMobile } from './components/NavbarMobile';
@@ -53,7 +53,9 @@ const Header: FC = () => {
             </Link>
           </div>
           <div className={styles.search_wrapper}>
-            {!!showSearch && <SearchPanel />}
+            {!!showSearch && (
+              <DocSearch />
+            )}
           </div>
           <div className={styles.menu_wrapper}>
             <Menu checked={open} handleChangeMenu={() => setOpen(!open)} />
@@ -71,7 +73,11 @@ const Header: FC = () => {
       <div className={styles.header_nav_wrapper}>
         <header>
           <Navbar />
-          {!!showSearch && <SearchPanel />}
+          {!!showSearch && (
+            <div className={styles.nav_search_wrapper}>
+              <DocSearch />
+            </div>
+          )}
         </header>
       </div>
     </article>

@@ -1,0 +1,69 @@
+/*! @docsearch/css Button 3.3.3 | MIT License | © Algolia, Inc. and contributors | https://docsearch.algolia.com */
+.DocSearch-Button {
+  align-items: center;
+  background: var(--docsearch-searchbox-background);
+  color: var(--docsearch-muted-color);
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  user-select: none;
+  /* height: 48px; */
+  height: 100%;
+  position: relative;
+  width: 100%;
+  padding: 8px 13px 8px 13px;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+  border: 1px solid #d0d5df;
+  border-radius: 4px;
+  outline: none;
+}
+.DocSearch-Button:active,
+.DocSearch-Button:focus,
+.DocSearch-Button:hover {
+  background: var(--docsearch-searchbox-focus-background);
+  /* box-shadow: var(--docsearch-searchbox-shadow); */
+  color: var(--docsearch-text-color);
+  outline: none;
+}
+.DocSearch-Button-Container {
+  align-items: center;
+  display: flex;
+}
+.DocSearch-Search-Icon {
+  stroke-width: 1.6;
+}
+.DocSearch-Button .DocSearch-Search-Icon {
+  /* color: var(--docsearch-text-color); */
+  width: 18px;
+  height: 18px;
+}
+.DocSearch-Button-Placeholder {
+  font-size: 14px;
+  padding: 0 12px 0 6px;
+}
+.DocSearch-Button-Keys {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.DocSearch-Button-Key {
+  font-size: 0;
+  width: 10px;
+  border: 0;
+}
+.DocSearch-Button-Key:nth-child(1){
+  background: url("/src/assets/imgs/⌘.svg") no-repeat center;
+  background-size: 10px 10px;
+}
+.DocSearch-Button-Key:nth-child(2){
+  background: url("/src/assets/imgs/k.svg") no-repeat center;
+  background-size: 8px 10px;
+}
+@media (max-width: 768px) {
+  .DocSearch-Button-Keys,
+  .DocSearch-Button-Placeholder {
+    display: none;
+  }
+}
