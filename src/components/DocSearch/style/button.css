@@ -45,22 +45,31 @@
 }
 .DocSearch-Button-Keys {
   display: flex;
-  align-items: center;
-  gap: 5px;
+  /* min-width: calc(2 * 20px + 2 * 0.4em); */
 }
+
 .DocSearch-Button-Key {
-  font-size: 0;
-  width: 10px;
-  border: 0;
+  align-items: center;
+  /* background: var(--docsearch-key-gradient); */
+  /* border-radius: 3px; */
+  /* box-shadow: var(--docsearch-key-shadow); */
+  color: var(--docsearch-muted-color);
+  display: flex;
+  height: 18px;
+  justify-content: center;
+  margin-right: 0.4em;
+  position: relative;
+  padding: 0px 0px 2px 0px;
+  border: 0px;
 }
+
 .DocSearch-Button-Key:nth-child(1){
-  background: url("/src/assets/imgs/⌘.svg") no-repeat center;
-  background-size: 10px 10px;
+  margin-top: 1px;
 }
-.DocSearch-Button-Key:nth-child(2){
-  background: url("/src/assets/imgs/k.svg") no-repeat center;
-  background-size: 8px 10px;
+.DocSearch-Button-Key:nth-child(1) svg{
+  margin-top: -1px;
 }
+
 @media (max-width: 768px) {
   .DocSearch-Button-Keys,
   .DocSearch-Button-Placeholder {
