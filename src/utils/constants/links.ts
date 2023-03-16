@@ -43,7 +43,7 @@ export const communityLinks = [
   {
     id: 'github',
     label: 'GitHub',
-    path: 'https://github.com/txlabs',
+    path: 'https://github.com/blocklessnetwork',
     icon: githubIcon,
     isExternal: true,
   },
