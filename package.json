@@ -23,13 +23,8 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start"
-  },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
+    "start": "next start",
+    "lint": "next lint"
   },
   "browserslist": {
     "production": [
@@ -46,6 +41,7 @@
   "devDependencies": {
     "eslint": "^8.28.0",
     "eslint-config-halo-lab": "^1.0.17",
+    "eslint-config-next": "^13.2.4",
     "prettier": "^2.8.0",
     "prettier-config-halo-lab": "^1.0.7",
     "stylelint-config-halo-lab": "^1.0.4"

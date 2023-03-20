@@ -197,12 +197,17 @@
         font-size: 16px;
         line-height: 18px;
       }
-      .img_box{
+      .img_box {
+        position: relative;
         display: block;
         padding: 20px;
         background: #FDFDFF;
         border: 1px solid #D6DAF1;
         margin: -12px 0 24px;
+
+        img {
+          position: static !important;
+        }
       }
     }
   }

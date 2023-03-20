@@ -40,7 +40,7 @@ const DocsRightNav: React.FC<DocsRightNavProps> = ({ markdoc, contentRef }) => {
     headersOffsetsRef.current =
       headers &&
       Array.from(headers).map((header: any) => header.offsetTop);
-  }, [content.children]);
+  }, [contentRef, content.children]);
 
   const handleChangeHeader = (header: any, i: number) => {
     router.push(`#${header.id}`);
