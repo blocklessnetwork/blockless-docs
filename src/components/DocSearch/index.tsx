@@ -1,16 +1,15 @@
 import { DocSearch } from "@docsearch/react";
-// import '@docsearch/css'
-import "./style/_variables.css";
-import "./style/button.css";
-import "./style/modal.css";
 
 const Index = () => {
+  const appId = process.env.NEXT_PUBLIC_ALGOLIA_APP_ID;
+  const apiKey=  process.env.NEXT_PUBLIC_SEARCH_API_KEY;
+  
   return (
     <DocSearch
-      appId="TVAJ97SI13"
-      indexName="blockless"
-      apiKey="343ef034663c58773db97ab823982092"
-    />
+        appId={appId as string}
+        indexName="blockless"
+        apiKey={apiKey as string}
+      />
   );
 };
 

@@ -1,13 +1,13 @@
 import { conceptsRoutes } from './concepts';
 import { docsRoutes } from './documentstion';
 import { referenceRoutes } from './reference';
-import sitesIcon from 'assets/icons/docIndex/sites.svg';
-import triggersIcon from 'assets/icons/docIndex/triggers.svg';
-import dataIcon from 'assets/icons/docIndex/data.svg';
-import zkIcon from 'assets/icons/docIndex/zk.svg';
-import discordIcon from 'assets/icons/community/discord.svg';
-import githubIcon from 'assets/icons/community/github.svg';
-import telegramIcon from 'assets/icons/community/telegram.svg';
+import sitesIcon from '@/src/assets/icons/docIndex/sites.svg';
+import triggersIcon from '@/src/assets/icons/docIndex/triggers.svg';
+import dataIcon from '@/src/assets/icons/docIndex/data.svg';
+import zkIcon from '@/src/assets/icons/docIndex/zk.svg';
+import discordIcon from '@/src/assets/icons/community/discord.svg';
+import githubIcon from '@/src/assets/icons/community/github.svg';
+import telegramIcon from '@/src/assets/icons/community/telegram.svg';
 
 export const twitterLink = 'https://twitter.com/theblockless';
 
@@ -43,7 +43,7 @@ export const communityLinks = [
   {
     id: 'github',
     label: 'GitHub',
-    path: 'https://github.com/txlabs',
+    path: 'https://github.com/blocklessnetwork',
     icon: githubIcon,
     isExternal: true,
   },

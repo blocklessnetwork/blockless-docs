@@ -1,0 +1,31 @@
+@import '@/src/styles/colors';
+@import '@/src/styles/breakpoints';
+
+.container {
+  max-width: 1248px;
+  padding: 0 24px;
+  margin: 0 auto;
+  height: auto;
+  min-height: calc(100vh - 334px);
+  /* overflow-y: auto; */
+  position: relative;
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    // margin-top: 66px;
+    width: 100%;
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+}
+
+@media screen and (max-width: 430px) {
+  .container {
+    // margin-top: 57px;
+    width: 100%;
+    padding-left: 16px;
+    padding-right: 16px;
+    overflow: hidden;
+  }
+}

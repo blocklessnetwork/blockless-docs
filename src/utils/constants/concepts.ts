@@ -1,13 +1,13 @@
 export const conceptsRoutes = {
-  overview: '/concepts',
-  network: '/network',
-  networkContributors: '/network/contributors',
-  networkOrchestrators: '/network/orchestrators',
-  networkWorkers: '/network/workers',
-  runtimeEnvironment: '/runtime-environment',
-  runtimeEnvironmentOverview: '/runtime-environment',
+  overview: '/docs/concepts',
+  network: '/docs/network',
+  networkContributors: '/docs/network/contributors',
+  networkOrchestrators: '/docs/network/orchestrators',
+  networkWorkers: '/docs/network/workers',
+  runtimeEnvironment: '/docs/runtime-environment',
+  runtimeEnvironmentOverview: '/docs/runtime-environment',
   runtimeEnvironmentSecurity:
-    '/runtime-environment/runtime-environment-security',
+    '/docs/runtime-environment/runtime-environment-security',
 };
 
 export const conceptsArticlesId = {
