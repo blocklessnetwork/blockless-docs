@@ -10,10 +10,15 @@ const nextConfig = {
   pageExtensions: ["md", "mdoc", "js", "jsx", "ts", "tsx"],
   assetPrefix: '/docs',
   async rewrites() {
-    return [
-      { source: "/docs/_next/:path*", destination: "/_next/:path*" }
-    ];
-  }
+    return {
+      beforeFiles: [
+        {
+          source: `/docs/_next/data/:path*`,
+          destination: '/_next/data/:path*'
+         },
+      ]
+    }
+  },
 }
 
 module.exports = withMarkdoc({ mode: 'static' })(nextConfig);
