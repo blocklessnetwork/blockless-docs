@@ -1,14 +1,14 @@
 export const referenceRoutes = {
-  overview: '/reference',
-  glossariesOverview: '/glossaries',
-  glossariesNetwork: '/glossaries/network-platforms-and-user-groups',
-  glossariesFunctions: '/glossaries/functions',
-  sdkOverview: '/blockless-sdk',
-  sdkMemory: '/blockless-sdk/memory',
-  sdkFile: '/blockless-sdk/file',
-  sdkHttp: '/blockless-sdk/http',
-  sdkIpfs: '/blockless-sdk/ipfs',
-  sdkS3: '/blockless-sdk/S3',
+  overview: '/docs/reference',
+  glossariesOverview: '/docs/glossaries',
+  glossariesNetwork: '/docs/glossaries/network-platforms-and-user-groups',
+  glossariesFunctions: '/docs/glossaries/functions',
+  sdkOverview: '/docs/blockless-sdk',
+  sdkMemory: '/docs/blockless-sdk/memory',
+  sdkFile: '/docs/blockless-sdk/file',
+  sdkHttp: '/docs/blockless-sdk/http',
+  sdkIpfs: '/docs/blockless-sdk/ipfs',
+  sdkS3: '/docs/blockless-sdk/s3',
 };
 
 export const referenceArticlesId = {

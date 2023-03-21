@@ -1,0 +1,3 @@
+[submodule "src/pages/docs"]
+	path = src/pages/docs
+	url = https://github.com/blocklessnetwork/docs-content

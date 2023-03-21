@@ -1,0 +1,275 @@
+@import '@/src/styles/colors';
+@import '@/src/styles/breakpoints';
+
+.wrapper {
+  position: relative;
+  padding-bottom: 98px;
+
+  @media screen and (max-width: $media-md) {
+    padding-bottom: 97px;
+  }
+
+  @media screen and (max-width: $media-sm) {
+    padding-bottom: 89px;
+  }
+
+  .help_header {
+    width: 100vw;
+    padding-bottom: 71px;
+    background: #FCFCFC;
+    border-bottom: 1px solid #EFEFEF;
+    position: relative;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background: url("../assets/imgs/help/header-mask.svg") no-repeat;
+    background-size: 1920px 453px;
+    background-position: center bottom;
+
+    @media screen and (max-width: $media-md) {
+      padding-bottom: 100px;
+    }
+
+    @media screen and (max-width: $media-sm) {
+      padding-bottom: 68px;
+      background: url("../assets/imgs/help/header-mask-sm.svg") no-repeat;
+      background-size: 1259px 297px;
+      background-position: center top;
+    }
+
+    .title {
+      padding-top: 53px;
+      font-weight: 600;
+      font-size: 42px;
+      line-height: 51px;
+      letter-spacing: -0.02em;
+      color: $primary-black;
+      text-align: center;
+
+      @media screen and (max-width: $media-md) {
+        padding-top: 80px;
+      }
+
+      @media screen and (max-width: $media-sm) {
+        padding-top: 50px;
+        font-size: 30px;
+        line-height: 36px;
+      }
+    }
+
+    .subtitle {
+      width: 303px;
+      max-width: 95vw;
+      margin: 18px auto 0;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 19px;
+      text-align: center;
+      color: $primary-black;
+
+      strong {
+        color: $primary-blue;
+        font-weight: 600;
+      }
+
+      @media screen and (max-width: $media-sm) {
+        width: 303px;
+        margin: 14px auto 0;
+        font-size: 16px;
+        line-height: 19px;
+      }
+    }
+
+    .search_box {
+      width: 584px;
+      height: 48px;
+      max-width: 95vw;
+      margin: 59px auto 0;
+      position: relative;
+      box-shadow: 0px 0px 17px rgba(228, 64, 255, 0.36);
+
+      @media screen and (max-width: $media-sm) {
+        width: 344px;
+        max-width: 95vw;
+        margin: 50px auto 0;
+      }
+    }
+  }
+
+  .documentations_title {
+    margin-top: 70px;
+    font-weight: 600;
+    font-size: 30px;
+    line-height: 36px;
+    text-align: center;
+    letter-spacing: -0.02em;
+    color: $primary-black;
+
+    @media screen and (max-width: $media-md) {
+      margin-top: 59px;
+    }
+
+    @media screen and (max-width: $media-sm) {
+      margin: 36px auto 0;
+      font-size: 20px;
+      line-height: 24px;
+      max-width: 240px;
+    }
+  }
+
+  .documentations_wrapper {
+    margin-top: 35px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+    justify-content: center;
+    padding: 0 24px;
+
+    @media screen and (max-width: $media-md) {
+      margin-top: 44px;
+      padding: 0 55px;
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media screen and (max-width: $media-sm) {
+      margin-top: 24px;
+      padding: 0;
+      grid-template-columns: repeat(1, 1fr);
+    }
+
+    .item {
+      display: flex;
+      align-items: flex-start;
+      justify-content: center;
+      flex-direction: column;
+      border: 1px solid $primary-gray6;
+      border-radius: 8px;
+      padding: 20px 10px 19px 20px;
+      max-width: 270px;
+      cursor: pointer;
+
+      @media screen and (max-width: $media-sm) {
+        max-width: 100%;
+        flex-direction: row;
+        align-items: center;
+        padding: 15px 20px;
+        gap: 20px;
+      }
+
+      .icon_box {
+        width: 52px;
+        height: 52px;
+        background: $primary-gray1;
+        border: 1px solid $primary-gray6;
+        border-radius: 4px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        @media screen and (max-width: $media-sm) {
+          flex-shrink: 0;
+        }
+
+        img {
+          max-width: 100%;
+          max-height: 100%;
+        }
+      }
+
+      .text_box {
+        .item_title {
+          font-weight: 600;
+          font-size: 16px;
+          line-height: 19px;
+          color: $primary-blue;
+          margin-top: 16px;
+
+          @media screen and (max-width: $media-sm) {
+            margin-top: 0;
+          }
+        }
+
+        .item_desc {
+          font-weight: 400;
+          font-size: 16px;
+          line-height: 19px;
+          color: $primary-gray3;
+          margin-top: 6px;
+        }
+      }
+
+      &:hover {
+        // background: $primary-white;
+        box-shadow: 1px 11px 25px rgba(0, 0, 0, 0.1);
+      }
+    }
+  }
+
+  .community_title {
+    margin: 100px auto 0;
+    font-weight: 600;
+    font-size: 30px;
+    line-height: 36px;
+    text-align: center;
+    letter-spacing: -0.02em;
+    color: $primary-black;
+
+    @media screen and (max-width: $media-md) {
+      max-width: 425px;
+    }
+
+    @media screen and (max-width: $media-sm) {
+      max-width: 319px;
+      margin: 63px auto 0;
+      font-size: 20px;
+      line-height: 24px;
+    }
+  }
+
+  .communities_wrapper {
+    margin-top: 36px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 17px;
+
+    @media screen and (max-width: $media-sm) {
+      margin-top: 36px;
+      flex-direction: column;
+    }
+
+    .community_item {
+      width: 205px;
+      height: 41px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 9px;
+      border: 1px solid #D0D5DD;
+      border-radius: 4px;
+
+      .icon {
+        width: 25px;
+        height: 25px;
+      }
+
+      .name {
+        flex: 1;
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 17px;
+        text-align: center;
+        color: #344054;
+      }
+
+      .link_icon {
+        width: 25px;
+        height: 25px;
+        background: url("../assets/icons/link-blank.svg") no-repeat center;
+        background-size: 13px 13px;
+      }
+    }
+  }
+
+}

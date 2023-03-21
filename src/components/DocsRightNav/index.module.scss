@@ -1,0 +1,31 @@
+@import '@/src/styles/colors';
+@import '@/src/styles/breakpoints';
+
+.headers_wrapper {
+  // max-width: 164px;
+  width: 180px;
+
+  .headers {
+    border-left: 1px solid $primary-gray4;
+
+    .header_item {
+      margin-bottom: 18px;
+      padding-left: 17px;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 22px;
+      color: $primary-gray5;
+      cursor: pointer;
+
+      &.active {
+        margin-left: -1px;
+        border-left: 1px solid $primary-black;
+        color: $primary-black;
+      }
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+}
