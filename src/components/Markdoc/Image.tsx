@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import NextImage from 'next/image'
 
 interface ImageProps {
   src: string;
@@ -17,7 +16,7 @@ const Image: React.FC<ImageProps> = ({ src, alt }) => {
     }
   }, [src]);
   return (
-    <span className="img_box">{imgSrc && <NextImage src={imgSrc} alt={alt} fill />}</span>
+    <span className="img_box">{imgSrc && <img src={imgSrc} alt={alt} />}</span>
   );
 };
 
