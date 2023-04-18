@@ -24,30 +24,26 @@ const Header: FC = () => {
     setShowSearch(router.pathname === '/' ? false : true);
   }, [router.pathname]);
 
-  const handleLogin = () => {
-    window.location.replace(loginLink);
-  };
-
   return (
     <article className={styles.header_wrapper}>
       <div className={styles.header_logo_wrapper}>
         <header>
           <div className={styles.logo}>
-            <Link href="/">
+            <Link href="/docs">
               <Image
                 src={logoIcon}
                 alt="blockless logo"
                 className={styles.logo_icon}
               />
             </Link>
-            <Link href="/">
+            <Link href="/docs">
               <Image
                 src={logoNameIcon}
                 alt="blockless"
                 className={styles.logo_name}
               />
             </Link>
-            <Link href="/">
+            <Link href="/docs">
               <span className={styles.separator}>/</span>
               <span className={styles.support}>Support</span>
             </Link>
@@ -67,7 +63,9 @@ const Header: FC = () => {
               <NavbarMobile />
             </div>
           </div>
-          <Button label="Login" handleClick={handleLogin} />
+          <a className={styles.login_button} href={loginLink} target="_blank" rel="noopener noreferrer">
+            <Button label="Login" />
+          </a>
         </header>
       </div>
       <div className={styles.header_nav_wrapper}>

@@ -12,10 +12,10 @@ const Footer: FC = () => {
       <footer>
         <div className={styles.block_links}>
           <div className={styles.logo}>
-            <Link href="/">
+            <Link href="/docs">
               <Image src={logoIcon} alt="blockless logo" />
             </Link>
-            <Link href="/">
+            <Link href="/docs">
               <Image
                 src={logoNameIcon}
                 alt="blockless"

@@ -81,16 +81,10 @@ export const footerLinks = {
   ],
 };
 
-export const loginLink = 'https://console.bls.dev/';
+export const loginLink = 'https://dashboard.blockless.network/';
 
 //menus
 export const navbarMenu = [
-  {
-    id: 'help',
-    label: 'Help',
-    path: '/',
-    isExternal: false,
-  },
   {
     id: 'documentation',
     label: 'Documentation',
