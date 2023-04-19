@@ -67,7 +67,7 @@
       padding: 0;
     }
 
-    & > button {
+    & > button, .login_button {
       @media screen and (max-width: $media-md) {
         display: none;
       }

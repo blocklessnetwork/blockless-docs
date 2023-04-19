@@ -3,7 +3,7 @@ import styles from './Button.module.scss';
 
 interface ButtonProps {
   label: string;
-  handleClick: () => void;
+  handleClick?: () => void;
 }
 
 const Button: FC<ButtonProps> = ({ label, handleClick }) => {

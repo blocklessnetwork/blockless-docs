@@ -11,10 +11,6 @@ import { loginLink, navbarMenu } from '@/src/utils/constants/links';
 const NavbarMobile: FC = () => {
   const router = useRouter()
 
-  const handleLogin = () => {
-    window.location.replace(loginLink);
-  };
-
   const isHelpPage = router.pathname === '/';
 
   return (
@@ -39,7 +35,9 @@ const NavbarMobile: FC = () => {
       </ul>
       {!isHelpPage && <DocsNavigation />}
       <div className={styles.login_wrapper}>
-        <Button label="Login" handleClick={handleLogin} />
+        <a className="login-button" href={loginLink} target="_blank" rel="noopener noreferrer">
+          <Button label="Login" />
+        </a>
       </div>
     </nav>
   );
