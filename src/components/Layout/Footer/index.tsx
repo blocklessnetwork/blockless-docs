@@ -12,16 +12,16 @@ const Footer: FC = () => {
       <footer>
         <div className={styles.block_links}>
           <div className={styles.logo}>
-            <Link href="/docs">
+            <a href="/">
               <Image src={logoIcon} alt="blockless logo" />
-            </Link>
-            <Link href="/docs">
+            </a>
+            <a href="/">
               <Image
                 src={logoNameIcon}
                 alt="blockless"
                 className={styles.logo_name}
               />
-            </Link>
+            </a>
           </div>
           <div className={styles.link_columns}>
             <div className={styles.resources}>

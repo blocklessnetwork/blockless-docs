@@ -5,7 +5,7 @@ import styles from './index.module.scss';
 import cls from 'classnames';
 import { Button } from '@/src/components/Button';
 import DocsNavigation from '@/src/components/DocsLeftNav';
-import { getActivePage } from '@/src/utils/helpers';
+import { isActiveMenu } from '@/src/utils/helpers';
 import { loginLink, navbarMenu } from '@/src/utils/constants/links';
 
 const NavbarMobile: FC = () => {
@@ -18,18 +18,12 @@ const NavbarMobile: FC = () => {
       <ul className={styles.list_wrapper}>
         {navbarMenu.map((item) => (
           <li
-            key={item.id}
+            key={item.name}
             className={cls(styles.menu_item, {
-              [styles.active]: getActivePage(router.pathname) === item.id,
+              [styles.active]: isActiveMenu(router.pathname, item.path),
             })}
           >
-            {item.isExternal ? (
-              <a href={item.path} target="_blank" rel="noreferrer">
-                {item.label}
-              </a>
-            ) : (
-              <Link href={item.path}>{item.label}</Link>
-            )}
+            <Link href={item.path}>{item.name}</Link>
           </li>
         ))}
       </ul>

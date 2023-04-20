@@ -21,7 +21,7 @@ const Header: FC = () => {
 
   useEffect(() => {
     setOpen(false);
-    setShowSearch(router.pathname === '/' ? false : true);
+    setShowSearch(['/','/docs'].includes(router.pathname) ? false : true);
   }, [router.pathname]);
 
   return (
@@ -29,23 +29,23 @@ const Header: FC = () => {
       <div className={styles.header_logo_wrapper}>
         <header>
           <div className={styles.logo}>
-            <Link href="/docs">
+            <a href="/">
               <Image
                 src={logoIcon}
                 alt="blockless logo"
                 className={styles.logo_icon}
               />
-            </Link>
-            <Link href="/docs">
+            </a>
+            <a href="/">
               <Image
                 src={logoNameIcon}
                 alt="blockless"
                 className={styles.logo_name}
               />
-            </Link>
+            </a>
             <Link href="/docs">
               <span className={styles.separator}>/</span>
-              <span className={styles.support}>Support</span>
+              <span className={styles.support}>Docs</span>
             </Link>
           </div>
           <div className={styles.search_wrapper}>

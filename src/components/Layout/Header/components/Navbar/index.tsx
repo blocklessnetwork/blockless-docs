@@ -3,7 +3,7 @@ import Link from 'next/link';
 import { useRouter } from 'next/router'
 import cls from 'classnames';
 import styles from './index.module.scss';
-import { getActivePage } from '@/src/utils/helpers';
+import { isActiveMenu } from '@/src/utils/helpers';
 import { navbarMenu } from '@/src/utils/constants/links';
 
 
@@ -13,20 +13,14 @@ const Navbar: FC = () => {
   return (
     <nav>
       <ul className={styles.list_wrapper}>
-        {navbarMenu.map((item) => (
+        {navbarMenu.map((item: any) => (
           <li
-            key={item.id}
+            key={item.name}
             className={cls({
-              [styles.active]: getActivePage(router.pathname) === item.id,
+              [styles.active]: isActiveMenu(router.pathname, item.path),
             })}
           >
-            {item.isExternal ? (
-              <a href={item.path} target="_blank" rel="noreferrer">
-                {item.label}
-              </a>
-            ) : (
-              <Link href={item.path}>{item.label}</Link>
-            )}
+            <Link href={item.path}>{item.name}</Link>
           </li>
         ))}
       </ul>

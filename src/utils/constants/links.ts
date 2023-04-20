@@ -8,6 +8,24 @@ import zkIcon from '@/src/assets/icons/docIndex/zk.svg';
 import discordIcon from '@/src/assets/icons/community/discord.svg';
 import githubIcon from '@/src/assets/icons/community/github.svg';
 import telegramIcon from '@/src/assets/icons/community/telegram.svg';
+import menuJson from '@/src/pages/docs/menu.json';
+
+export interface menuItem {
+  name: string
+  path?: string
+  subMenu?: menuItem[]
+}
+
+export const docsMenu = menuJson || [];
+//menus
+export const navbarMenu = [
+  {
+    name: 'Home',
+    path: "/docs",
+  },
+  ...docsMenu
+];
+
 
 export const twitterLink = 'https://twitter.com/theblockless';
 
@@ -83,27 +101,7 @@ export const footerLinks = {
 
 export const loginLink = 'https://dashboard.blockless.network/';
 
-//menus
-export const navbarMenu = [
-  {
-    id: 'documentation',
-    label: 'Documentation',
-    path: docsRoutes.overview,
-    isExternal: false,
-  },
-  {
-    id: 'concepts',
-    label: 'Concepts',
-    path: conceptsRoutes.overview,
-    isExternal: false,
-  },
-  {
-    id: 'reference',
-    label: 'Reference',
-    path: referenceRoutes.overview,
-    isExternal: false,
-  },
-];
+
 
 export const documentationIndexList = [
   {
