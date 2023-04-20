@@ -8,7 +8,145 @@ import zkIcon from '@/src/assets/icons/docIndex/zk.svg';
 import discordIcon from '@/src/assets/icons/community/discord.svg';
 import githubIcon from '@/src/assets/icons/community/github.svg';
 import telegramIcon from '@/src/assets/icons/community/telegram.svg';
-import menuJson from '@/src/pages/docs/menu.json';
+// import menuJson from '@/src/pages/docs/menu.json';
+const menuJson = [
+  {
+    "name": "Protocol",
+    "path": "/docs/protocol",
+    "subMenu": [
+      {
+        "name": "Networking",
+        "path": "/docs/protocol/networking",
+        "subMenu": [
+          {
+            "name": "Selection",
+            "path": "/docs/protocol/networking/selection"
+          },
+          {
+            "name": "Communication",
+            "path": "/docs/protocol/networking/communication"
+          },
+          {
+            "name": "Execution Flow",
+            "path": "/docs/protocol/networking/execution-flow"
+          },
+          {
+            "name": "Execution",
+            "path": "/docs/protocol/networking/execution"
+          },
+          {
+            "name": "Deployment",
+            "path": "/docs/protocol/networking/deployment"
+          },
+          {
+            "name": "Distribution",
+            "path": "/docs/protocol/networking/distribution"
+          },
+          {
+            "name": "Consensus",
+            "path": "/docs/protocol/networking/consensus"
+          }
+        ] 
+      },
+      {
+        "name": "Core Concepts",
+        "path": "/docs/protocol/core-concepts"
+      },
+      {
+        "name": "Runtime",
+        "path": "/docs/protocol/runtime"
+      },
+      {
+        "name": "Security",
+        "path": "/docs/protocol/security",
+        "subMenu": [
+          {
+            "name": "Secret Management",
+            "path": "/docs/protocol/security/secret-management"
+          },
+          {
+            "name": "Runtime Security",
+            "path": "/docs/protocol/security/runtime-security"
+          },
+          {
+            "name": "Result Verifiability",
+            "path": "/docs/protocol/security/result-verifiability"
+          }
+        ]
+      },
+      {
+        "name": "Extension",
+        "path": "/docs/protocol/extension"
+      },
+      {
+        "name": "Account",
+        "path": "/docs/protocol/account"
+      },
+      {
+        "name": "Nodes",
+        "subMenu": [
+          {
+            "name": "Ranking",
+            "path": "/docs/protocol/nodes/ranking"
+          },
+          {
+            "name": "Node Types",
+            "path": "/docs/protocol/nodes/node-types"
+          }
+        ]
+      },
+      {
+        "name": "Economics",
+        "subMenu": [
+          {
+            "name": "Execution Network Economics",
+            "path": "/docs/protocol/economics/execution-network-economics"
+          },
+          {
+            "name": "Orchestration Network Economics",
+            "path": "/docs/protocol/economics/orchestration-network-economics"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Functions",
+    "path": "/docs/functions",
+    "subMenu": [
+      {
+        "name": "Quickstart",
+        "path": "/docs/functions/quick-start"
+      },
+      {
+        "name": "Function Manifest",
+        "path": "/docs/functions/function-manifest"
+      },
+      {
+        "name": "Extensions",
+        "path": "/docs/functions/extensions"
+      },
+      {
+        "name": "Composability",
+        "path": "/docs/functions/composability"
+      },
+      {
+        "name": "Function Types",
+        "path": "/docs/functions/function-types"
+      },
+      {
+        "name": "Tutorials",
+        "path": "/docs/functions/tutorials",
+        "subMenu": [
+          {
+            "name": "Serverless Todo App",
+            "path": "/docs/functions/tutorials/serverless-todo-app"
+          }
+        ]
+      }
+    ]
+  }
+]
 
 export interface menuItem {
   name: string
