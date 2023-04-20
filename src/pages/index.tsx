@@ -18,7 +18,7 @@ const communityList = communityLinks
       : 1;
   });
 
-const Help: FC = () => {
+const Home: FC = () => {
   const router = useRouter();
 
   const handleChangeDocumentation = (link: string | null) => {
@@ -78,4 +78,4 @@ const Help: FC = () => {
   );
 };
 
-export default Help;
+export default Home;

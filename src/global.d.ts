@@ -8,3 +8,5 @@ declare global {
     ): number
   }
 }
+
+declare module '*.json';
