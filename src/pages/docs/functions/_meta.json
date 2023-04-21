@@ -1,0 +1,20 @@
+{
+  "index": {
+    "title": "Overview"
+  },
+  "quick-start": {
+    "title": "Quick Start"
+  },
+  "function-manifest": {
+    "title": "Function Manifest"
+  },
+  "extensions": {
+    "title": "Extensions"
+  },
+  "composability": {
+    "title": "Composability"
+  },
+  "tutorials": {
+    "title": "Tutorials"
+  }
+}

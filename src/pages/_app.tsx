@@ -32,18 +32,9 @@ const useInterceptNextDataHref = ({
 };
 
 const App = ({ Component, pageProps, router }: any) => {
-  const { markdoc }: any = pageProps;
   const getLayout =
     Component.getLayout || ((page: any) => <Layout {...pageProps}>{page}</Layout>);
   const Child = getLayout(<Component {...pageProps} />);
-
-  const title = useMemo(()=>{
-    return (markdoc?.frontmatter?.title ? markdoc.frontmatter.title + " – " : "") + TITLE;
-  },[markdoc])
-
-  const description = useMemo(()=>{
-    return markdoc?.frontmatter?.description || DESCRIPTION;
-  },[markdoc])
 
   useInterceptNextDataHref({
     router,
@@ -52,14 +43,8 @@ const App = ({ Component, pageProps, router }: any) => {
 
   return (
     <>
-      <Head>
-        <title>{title}</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta name="referrer" content="strict-origin" />
-        <meta name="title" content={title} />
-        <meta name="description" content={description} />
-      </Head>
       <Suspense fallback={<>loading...</>}>{Child}</Suspense>
+      {/* <Suspense fallback={<>loading...</>}><Component /></Suspense> */}
     </>
   );
 };
