@@ -1,14 +1,12 @@
-import React, { Suspense, useEffect, useMemo } from "react";
+import React, { Suspense, useEffect } from "react";
 import Layout from "@/src/components/Layout";
-import Head from "next/head";
 import "@/src/styles/globals.css";
 import "@/src/components/DocSearch/style/_variables.css";
 import "@/src/components/DocSearch/style/button.css";
 import "@/src/components/DocSearch/style/modal.css";
+import "@/nextra-theme-docs/css/styles.css"
 import { Router } from "next/router"
-
-const TITLE = "Blockless - Support";
-const DESCRIPTION = "Blockless - Support";
+import Head from "next/head"
 
 const useInterceptNextDataHref = ({
   router,
@@ -43,8 +41,11 @@ const App = ({ Component, pageProps, router }: any) => {
 
   return (
     <>
+      <Head>
+        <title>Blockless - Support</title>
+        <meta name="description" content="Blockless - Support"></meta>
+      </Head>
       <Suspense fallback={<>loading...</>}>{Child}</Suspense>
-      {/* <Suspense fallback={<>loading...</>}><Component /></Suspense> */}
     </>
   );
 };

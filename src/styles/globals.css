@@ -109,20 +109,26 @@ h6 {
 
 .nextra-sidebar-container{
   @media (min-width: 768px){
-    width: 14rem !important;
+    max-width: 14rem !important;
+    top: 122px !important;
   }
 }
 .nextra-sidebar-container .nextra-scrollbar{
   padding-left: 0;
 }
+.nextra-sidebar-container .nx-sticky{
+  margin-left: 0;
+}
 .nextra-content main {
-  padding-left: 5px;
+  padding-left: 10px;
   padding-right: 5px;
 }
 .nextra-toc {
   padding-right: 0 !important;
   width: 14rem !important;
 }
-.nextra-breadcrumb{
-  display: none !important;
+.nextra-toc .nextra-scrollbar{
+  margin-right: -5px !important;
+  padding-right: 30px !important;
+  top: 122px !important;
 }

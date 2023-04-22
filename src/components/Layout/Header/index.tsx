@@ -24,6 +24,10 @@ const Header: FC = () => {
     setShowSearch(['/','/docs'].includes(router.pathname) ? false : true);
   }, [router.pathname]);
 
+  useEffect(()=>{
+    document.body.style.overflow = open ? "hidden" : "initial"
+  }, [open])
+
   return (
     <article className={styles.header_wrapper}>
       <div className={styles.header_logo_wrapper}>
@@ -48,34 +52,32 @@ const Header: FC = () => {
               <span className={styles.support}>Docs</span>
             </Link>
           </div>
-          <div className={styles.search_wrapper}>
-            {!!showSearch && (
-              <DocSearch />
-            )}
-          </div>
-          <div className={styles.menu_wrapper}>
-            <Menu checked={open} handleChangeMenu={() => setOpen(!open)} />
-            <div
-              className={cls(styles.menu_overlay, {
-                [styles.overlay_active]: open,
-              })}
-            >
-              <NavbarMobile />
+          <div className={styles.header_right}>
+            <div className={styles.search_wrapper}>
+              {!!showSearch && (
+                <DocSearch />
+              )}
             </div>
+            <div className={styles.menu_wrapper}>
+              <Menu checked={open} handleChangeMenu={() => setOpen(!open)} />
+              <div
+                className={cls(styles.menu_overlay, {
+                  [styles.overlay_active]: open,
+                })}
+              >
+                <NavbarMobile />
+              </div>
+            </div>
+            <a className={styles.login_button} href={loginLink} target="_blank" rel="noopener noreferrer">
+              <Button label="Login" />
+            </a>
           </div>
-          <a className={styles.login_button} href={loginLink} target="_blank" rel="noopener noreferrer">
-            <Button label="Login" />
-          </a>
+          
         </header>
       </div>
       <div className={styles.header_nav_wrapper}>
         <header>
           <Navbar />
-          {!!showSearch && (
-            <div className={styles.nav_search_wrapper}>
-              <DocSearch />
-            </div>
-          )}
         </header>
       </div>
     </article>

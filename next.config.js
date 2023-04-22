@@ -1,10 +1,9 @@
 const path = require("path");
-const withMarkdoc = require("@markdoc/next.js");
+const nextra = require("nextra");
 
 const nextConfig = {
   webpack: (config) => {
     config.resolve.alias["@"] = path.resolve(__dirname);
-   
     return config;
   },
   pageExtensions: ["md", "mdoc", "js", "jsx", "ts", "tsx"],
@@ -21,10 +20,12 @@ const nextConfig = {
   },
 }
 
-const withNextra = require('nextra')({
+const withNextra = nextra({
+  // theme: './nextra-theme-docs/src/index.tsx',
   theme: 'nextra-theme-docs',
-  themeConfig: './theme.config.jsx',
-  latex: true
+  themeConfig: './theme.config.tsx',
+  latex: true,
+  defaultShowCopyCode: true
 })
  
 module.exports = withNextra(nextConfig)

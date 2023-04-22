@@ -1,5 +1,11 @@
 {
   "*": {
     "type": "page"
+  },
+  "functions": {
+    "title": "Functions"
+  },
+  "protocol": {
+    "title": "Protocol"
   }
 }

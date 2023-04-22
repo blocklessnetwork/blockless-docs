@@ -1,4 +1,8 @@
 {
+  "docs": {
+    "type": "page",
+    "title": "Documentation"
+  },
   "*": {
     "type": "page"
   }
