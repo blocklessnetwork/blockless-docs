@@ -8,8 +8,13 @@ ul.doc_navigation {
   width: 185px;
 
   @media screen and (max-width: $media-md) {
-    margin-left: 24px !important;
-    margin-top: 19px !important;
+    padding: 19px 24px 0 !important;
+    // margin-left: 24px !important;
+    // margin-right: 24px !important;
+    // margin-top: 19px !important;
+    width: 100%;
+    max-width: 100%;
+    overflow-y: scroll;
   }
 
   .nav_item {
@@ -43,10 +48,10 @@ ul.doc_navigation {
         height: 20px;
         margin-right: 4px;
         position: absolute;
-        left: -25px;
+        right: 0;
 
         @media screen and (max-width: $media-sm) {
-          display: none;
+          // display: none;
         }
 
         &.expanded {
