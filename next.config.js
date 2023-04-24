@@ -23,9 +23,13 @@ const nextConfig = {
 const withNextra = nextra({
   // theme: './nextra-theme-docs/src/index.tsx',
   theme: 'nextra-theme-docs',
+  // theme: './theme.tsx',
   themeConfig: './theme.config.tsx',
   latex: true,
-  defaultShowCopyCode: true
+  defaultShowCopyCode: true,
+  // flexSearch: {
+  //   codeblocks: true,
+  // },
 })
  
 module.exports = withNextra(nextConfig)
