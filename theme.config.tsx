@@ -12,9 +12,12 @@ const config: DocsThemeConfig = {
       titleTemplate: '%s – Blockless'
     }
   },
+  nextThemes: {
+    defaultTheme: 'light',
+  },
   sidebar: {
     defaultMenuCollapseLevel: 1,
-    toggleButton: true,
+    toggleButton: false,
   },
   navbar: {
     component: null
