@@ -1,0 +1,14 @@
+{
+	"index": {
+		"title": "Overview"
+	},
+	"dashboard": {
+		"title": "Dashboard"
+	},
+	"cli": {
+		"title": "CLI"
+	},
+	"sdks": {
+		"title": "SDKs"
+	}
+}

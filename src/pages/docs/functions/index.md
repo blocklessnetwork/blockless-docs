@@ -12,4 +12,4 @@ The Blockless Functions platform integrates seamlessly with many services and ex
 
 ## Initial Node Offerings
 
-Functions can be deployed to a fully-customizable service environment that consists of an arbitrary number of worker instances, assembling a function-specific subnetwork or shard. The subnetwork can also be dynamically load-balanced with varying incoming load.
+Functions can be deployed to a targeted group of nodes with specific features (such as a specific NFT ownership). This allows you to assemble a function-specific subnetwork or shard. The subnetwork can also be dynamically load-balanced with varying incoming load.

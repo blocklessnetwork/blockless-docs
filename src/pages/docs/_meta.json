@@ -1,11 +1,17 @@
 {
-  "*": {
-    "type": "page"
-  },
-  "functions": {
-    "title": "Functions"
-  },
-  "protocol": {
-    "title": "Protocol"
-  }
+	"*": {
+		"type": "page"
+	},
+	"protocol": {
+		"title": "Protocol"
+	},
+	"functions": {
+		"title": "Functions"
+	},
+	"developer-tools": {
+		"title": "Developer Tools"
+	},
+	"reference": {
+		"title": "Reference"
+	}
 }
