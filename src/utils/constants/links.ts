@@ -236,11 +236,11 @@ const menuJson = [
 			},
 			{
 				name: 'AssemblyScript SDK',
-				path: '/docs/reference/assemblyscript-sdk',
+				path: '/docs/reference/assemblyscript-sdk/memory',
 				subMenu: [
 					{
 						name: 'Memory',
-						path: '/docs/reference/assemblyscript-sdk/memory',
+						path: '/docs/reference/assemblyscript-sdk/memory/stdin',
 						subMenu: [
 							{
 								name: 'Stdin',
