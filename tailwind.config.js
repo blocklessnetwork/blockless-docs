@@ -13,9 +13,10 @@ const makePrimaryColor =
 module.exports = {
   prefix: 'nx-',
   content: [
-    // "./src/**/*.{js,ts,jsx,tsx,mdx}",
     "./nextra-theme-docs/src/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/**/*.{js,ts,jsx,tsx,mdx}",
+    './node_modules/nextra/dist/icons/*.js',
+    './node_modules/nextra/dist/components/*.js'
   ],
   theme: {
     screens: {

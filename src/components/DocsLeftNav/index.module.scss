@@ -41,24 +41,7 @@ ul.doc_navigation {
       align-items: center;
       position: relative;
 
-      .arrow {
-        transform: rotate(-90deg);
-        min-width: 20px;
-        width: 20px;
-        height: 20px;
-        margin-right: 4px;
-        position: absolute;
-        right: 0;
-
-        @media screen and (max-width: $media-sm) {
-          // display: none;
-        }
-
-        &.expanded {
-          transform: rotate(0deg);
-          transition: transform 0.5s;
-        }
-      }
+      
 
       span {
         font-weight: 400;
@@ -90,6 +73,7 @@ ul.doc_navigation {
         font-size: 16px;
         line-height: 19px;
         color: $primary-gray5;
+        position: relative;
 
         @media screen and (max-width: $media-md) {
           line-height: 22px;
@@ -105,6 +89,26 @@ ul.doc_navigation {
           margin-bottom: 0;
         }
       }
+    }
+  }
+
+  .arrow {
+    transform: rotate(-90deg);
+    min-width: 20px;
+    width: 20px;
+    height: 20px;
+    margin-right: 4px;
+    position: absolute;
+    right: 0;
+    top: 0;
+
+    @media screen and (max-width: $media-sm) {
+      // display: none;
+    }
+
+    &.expanded {
+      transform: rotate(0deg);
+      transition: transform 0.5s;
     }
   }
 }

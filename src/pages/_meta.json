@@ -12,7 +12,7 @@
   "docs": {
     "type": "page",
     "title": "Home",
-    "display": "default",
+    "display": "normal",
     "theme": {
       "layout": "full"
     }
@@ -20,13 +20,25 @@
   "protocol": {
     "type": "page",
     "title": "Protocol",
-    "display": "default",
+    "display": "normal",
     "href": "/docs/protocol"
   },
   "function": {
     "type": "page",
     "title": "Function",
-    "display": "default",
+    "display": "normal",
     "href": "/docs/functions"
+  },
+  "developer-tools": {
+    "type": "page",
+    "title": "Developer Tools",
+    "display": "normal",
+    "href": "/docs/developer-tools"
+  },
+  "reference": {
+    "type": "page",
+    "title": "Reference",
+    "display": "normal",
+    "href": "/docs/reference/networking"
   }
 }

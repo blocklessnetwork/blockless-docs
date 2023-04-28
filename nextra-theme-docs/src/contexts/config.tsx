@@ -14,7 +14,8 @@ type Config<FrontMatterType = FrontMatter> = DocsThemeConfig &
     PageOpts<FrontMatterType>,
     'flexsearch' | 'newNextLinkBehavior' | 'title' | 'frontMatter'
   >
-
+// @ts-ignore
+// eslint-disable-next-line
 const ConfigContext = createContext<Config>({
   title: '',
   frontMatter: {},

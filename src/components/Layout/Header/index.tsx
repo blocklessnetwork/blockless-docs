@@ -88,7 +88,7 @@ const Header: FC<headerProps> = (props) => {
 			</div>
 			<div className={styles.header_nav_wrapper}>
 				<header>
-					<Navbar />
+					<Navbar directories={directories} />
 				</header>
 			</div>
 		</article>
