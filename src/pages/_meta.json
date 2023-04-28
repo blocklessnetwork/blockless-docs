@@ -1,9 +1,32 @@
 {
+  "*": {
+    "display": "hidden"
+  },
+  "index": {
+    "type": "page",
+    "display": "hidden",
+    "theme": {
+      "layout": "full"
+    }
+  },
   "docs": {
     "type": "page",
-    "title": "Documentation"
+    "title": "Home",
+    "display": "default",
+    "theme": {
+      "layout": "full"
+    }
   },
-  "*": {
-    "type": "page"
+  "protocol": {
+    "type": "page",
+    "title": "Protocol",
+    "display": "default",
+    "href": "/docs/protocol"
+  },
+  "function": {
+    "type": "page",
+    "title": "Function",
+    "display": "default",
+    "href": "/docs/functions"
   }
 }

@@ -1,6 +1,9 @@
 {
   "*": {
-    "type": "page"
+    "type": "page",
+    "theme": {
+      "layout": "default"
+    }
   },
   "functions": {
     "title": "Functions"

@@ -120,7 +120,7 @@ export const themeSchema = z.strictObject({
   }),
   search: z.strictObject({
     component: z.custom<
-      ReactNode | FC<{ className?: string; directories: Item[] }>
+      ReactNode | FC<{ className?: string; inputClassName?: string; resultClassName?: string; directories: Item[] }>
     >(...reactNode),
     emptyResult: z.custom<ReactNode | FC>(...reactNode),
     error: z.string().or(z.function().returns(z.string())),
@@ -273,10 +273,10 @@ export const DEFAULT_THEME: DocsThemeConfig = {
     )
   },
   search: {
-    component: function Search({ className, directories }) {
+    component: function Search({ className, inputClassName, resultClassName, directories }) {
       const config = useConfig()
       return config.flexsearch ? (
-        <Flexsearch className={className} />
+        <Flexsearch className={className} inputClassName={inputClassName} resultClassName={resultClassName} />
       ) : (
         <MatchSorterSearch className={className} directories={directories} />
       )

@@ -151,9 +151,13 @@ const loadIndexesImpl = async (
 }
 
 export function Flexsearch({
-  className
+  className,
+  inputClassName,
+  resultClassName
 }: {
   className?: string
+  inputClassName?: string
+  resultClassName?: string
 }): ReactElement {
   const { locale = DEFAULT_LOCALE, basePath } = useRouter()
   const [loading, setLoading] = useState(false)
@@ -292,6 +296,8 @@ export function Flexsearch({
       onChange={handleChange}
       onActive={preload}
       className={className}
+      inputClassName={inputClassName}
+      resultClassName={resultClassName}
       overlayClassName="nx-w-screen nx-min-h-[100px] nx-max-w-[min(calc(100vw-2rem),calc(100%+20rem))]"
       results={results}
     />

@@ -4,7 +4,6 @@ import "@/src/styles/globals.css";
 import "@/src/components/DocSearch/style/_variables.css";
 import "@/src/components/DocSearch/style/button.css";
 import "@/src/components/DocSearch/style/modal.css";
-import "@/nextra-theme-docs/css/styles.css"
 import { Router } from "next/router"
 import Head from "next/head"
 
@@ -30,9 +29,6 @@ const useInterceptNextDataHref = ({
 };
 
 const App = ({ Component, pageProps, router }: any) => {
-  const getLayout =
-    Component.getLayout || ((page: any) => <Layout {...pageProps}>{page}</Layout>);
-  const Child = getLayout(<Component {...pageProps} />);
 
   useInterceptNextDataHref({
     router,
@@ -45,7 +41,7 @@ const App = ({ Component, pageProps, router }: any) => {
         <title>Blockless - Support</title>
         <meta name="description" content="Blockless - Support"></meta>
       </Head>
-      <Suspense fallback={<>loading...</>}>{Child}</Suspense>
+      <Suspense fallback={<>loading...</>}><Component {...pageProps} /></Suspense>
     </>
   );
 };

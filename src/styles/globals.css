@@ -1,12 +1,8 @@
+@import '../../nextra-theme-docs/css/styles.css';
+
 html,
 body {
-  /* height: 100%; */
-  /* padding: 0; */
-  /* margin: 0; */
   font-family: 'Inter', sans-serif;
-  /* overflow-x: hidden; */
-  /* overflow-y: auto; */
-  /* -webkit-overflow-scrolling: touch; */
 }
 
 body::-webkit-scrollbar {
@@ -17,12 +13,6 @@ body::-webkit-scrollbar {
 *::before,
 *::after {
   box-sizing: border-box;
-}
-
-ul[class],
-ol[class] {
-  list-style: none;
-  padding: 0;
 }
 
 body,

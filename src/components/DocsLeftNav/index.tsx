@@ -6,17 +6,21 @@ import Link from "next/link";
 import arrowIcon from "@/src/assets/icons/arrow-down.svg";
 import AnimateHeight from "react-animate-height";
 import { useRouter } from "next/router";
-
 import { docsMenu, menuItem } from "@/src/utils/constants/links";
+import type { PageItem } from 'nextra/normalize-pages'
 
-const DocsLeftNav: FC = () => {
+interface docsLeftNavProps {
+	docsDirectories: PageItem[]
+}
+const DocsLeftNav: FC<docsLeftNavProps> = (props) => {
+  const { docsDirectories } = props;
   const router = useRouter();
-
+  // console.log('DocsLeftNav docsDirectories', docsDirectories)
   const [selected, setSelected] = useState("");
 
-  const selectHandle = (menu: menuItem) => {
-    if (menu.path && !menu.subMenu) router.push(menu.path);
-    setSelected(menu.name === selected ? '' : menu.name)
+  const selectHandle = (menu: PageItem) => {
+    if (menu.route && !menu.children) router.push(menu.route);
+    setSelected(menu.route === selected ? '' : menu.route)
   };
 
   const leftNav = useMemo(() => {
@@ -42,41 +46,41 @@ const DocsLeftNav: FC = () => {
 
   return (
     <ul className={styles.doc_navigation}>
-      {leftNav.map((item: menuItem) => (
+      {docsDirectories.filter(v=>v.isUnderCurrentDocsTree).map((item: PageItem) => (
         <li
-          key={item.name}
+          key={item.route}
           className={cls(styles.nav_item, {
-            [styles.selected_nav]: 
-              (!item.subMenu && selected === item.name) ||
-              router.pathname === item.path,
+            [styles.selected_nav]: selected === item.route
+              // (!item.children && selected === item.name) ||
+              // router.pathname === item.route,
           })}
         >
           <p
             className={styles.item_wrapper}
             onClick={() => selectHandle(item)}
           >
-            {item.subMenu && (
+            {item.children && (
               <Image
                 src={arrowIcon}
                 alt="arrow icon"
                 className={cls(styles.arrow, {
-                  [styles.expanded]: selected === item.name,
+                  [styles.expanded]: selected === item.route,
                 })}
               />
             )}
-            <span>{item.name}</span>
+            <span>{item.title}</span>
           </p>
-          <AnimateHeight height={selected === item.name ? "auto" : 0}>
-            {item.subMenu && (
+          <AnimateHeight height={selected === item.route ? "auto" : 0}>
+            {item.children && (
               <ul className={styles.inner_wrapper}>
-                {item.subMenu?.map((el: menuItem) => (
+                {item.children?.map((el: PageItem) => (
                   <li
-                    key={`${item.name}-${el.name}`}
+                    key={el.route}
                     className={cls(styles.inner_nav_item, {
-                      [styles.selected]: router.pathname === el.path,
+                      [styles.selected]: router.pathname === el.route,
                     })}
                   >
-                    <Link href={el.path as string}>{el.name}</Link>
+                    <Link href={el.route as string}>{el.title}</Link>
                   </li>
                 ))}
               </ul>

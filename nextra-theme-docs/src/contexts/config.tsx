@@ -18,7 +18,7 @@ type Config<FrontMatterType = FrontMatter> = DocsThemeConfig &
 const ConfigContext = createContext<Config>({
   title: '',
   frontMatter: {},
-  ...DEFAULT_THEME
+  // ...DEFAULT_THEME
 })
 
 export function useConfig<FrontMatterType = FrontMatter>() {
