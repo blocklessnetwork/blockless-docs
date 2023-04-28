@@ -22,7 +22,7 @@
     top: 0;
     left: 50%;
     transform: translateX(-50%);
-    background: url("../assets/imgs/help/header-mask.svg") no-repeat;
+    background: url("../../assets/imgs/help/header-mask.svg") no-repeat;
     background-size: 1920px 453px;
     background-position: center bottom;
 
@@ -32,7 +32,7 @@
 
     @media screen and (max-width: $media-sm) {
       padding-bottom: 68px;
-      background: url("../assets/imgs/help/header-mask-sm.svg") no-repeat;
+      background: url("../../assets/imgs/help/header-mask-sm.svg") no-repeat;
       background-size: 1259px 297px;
       background-position: center top;
     }
@@ -266,7 +266,7 @@
       .link_icon {
         width: 25px;
         height: 25px;
-        background: url("../assets/icons/link-blank.svg") no-repeat center;
+        background: url("../../assets/icons/link-blank.svg") no-repeat center;
         background-size: 13px 13px;
       }
     }

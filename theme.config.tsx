@@ -35,6 +35,7 @@ const config: DocsThemeConfig = {
   editLink: {
     text: 'Edit this page on GitHub'
   },
+  darkMode: false
 }
 
 export default config;

@@ -6,7 +6,7 @@ const nextConfig = {
     config.resolve.alias["@"] = path.resolve(__dirname);
     return config;
   },
-  pageExtensions: ["md", "mdoc", "js", "jsx", "ts", "tsx"],
+  pageExtensions: ["md", "mdx", "js", "jsx", "ts", "tsx"],
   assetPrefix: '/docs',
   async rewrites() {
     return {
@@ -21,11 +21,11 @@ const nextConfig = {
 }
 
 const withNextra = nextra({
-  // theme: './nextra-theme-docs/src/index.tsx',
-  theme: 'nextra-theme-docs',
+  // theme: 'nextra-theme-docs',
+  theme: './theme.tsx',
   themeConfig: './theme.config.tsx',
   latex: true,
-  defaultShowCopyCode: true
+  defaultShowCopyCode: true,
 })
  
 module.exports = withNextra(nextConfig)

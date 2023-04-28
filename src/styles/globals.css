@@ -1,12 +1,8 @@
+@import '../../nextra-theme-docs/css/styles.css';
+
 html,
 body {
-  /* height: 100%; */
-  /* padding: 0; */
-  /* margin: 0; */
   font-family: 'Inter', sans-serif;
-  /* overflow-x: hidden; */
-  /* overflow-y: auto; */
-  /* -webkit-overflow-scrolling: touch; */
 }
 
 body::-webkit-scrollbar {
@@ -117,9 +113,6 @@ h6 {
 }
 .nextra-sidebar-container .nx-sticky{
   margin-left: 0;
-}
-.nextra-sidebar-container .nx-sticky.nx-bottom-0{
-  display: none;
 }
 .nextra-content main {
   padding-left: 10px;

@@ -21,6 +21,8 @@ import type { SearchResult } from '../types'
 
 type SearchProps = {
   className?: string
+  inputClassName?: string
+  resultClassName?: string
   overlayClassName?: string
   value: string
   onChange: (newValue: string) => void
@@ -34,7 +36,9 @@ const INPUTS = ['input', 'select', 'button', 'textarea']
 
 export function Search({
   className,
+  inputClassName,
   overlayClassName,
+  resultClassName,
   value,
   onChange,
   onActive,
@@ -195,6 +199,7 @@ export function Search({
       )}
 
       <Input
+        className={inputClassName}
         ref={input}
         value={value}
         onChange={e => {
@@ -229,11 +234,12 @@ export function Search({
             // Using bg-white as background-color when the browser didn't support backdrop-filter
             'nx-border nx-border-gray-200 nx-bg-white nx-text-gray-100 dark:nx-border-neutral-800 dark:nx-bg-neutral-900',
             'nx-absolute nx-top-full nx-z-20 nx-mt-2 nx-overflow-auto nx-overscroll-contain nx-rounded-xl nx-py-2.5 nx-shadow-xl',
-            'nx-max-h-[min(calc(50vh-11rem-env(safe-area-inset-bottom)),400px)]',
+            'nx-max-h-[min(calc(80vh-11rem-env(safe-area-inset-bottom)),400px)]',
             'md:nx-max-h-[min(calc(100vh-5rem-env(safe-area-inset-bottom)),400px)]',
             'nx-inset-x-0 ltr:md:nx-left-auto rtl:md:nx-right-auto',
             'contrast-more:nx-border contrast-more:nx-border-gray-900 contrast-more:dark:nx-border-gray-50',
-            overlayClassName
+            overlayClassName,
+            resultClassName,
           )}
           ref={ulRef}
           style={{

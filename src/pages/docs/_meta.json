@@ -1,8 +1,11 @@
 {
-	"*": {
-		"type": "page"
-	},
-	"protocol": {
+  "*": {
+    "type": "page",
+    "theme": {
+      "layout": "default"
+    }
+  },
+  "protocol": {
 		"title": "Protocol"
 	},
 	"functions": {
