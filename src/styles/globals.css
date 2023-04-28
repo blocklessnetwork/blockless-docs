@@ -15,6 +15,11 @@ body::-webkit-scrollbar {
   box-sizing: border-box;
 }
 
+ul, ol{
+  list-style: none;
+  padding: 0;
+}
+
 body,
 h1,
 h2,
@@ -109,6 +114,9 @@ h6 {
 .nextra-sidebar-container .nx-sticky{
   margin-left: 0;
 }
+.nextra-sidebar-container .nx-sticky.nx-bottom-0{
+  display: none;
+}
 .nextra-content main {
   padding-left: 10px;
   padding-right: 5px;
@@ -122,3 +130,11 @@ h6 {
   padding-right: 30px !important;
   top: 122px !important;
 }
+.nextra-content .-nx-mt-20{
+  margin-top: -5rem;
+  @media (min-width: 768px){
+    margin-top: -130px;
+  }
+}
+
+

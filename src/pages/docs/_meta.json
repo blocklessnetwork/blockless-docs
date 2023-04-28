@@ -5,10 +5,16 @@
       "layout": "default"
     }
   },
-  "functions": {
-    "title": "Functions"
-  },
   "protocol": {
-    "title": "Protocol"
-  }
+		"title": "Protocol"
+	},
+	"functions": {
+		"title": "Functions"
+	},
+	"developer-tools": {
+		"title": "Developer Tools"
+	},
+	"reference": {
+		"title": "Reference"
+	}
 }

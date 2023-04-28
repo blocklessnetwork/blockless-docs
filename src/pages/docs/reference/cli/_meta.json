@@ -1,0 +1,20 @@
+{
+	"identity-and-account": {
+		"title": "Identity and Account"
+	},
+	"components": {
+		"title": "Components"
+	},
+	"functions": {
+		"title": "Functions"
+	},
+	"help": {
+		"title": "Help"
+	},
+	"update": {
+		"title": "Update"
+	},
+	"dashboard": {
+		"title": "Dashboard"
+	}
+}

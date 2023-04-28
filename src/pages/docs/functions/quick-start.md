@@ -87,4 +87,4 @@ You will be able to view your deployed function either via the `bls function lis
 
 ## Next Steps
 
-To do more with Blockless Functions, explore the [Tutorials](./tutorials/index.md).
+To do more with Blockless Functions, explore the [tutorials](./tutorials/).

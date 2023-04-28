@@ -5,13 +5,13 @@ Blockless utilizes a configuration file called `bls.toml` to enable customizatio
 Here, you can find a sample `bls.toml` file that is generated when you run the `bls function init` command to create a new `Hello World` project.
 
 ```toml
-name = "yodelling-coffee-pony"
+name = “my-function"
 type = "function"
 version = "1.0.0"
 content_type = "json"
 
 [deployment]
-nodes = 4 
+nodes = 4
 permissions = [
   "https://bsc-dataseed.binance.org",
   "https://api.coingecko.com",
@@ -20,12 +20,12 @@ permissions = [
 
 [build]
 dir = "build"
-entry = "yodelling-coffee-pony_debug.wasm"
+entry = “my-function_debug.wasm"
 command = "npm run build:debug"
 
 [build_release]
 dir = "build"
-entry = "yodelling-coffee-pony.wasm"
+entry = “my-function.wasm"
 command = "npm run build:release"
 ```
 
@@ -34,25 +34,25 @@ command = "npm run build:release"
 In the top-level configuration, you can define your function’s name and version.
 
 ```jsx
-name = "yodelling-coffee-pony"
+name = “my-function"
 type = "function"
 version = "1.0.0"
 content_type = "json"
 ```
 
-### name `string`  `Required`
+### name `string` `Required`
 
 The `name` property is a string that represents the unique identifier for your function or site.
 
-### version `string`  `Optional`
+### version `string` `Optional`
 
 The `version` property is an optional string that represents the version of your function or site.
 
-### type `string`  `Optional`
+### type `string` `Optional`
 
 The `type` property is an optional string that determines the type of deployment. Currently, the type field can be either `"function"` or `"site"`. If not provided, it defaults to `"function"`.
 
-### content_type `string`  `Optional`
+### content_type `string` `Optional`
 
 The `content_type` property is an optional string that defines the content type for the response returned by your function or site. Some type examples are: `"json"`, `"html"`, or `"text"`. If not provided, it defaults to `"text"`.
 
@@ -62,7 +62,7 @@ The deployment section is used to specify the deployment settings for the applic
 
 ```toml
 [deployment]
-nodes = 4 
+nodes = 4
 permissions = [
   "https://bsc-dataseed.binance.org",
   "https://api.coingecko.com",
@@ -85,12 +85,12 @@ The build configuration is used to specify the build settings for the applicatio
 ```toml
 [build]
 dir = "build"
-entry = "yodelling-coffee-pony_debug.wasm"
+entry = “my-function_debug.wasm"
 command = "npm run build:debug"
 
 [build_release]
 dir = "build"
-entry = "yodelling-coffee-pony.wasm"
+entry = “my-function.wasm"
 command = "npm run build:release"
 ```
 

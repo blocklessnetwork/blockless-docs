@@ -1,20 +1,20 @@
 {
-  "index": {
-    "title": "Overview"
-  },
-  "quick-start": {
-    "title": "Quick Start"
-  },
-  "function-manifest": {
-    "title": "Function Manifest"
-  },
-  "extensions": {
-    "title": "Extensions"
-  },
-  "composability": {
-    "title": "Composability"
-  },
-  "tutorials": {
-    "title": "Tutorials"
-  }
+	"index": {
+		"title": "Overview"
+	},
+	"quick-start": {
+		"title": "Quick Start"
+	},
+	"function-manifest": {
+		"title": "Function Manifest"
+	},
+	"extensions": {
+		"title": "Extensions"
+	},
+	"functions-workflow": {
+		"title": "Functions Workflow"
+	},
+	"tutorials": {
+		"title": "Tutorials"
+	}
 }
