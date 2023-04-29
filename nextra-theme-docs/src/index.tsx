@@ -90,7 +90,7 @@ const Body = ({
 				themeContext.typesetting === 'article' && 'nextra-body-typesetting-article'
 			)}
 		>
-			<main className="nx-w-full nx-min-w-0 nx-max-w-6xl nx-pl-[10px] nx-pr-[5px]">
+			<main className="nx-w-full nx-min-w-0 nx-max-w-6xl nx-pl-[10px] nx-pr-[5px] nx-pt-4">
 				{breadcrumb}
 				{body}
 			</main>
