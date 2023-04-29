@@ -2,11 +2,11 @@
   "index": {
     "title": "Overview"
   },
-  "networking": {
-    "title": "Networking"
-  },
   "core-concepts": {
     "title": "Core Concepts"
+  },
+  "networking": {
+    "title": "Networking"
   },
   "runtime": {
     "title": "Runtime Environment"
