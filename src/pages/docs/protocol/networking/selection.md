@@ -1,4 +1,4 @@
-# **Execution Node Selection Algorithm Overview**
+# Execution Node Selection Algorithm Overview
 
 The central algorithm can be condensed into the following steps:
 
@@ -51,7 +51,7 @@ The simulated annealing process then commences, involving the iterative selectio
 
 As the temperature diminishes, the algorithm becomes increasingly inclined to accept only candidate computers with superior suitability scores, eventually converging to the most suitable computer. This methodology ensures that the algorithm can explore various computers before settling on the optimal choice according to the specified filters. This approach effectively balances the exploration and exploitation aspects of the selection process, leading to an efficient and robust computer selection algorithm.
 
-# **Execution Node Selection Workflow Overview**
+## Execution Node Selection Workflow Overview
 
 This diagram shows the process of filtering computers in the Blockless network based on selection criteria to create a list of eligible computers.
 
