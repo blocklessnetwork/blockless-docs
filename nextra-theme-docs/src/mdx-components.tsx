@@ -58,7 +58,7 @@ function HeadingLink({
       {...props}
     >
       {children}
-      <span className="nx-absolute -nx-mt-20" id={id} ref={obRef} />
+      <span className="nx-absolute -nx-mt-[130] max-md:-nx-mt-[80]" id={id} ref={obRef} />
       <a
         href={`#${id}`}
         className="subheading-anchor"

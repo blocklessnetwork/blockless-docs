@@ -392,10 +392,10 @@ export function Sidebar({
       <aside
         className={cn(
           'nextra-sidebar-container nx-flex nx-flex-col',
-          'md:nx-top-16 md:nx-shrink-0 motion-reduce:nx-transform-none',
+          'md:nx-top-[122px] md:nx-shrink-0 motion-reduce:nx-transform-none',
           'nx-transform-gpu nx-transition-all nx-ease-in-out',
           'print:nx-hidden',
-          showSidebar ? 'md:nx-w-64' : 'md:nx-w-20',
+          showSidebar ? 'md:nx-w-60' : 'md:nx-w-20',
           asPopover ? 'md:nx-hidden' : 'md:nx-sticky md:nx-self-start',
           menu
             ? 'max-md:[transform:translate3d(0,0,0)]'
@@ -417,7 +417,7 @@ export function Sidebar({
             <div
               className={cn(
                 'nx-overflow-y-auto nx-overflow-x-hidden',
-                'nx-p-4 nx-grow md:nx-h-[calc(100vh-var(--nextra-navbar-height)-var(--nextra-menu-height))]',
+                'nx-p-4 nx-px-[0] nx-grow md:nx-h-[calc(100vh-var(--nextra-navbar-height)-var(--nextra-menu-height))]',
                 showSidebar ? 'nextra-scrollbar' : 'no-scrollbar'
               )}
               ref={sidebarRef}
@@ -452,7 +452,7 @@ export function Sidebar({
             className={cn(
               'nx-sticky nx-bottom-0',
               'nx-bg-white dark:nx-bg-dark', // when banner is showed, sidebar links can be behind menu, set bg color as body bg color
-              'nx-mx-4 nx-py-4 nx-shadow-[0_-12px_16px_#fff]',
+              'nx-mx-4 nx-ml-[0] nx-py-4 nx-shadow-[0_-12px_16px_#fff]',
               'nx-flex nx-items-center nx-gap-2',
               'dark:nx-border-neutral-800 dark:nx-shadow-[0_-12px_16px_#111]',
               'contrast-more:nx-border-neutral-400 contrast-more:nx-shadow-none contrast-more:dark:nx-shadow-none',
