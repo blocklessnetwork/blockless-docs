@@ -2,8 +2,7 @@
   "*": {
     "type": "page",
     "theme": {
-      "layout": "default",
-      "timestamp": true
+      "layout": "default"
     }
   },
   "protocol": {

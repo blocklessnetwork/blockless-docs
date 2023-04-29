@@ -7,8 +7,7 @@
     "title": "Home",
     "display": "hidden",
     "theme": {
-      "layout": "full",
-      "timestamp": false
+      "layout": "full"
     }
   },
   "docs": {
@@ -16,8 +15,7 @@
     "title": "Home",
     "display": "normal",
     "theme": {
-      "layout": "full",
-      "timestamp": false
+      "layout": "full"
     }
   },
   "protocol": {

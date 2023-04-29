@@ -40,7 +40,24 @@ const config: DocsThemeConfig = {
   editLink: {
     text: 'Edit this page on GitHub'
   },
-  darkMode: false
+  darkMode: false,
+  gitTimestamp: ({ timestamp }) => {
+    const { locale = 'en-US', pathname } = useRouter()
+    console.log("pathname",pathname)
+    if(!pathname.startsWith('/docs/')) return null;
+    return (
+      <>
+        Last updated on{' '}
+        <time dateTime={timestamp.toISOString()}>
+          {timestamp.toLocaleDateString(locale, {
+            day: 'numeric',
+            month: 'long',
+            year: 'numeric'
+          })}
+        </time>
+      </>
+    )
+  },
 }
 
 export default config;
