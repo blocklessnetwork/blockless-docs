@@ -43,7 +43,6 @@ const config: DocsThemeConfig = {
   darkMode: false,
   gitTimestamp: ({ timestamp }) => {
     const { locale = 'en-US', pathname } = useRouter()
-    console.log("pathname",pathname)
     if(!pathname.startsWith('/docs/')) return null;
     return (
       <>
