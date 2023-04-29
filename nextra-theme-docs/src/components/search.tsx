@@ -166,6 +166,7 @@ export function Search({
           'nx-border dark:nx-border-gray-100/20 dark:nx-bg-dark/50',
           'contrast-more:nx-border-current contrast-more:nx-text-current contrast-more:dark:nx-border-current',
           'nx-items-center nx-gap-1 nx-transition-opacity',
+          'max-sm:nx-hidden',
           value
             ? 'nx-z-20 nx-flex nx-cursor-pointer hover:nx-opacity-70'
             : 'nx-pointer-events-none nx-hidden sm:nx-flex'

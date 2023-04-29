@@ -288,10 +288,10 @@ export const DEFAULT_THEME: DocsThemeConfig = {
     ),
     error: 'Failed to load search index.',
     loading: function useLoading() {
-      const { locale } = useRouter()
-      if (locale === 'zh-CN') return '正在加载…'
-      if (locale === 'ru') return 'Загрузка…'
-      if (locale === 'fr') return 'Сhargement…'
+      // const { locale } = useRouter()
+      // if (locale === 'zh-CN') return '正在加载…'
+      // if (locale === 'ru') return 'Загрузка…'
+      // if (locale === 'fr') return 'Сhargement…'
       return 'Loading…'
     },
     placeholder: function usePlaceholder() {

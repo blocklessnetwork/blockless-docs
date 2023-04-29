@@ -100,38 +100,3 @@ h6 {
   align-items: center;
   justify-content: center;
 }
-
-
-.nextra-sidebar-container{
-  @media (min-width: 768px){
-    max-width: 14rem !important;
-    top: 122px !important;
-  }
-}
-.nextra-sidebar-container .nextra-scrollbar{
-  padding-left: 0;
-}
-.nextra-sidebar-container .nx-sticky{
-  margin-left: 0;
-}
-.nextra-content main {
-  padding-left: 10px;
-  padding-right: 5px;
-}
-.nextra-toc {
-  padding-right: 0 !important;
-  width: 14rem !important;
-}
-.nextra-toc .nextra-scrollbar{
-  margin-right: -5px !important;
-  padding-right: 30px !important;
-  top: 122px !important;
-}
-.nextra-content .-nx-mt-20{
-  margin-top: -5rem;
-  @media (min-width: 768px){
-    margin-top: -130px;
-  }
-}
-
-

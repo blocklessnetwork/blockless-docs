@@ -1,16 +1,21 @@
 import type { DocsThemeConfig} from 'nextra-theme-docs';
+import { useConfig } from '@/nextra-theme-docs/src/contexts'
+import { useRouter } from 'next/router'
 
 const config: DocsThemeConfig = {
-  // logo: <span>My Nextra Documentation</span>,
-  // project: {
-  //   link: 'https://github.com/blocklessnetwork/blockless-support-review',
-  // },
   docsRepositoryBase: 'https://github.com/blocklessnetwork/blockless-support-review/blob/main',
-  // flexsearch: true,
   useNextSeoProps() {
+    const { asPath } = useRouter()
     return {
-      titleTemplate: '%s – Blockless'
+      titleTemplate: asPath === '/' ? 'Docs – Blockless' : '%s – Blockless'
     }
+  },
+  head: () => {
+    const { frontMatter } = useConfig()
+    return <>
+      <meta property="og:title" content={frontMatter.title || 'Blockless Docs'} />
+      <meta property="og:description" content={frontMatter.description || 'Blockless Docs'} />
+    </>
   },
   nextThemes: {
     defaultTheme: 'light',

@@ -4,9 +4,11 @@
   },
   "index": {
     "type": "page",
+    "title": "Home",
     "display": "hidden",
     "theme": {
-      "layout": "full"
+      "layout": "full",
+      "timestamp": false
     }
   },
   "docs": {
@@ -14,7 +16,8 @@
     "title": "Home",
     "display": "normal",
     "theme": {
-      "layout": "full"
+      "layout": "full",
+      "timestamp": false
     }
   },
   "protocol": {

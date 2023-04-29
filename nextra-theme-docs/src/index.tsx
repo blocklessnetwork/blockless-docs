@@ -28,7 +28,7 @@ interface BodyProps {
 }
 
 const classes = {
-	toc: cn('nextra-toc nx-order-last nx-hidden nx-w-64 nx-shrink-0 xl:nx-block print:nx-hidden'),
+	toc: cn('nextra-toc nx-order-last nx-hidden nx-w-56 nx-shrink-0 xl:nx-block print:nx-hidden'),
 	main: cn('nx-w-full nx-break-words')
 }
 
@@ -90,7 +90,7 @@ const Body = ({
 				themeContext.typesetting === 'article' && 'nextra-body-typesetting-article'
 			)}
 		>
-			<main className="nx-w-full nx-min-w-0 nx-max-w-6xl nx-px-6 nx-pt-4 md:nx-px-12">
+			<main className="nx-w-full nx-min-w-0 nx-max-w-6xl nx-pl-[10px] nx-pr-[5px]">
 				{breadcrumb}
 				{body}
 			</main>
@@ -142,7 +142,7 @@ const InnerLayout = ({
 				<nav className={classes.toc} aria-label="table of contents" />
 			)
 		) : (
-			<nav className={cn(classes.toc, 'nx-px-4')} aria-label="table of contents">
+			<nav className={cn(classes.toc, 'nx-pl-4')} aria-label="table of contents">
 				{renderComponent(config.toc.component, {
 					headings: config.toc.float ? headings : [],
 					filePath
