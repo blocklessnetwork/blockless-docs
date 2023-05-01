@@ -87,6 +87,7 @@
       margin: 59px auto 0;
       position: relative;
       box-shadow: 0px 0px 17px rgba(228, 64, 255, 0.36);
+      border-radius: 8px;
 
       @media screen and (max-width: $media-sm) {
         width: 344px;

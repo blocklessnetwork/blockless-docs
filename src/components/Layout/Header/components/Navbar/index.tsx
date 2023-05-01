@@ -14,24 +14,24 @@ const Navbar: FC<NavbarProps> = (props) => {
 	const router = useRouter()
 
 	return (
-		<nav>
-			<ul className={styles.list_wrapper}>
-				{directories.map((item: any) => {
-           // @ts-ignore
-          const path = item.href || item.route;
-					return (
-						<li
-							key={item.name}
-							className={cls({
-								[styles.active]: isActiveMenu(router.pathname, path)
-							})}
-						>
-							<Link href={path}>{item.title}</Link>
-						</li>
-					)
-				})}
-			</ul>
-		</nav>
+		<ul className={styles.list_wrapper}>
+			{directories.map((item: any) => {
+				// @ts-ignore
+				const path = item.href || item.route
+        const isActive = isActiveMenu(router.pathname, path)
+				return (
+					<li
+						key={item.name}
+						className={cls({
+							[styles.active]: isActive
+						})}
+					>
+						<Link href={path}>{item.title}</Link>
+            <div className={styles.line} />
+					</li>
+				)
+			})}
+		</ul>
 	)
 }
 
