@@ -60,7 +60,7 @@ const Header: FC<headerProps> = (props) => {
 									{renderComponent(config.search.component, {
 										directories: [],
 										// className: 'nx-hidden md:nx-inline-block mx-min-w-[200px]',
-                    resultClassName: "!nx-top-[calc(100%_+_8px)] max-md:nx-max-w-full"
+                    resultClassName: "!nx-top-[calc(100%_+_8px)] max-md:nx-max-w-full !nx-bg-white !nx-backdrop-filter-none"
 									})}
 								</>
 							)}
