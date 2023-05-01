@@ -24,14 +24,16 @@ const NavbarMobile: FC<navMobileProps> = (props) => {
         {directories.map((item) => {
           // @ts-ignore
           const path = item.href || item.route
+          const isActive = isActiveMenu(router.pathname, path)
           return (
             <li
               key={item.name}
               className={cls(styles.menu_item, {
-                [styles.active]: isActiveMenu(router.pathname, path)
+                [styles.active]: isActive
               })}
             >
               <Link href={path}>{item.title}</Link>
+              <div className={styles.line} />
             </li>
           )
         })}

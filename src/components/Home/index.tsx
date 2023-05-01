@@ -34,7 +34,7 @@ const Home: FC = () => {
 				<div className={styles.search_box}>
 					{renderComponent(config.search.component, {
 						directories: [],
-						className: 'md:nx-w-full nx-w-full nx-h-full nx-border nx-border-solid nx-border-[#d0d5df]',
+						className: 'md:nx-w-full nx-w-full nx-h-full nx-border nx-border-solid nx-border-[#d0d5df] nx-rounded-[8px]',
             inputClassName: "nx-bg-white",
             resultClassName: "!nx-max-w-full !nx-top-[calc(100%_+_8px)]"
 					})}
