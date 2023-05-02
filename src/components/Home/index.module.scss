@@ -85,8 +85,7 @@
 			}
 			.search_bg {
 				position: absolute;
-				width: 676px;
-        // width: 100%;
+        width: calc(100% + 70px);
 				max-width: 676px;
 				height: 133px;
 				top: 50%;
@@ -94,8 +93,11 @@
 				transform: translateX(-50%) translateY(-50%);
 				background: url('../../assets/imgs/home/input-bg.svg') no-repeat center;
 				background-size: 100% 100%;
+        @media screen and (max-width: $media-md) {
+          width: calc(100% + 10px);
+        }
 				@media screen and (max-width: $media-sm) {
-					width: 375px;
+          width: 100%;
 					background: url('../../assets/imgs/home/input-bg-sm.svg') no-repeat center;
 					background-size: 100% 100%;
 				}
