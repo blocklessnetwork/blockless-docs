@@ -29,6 +29,7 @@ const Home: FC = () => {
 					Discover solutions in our <strong>documentation</strong> and <strong>community</strong>
 				</p>
 				<div className={styles.search_box}>
+					<div className={styles.search_bg} />
 					{renderComponent(config.search.component, {
 						directories: [],
 						className:
@@ -40,34 +41,36 @@ const Home: FC = () => {
 			</div>
 
 			<div className={styles.product_wrapper}>
-				<div className={classname(styles.product_item, styles.protocol)}>
-					<Link href="/docs/protocol">
+				<div className={styles.row}>
+					<Link href="/docs/protocol" className={classname(styles.product_item, styles.protocol)}>
 						<div className={styles.title}>Protocol</div>
 						<div className={styles.desc}>
 							Discover the next generation decentralized network optimized for verifiable
 							computation
 						</div>
 					</Link>
-				</div>
-				<div className={classname(styles.product_item, styles.functions)}>
-					<Link href="/docs/functions">
+					<Link href="/docs/functions" className={classname(styles.product_item, styles.functions)}>
 						<div className={styles.title}>Functions</div>
 						<div className={styles.desc}>
 							Get started and deploy your first application on Blockless
 						</div>
 					</Link>
 				</div>
-				<div className={classname(styles.product_item, styles.developer)}>
-					<Link href="/docs/developer-tools">
+				<div className={styles.row}>
+					<Link
+						href="/docs/developer-tools"
+						className={classname(styles.product_item, styles.developer)}
+					>
 						<div className={styles.title}>Developer Tools</div>
 						<div className={styles.desc}>
 							Learn how to use the Blockless Dashboard, CLI, and SDKs to help you build, test, and
 							manage your Blockless applications
 						</div>
 					</Link>
-				</div>
-				<div className={classname(styles.product_item, styles.references)}>
-					<Link href="/docs/reference/networking">
+					<Link
+						href="/docs/reference/networking"
+						className={classname(styles.product_item, styles.references)}
+					>
 						<div className={styles.title}>References</div>
 						<div className={styles.desc}>Look up references for CLI or extension integrations</div>
 						<Image className={styles.block_icon} src={referencesBlockIcon} alt="icon" />
