@@ -2,9 +2,12 @@ import { FC } from 'react'
 import styles from './index.module.scss'
 import { useRouter } from 'next/router'
 import Image from 'next/image'
+import Link from 'next/link'
+import classname from 'classnames'
 import { communityLinks, documentationIndexList } from '@/src/utils/constants/links'
 import { useConfig } from '@/nextra-theme-docs/src/contexts'
 import { renderComponent } from '@/nextra-theme-docs/src/utils'
+import referencesBlockIcon from '@/src/assets/imgs/home/references_block.svg'
 
 const communityKeys = ['github', 'discord', 'telegram']
 const communityList = communityLinks
@@ -16,13 +19,7 @@ const communityList = communityLinks
 	})
 
 const Home: FC = () => {
-	const router = useRouter()
-  const config = useConfig()
-
-	const handleChangeDocumentation = (link: string | null) => {
-		if (!link) return
-		router.push(link)
-	}
+	const config = useConfig()
 
 	return (
 		<div className={styles.wrapper}>
@@ -32,45 +29,68 @@ const Home: FC = () => {
 					Discover solutions in our <strong>documentation</strong> and <strong>community</strong>
 				</p>
 				<div className={styles.search_box}>
+					<div className={styles.search_bg} />
 					{renderComponent(config.search.component, {
 						directories: [],
-						className: 'md:nx-w-full nx-w-full nx-h-full nx-border nx-border-solid nx-border-[#d0d5df] nx-rounded-[8px]',
-            inputClassName: "nx-bg-white",
-            resultClassName: "!nx-max-w-full !nx-top-[calc(100%_+_8px)]"
+						className:
+							'md:nx-w-full nx-w-full nx-h-full nx-border nx-border-solid nx-border-[#d0d5df] nx-rounded-[8px]',
+						inputClassName: 'nx-bg-white',
+						resultClassName: '!nx-max-w-full !nx-top-[calc(100%_+_8px)]'
 					})}
 				</div>
 			</div>
 
-			<h3 className={styles.documentations_title}>Browse documentation by product</h3>
-			<div className={styles.documentations_wrapper}>
-				{documentationIndexList.map((item) => (
-					<div
-						className={styles.item}
-						key={item.id}
-						onClick={() => handleChangeDocumentation(item.link)}
+			<div className={styles.product_wrapper}>
+				<div className={styles.row}>
+					<Link href="/docs/protocol" className={classname(styles.product_item, styles.protocol)}>
+						<div className={styles.title}>Protocol</div>
+						<div className={styles.desc}>
+							Discover the next generation decentralized network optimized for verifiable
+							computation
+						</div>
+					</Link>
+					<Link href="/docs/functions" className={classname(styles.product_item, styles.functions)}>
+						<div className={styles.title}>Functions</div>
+						<div className={styles.desc}>
+							Get started and deploy your first application on Blockless
+						</div>
+					</Link>
+				</div>
+				<div className={styles.row}>
+					<Link
+						href="/docs/developer-tools"
+						className={classname(styles.product_item, styles.developer)}
 					>
-						<div className={styles.icon_box}>
-							<Image src={item.icon} alt="" />
+						<div className={styles.title}>Developer Tools</div>
+						<div className={styles.desc}>
+							Learn how to use the Blockless Dashboard, CLI, and SDKs to help you build, test, and
+							manage your Blockless applications
 						</div>
-						<div className={styles.text_box}>
-							<p className={styles.item_title}>{item.title}</p>
-							<p className={styles.item_desc}>{item.desc}</p>
-						</div>
-					</div>
-				))}
+					</Link>
+					<Link
+						href="/docs/reference/networking"
+						className={classname(styles.product_item, styles.references)}
+					>
+						<div className={styles.title}>References</div>
+						<div className={styles.desc}>Look up references for CLI or extension integrations</div>
+						<Image className={styles.block_icon} src={referencesBlockIcon} alt="icon" />
+					</Link>
+				</div>
 			</div>
 
-			<h3 className={styles.community_title}>Get your questions answered in our communities.</h3>
 			<div className={styles.communities_wrapper}>
-				{communityList.map((item) => (
-					<a key={item.id} href={item.path} target="_blank" rel="noreferrer">
-						<div className={styles.community_item}>
-							<Image className={styles.icon} src={item.icon} alt="icon" />
-							<div className={styles.name}>Go to {item.label}</div>
-							<i className={styles.link_icon} />
-						</div>
-					</a>
-				))}
+				<div className={styles.title}>Get your questions answered in our communities</div>
+				<div className={styles.community_list}>
+					{communityList.map((item) => (
+						<a key={item.id} href={item.path} target="_blank" rel="noreferrer">
+							<div className={styles.community_item}>
+								<Image className={styles.icon} src={item.icon} alt="icon" />
+								<div className={styles.name}>Go to {item.label}</div>
+								<i className={styles.link_icon} />
+							</div>
+						</a>
+					))}
+				</div>
 			</div>
 		</div>
 	)
