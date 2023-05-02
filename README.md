@@ -1,4 +1,6 @@
-# Blockless Documentation
+<div align="center">
+  <h1 align="center">Blockless Documentation</h1>
+</div>
 
 ## About
 
