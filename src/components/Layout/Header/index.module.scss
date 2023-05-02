@@ -172,7 +172,7 @@
         left: 0;
         right: 0;
         width: 0;
-        height: 100vh;
+        height: calc(100vh - 66px);
         z-index: 10;
         background: $primary-gray1;
         overflow: hidden;
