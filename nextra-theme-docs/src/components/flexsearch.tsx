@@ -67,8 +67,9 @@ const loadIndexesImpl = async (
   basePath: string,
   locale: string
 ): Promise<void> => {
+  const assetPrefix = `${basePath}/docs`
   const response = await fetch(
-    `${basePath}/_next/static/chunks/nextra-data-${locale}.json`
+    `${assetPrefix}/_next/static/chunks/nextra-data-${locale}.json`
   )
   const data = (await response.json()) as NextraData
   // @ts-ignore
