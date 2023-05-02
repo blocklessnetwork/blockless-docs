@@ -14,16 +14,16 @@
 	}
 
 	.help_header {
-    width: 100vw;
-    height: 484px;
-    margin-bottom: -119px;
-    z-index: -1;
-    background: #FCFCFC;
-    position: relative;
-    top: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    overflow: hidden;
+		width: 100vw;
+		height: 484px;
+		margin-bottom: -119px;
+		z-index: -1;
+		background: #fcfcfc;
+		position: relative;
+		top: 0;
+		left: 50%;
+		transform: translateX(-50%);
+		overflow: hidden;
 
 		.title {
 			padding-top: 53px;
@@ -74,33 +74,33 @@
 			margin: 38px auto 0;
 			position: relative;
 			border-radius: 8px;
-      padding: 0 10px;
+			padding: 0 10px;
 
-      @media screen and (max-width: $media-md) {
+			@media screen and (max-width: $media-md) {
 				padding: 0 30px;
 			}
 
 			@media screen and (max-width: $media-sm) {
 				max-width: 364px;
-        padding: 0 10px;
+				padding: 0 10px;
 				margin: 50px auto 0;
 			}
-      .search_bg{
-        position: absolute;
-        width: 676px;
-        max-width: 676px;
-        height: 133px;
-        top: 50%;
-        left: 50%;
-        transform: translateX(-50%) translateY(-50%);
-        background: url("../../assets/imgs/home/input-bg.svg") no-repeat center;
-        background-size: 100% 100%;
-        @media screen and (max-width: $media-sm) {
-          width: 375px;
-          background: url("../../assets/imgs/home/input-bg-sm.svg") no-repeat center;
-          background-size: 100% 100%;
-        }
-      }
+			.search_bg {
+				position: absolute;
+				width: 676px;
+				max-width: 676px;
+				height: 133px;
+				top: 50%;
+				left: 50%;
+				transform: translateX(-50%) translateY(-50%);
+				background: url('../../assets/imgs/home/input-bg.svg') no-repeat center;
+				background-size: 100% 100%;
+				@media screen and (max-width: $media-sm) {
+					width: 375px;
+					background: url('../../assets/imgs/home/input-bg-sm.svg') no-repeat center;
+					background-size: 100% 100%;
+				}
+			}
 		}
 	}
 
@@ -113,15 +113,15 @@
 			gap: 25px;
 		}
 
-    .row{
-      width: 100%;
-      display: flex;
-      flex-wrap: nowrap;
-      gap: 28px;
-      @media screen and (max-width: $media-md) {
-        flex-wrap: wrap;
-      }
-    }
+		.row {
+			width: 100%;
+			display: flex;
+			flex-wrap: nowrap;
+			gap: 28px;
+			@media screen and (max-width: $media-md) {
+				flex-wrap: wrap;
+			}
+		}
 
 		.product_item {
 			height: 258px;
@@ -131,7 +131,11 @@
 			flex-grow: 1;
 			flex-shrink: 1;
 			padding: 28px;
-			
+			&:hover {
+				transition: transform 0.2s, box-shadow 0.2s;
+				transform: translateY(-4px);
+			}
+
 			@media screen and (max-width: 900px) {
 				width: 100%;
 				max-width: 100% !important;
@@ -298,7 +302,7 @@
 			}
 			@media screen and (max-width: 620px) {
 				gap: 20px;
-        flex-direction: column;
+				flex-direction: column;
 				justify-content: center;
 			}
 			.community_item {

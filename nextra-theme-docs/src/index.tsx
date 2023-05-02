@@ -74,7 +74,7 @@ const Body = ({
 			<article
 				className={cn(
 					classes.main,
-					'nextra-content nx-min-h-[calc(100vh-var(--nextra-navbar-height))]'
+					'nextra-content'
 				)}
 			>
 				{body}
