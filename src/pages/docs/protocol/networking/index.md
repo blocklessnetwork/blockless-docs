@@ -1,13 +1,19 @@
 # Overview
 
-The Blockless Networking Module, or b7s in short, automatically orchestrate the distribution of tasks to a network of computers.
+The Blockless Networking Module (b7s) is the core infrastructure that connects nodes within the Blockless Network and streamlines the distribution of work across the system. It is designed to provide a secure and verifiable execution environment for distributed computing tasks.
 
-## Network Architecture
+The Blockless Networking module (b7s) is open-sourced and can be found on [GitHub](https://github.com/blocklessnetwork/b7s).
 
-The Blockless Network comprises two important and distinct P2P networks – a Cosmos-based blockchain for job orchestration and a libp2p-based execution network for work execution.
+## Goal
 
-## Network Process Overview
+As a purpose-built execution network optimized for verifiability, the objective of the Blockless Networking Module is to create an efficient execution network that enables the selection of the optimal group of nodes based on task requirements, and to execute tasks securely and efficiently within the formed subnetwork.
 
-Once a task is received by a validator in the orchestration network, the validator network performs a selection algorithm to determine which execution node(s) will be assigned the task.
+## Networking Procedure Overview
 
-The execution network is an off-chain decentralized network that executes tasks. Each execution node instantiates a Blockless Runtime Environment to execute a unique WASM binary bundle in a secure and isolated environment.
+The entire networking process, from receiving a task to delivering the result to its intended destination, can be divided into two key steps:
+
+1. **Selection and Orchestration**: Upon receiving a task, the network processes its task manifest, which outlines the execution requirements. Based on this information, the network selects a group of nodes that fulfill the specified criteria.
+
+2. **Execution and Consensus**: The chosen nodes form a task-specific execution subnetwork, where they carry out the assigned work according to the task setup. A modular consensus mechanism, such as data aggregation, pBFT, Raft, or zero-knowledge proofs, can be integrated into the execution subnetwork to validate the accuracy and integrity of the execution process.
+
+These steps work cohesively to ensure that the Blockless Network can effectively handle various distributed computing tasks while maintaining high levels of security, verifiability, and performance.
