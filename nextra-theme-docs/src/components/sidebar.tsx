@@ -128,7 +128,8 @@ function FolderImpl({ item, anchors }: FolderProps): ReactElement {
           'nx-items-center nx-justify-between nx-gap-2',
           !isLink && 'nx-text-left nx-w-full',
           classes.link,
-          active ? classes.active : classes.inactive
+          classes.inactive,
+          // active ? classes.active : classes.inactive
         )}
         onClick={e => {
           const clickedToggleIcon = ['svg', 'path'].includes(
