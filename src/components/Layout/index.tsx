@@ -18,7 +18,7 @@ const Layout: React.FC<PropsTypes> = (props) => {
 	const { pageMap } = pageOpts
 	const { locale = DEFAULT_LOCALE, defaultLocale } = useRouter()
 	const fsPath = useFSRoute()
-  console.log("pageMap",pageMap)
+  console.log("pageMap",JSON.stringify(pageMap))
 	const { activeType, docsDirectories, directories } = useMemo(
 		() =>
 			normalizePages({
