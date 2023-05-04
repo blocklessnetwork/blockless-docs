@@ -6,16 +6,13 @@
 		"title": "Node Selection"
 	},
 	"distribution": {
-		"title": "Distribution"
+		"title": "Randomized Distribution"
 	},
 	"execution": {
-		"title": "Execution"
+		"title": "Deployment and Execution"
 	},
 	"consensus": {
-		"title": "Consensus"
-	},
-	"deployment": {
-		"title": "Deployment"
+		"title": "Dynamic Consensus"
 	},
 	"communication": {
 		"title": "Communication"
