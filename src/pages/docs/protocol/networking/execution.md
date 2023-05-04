@@ -1,12 +1,16 @@
-# Execution Process Overview
+# Deployment and Execution
 
-Following the completion of the selection and distribution phases, the task is prepared for execution. This signifies the commencement of the task life cycle's second stage: execution and consensus.
+Upon the conclusion of the selection and distribution phases, the task is ready for deployment and execution.
 
-## Acquiring the Execution Binary
+Blockless utilizes a two-stage deployment and execution process, allowing the execution binary to be installed and run on a set of randomly selected devices efficiently. This process first involves the notification of deployments, which initiates a pre-cache procedure. Subsequently, a runtime environment is instantiated for task execution.
 
-During the selection phase, a roll call is initiated before the suitability score calculation and simulated annealing process take place. The task message, along with the task manifest containing the bundle address (IPFS CID), is broadcasted across the network using the gossip protocol. Nodes that have successfully passed the self-audit and are deemed qualified for execution proceed to join the roll call sequence.
+## Acquiring the Execution Binary (Pre-Cache)
 
-Prior to adding the nodes to the selection and distribution queue, or the roll call queue, the presence of the execution binary cache on the node's local machine is checked. If the cache is not available, the node retrieves the execution binary from IPFS. Once completed, the node can participate in the roll call, as well as the ensuing selection and distribution processes.
+During the selection phase, a roll call is initiated before the suitability score calculation and simulated annealing process take place. The task message ($D_{msg}$), along with the task manifest ($A$) containing the bundle address (IPFS CID) and content ($C$), is broadcasted across the network using the GossipSub protocol.
+
+Prior to adding the nodes to the selection and distribution process, or the roll call queue, the presence of the execution binary cache on the node's local machine is checked.
+
+If the cache is not available, the node retrieves the execution binary from either publisher (IPFS by default) based on the task message or from the nearby nodes. Once completed, the node can participate in the roll call, as well as the ensuing selection and distribution processes.
 
 ## Launching the Execution Binary
 

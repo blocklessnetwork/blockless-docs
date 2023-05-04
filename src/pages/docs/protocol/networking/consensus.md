@@ -1,35 +1,38 @@
-# Consensus
+# Dynamic Consensus
 
-Blockless incorporates a pluggable consensus mechanism - a modular approach to consensus formation in P2P networks. It allows nodes to dynamically adopt different consensus models depending on network conditions, requirements, and preferences. This flexibility enables the network to maintain efficiency, security, and scalability, while also supporting diverse use cases and applications.
+Blockless introduces a dynamic and pluggable consensus mechanism, offering a modular approach to consensus formation in P2P networks.
 
-The pluggable consensus mechanism is built on top of the libp2p networking stack, which provides a robust and modular foundation for P2P communication. Nodes use libp2p to form direct connections with other nodes in the network, facilitating efficient and secure data exchange.
+Simply put, developers can choose from various consensus schemes, such as data aggregation, pBFT, Raft, or ZK, and apply them to an execution subnetwork dedicated to a specific task or function. This provides enhanced security and flexibility.
 
-Using the pluggable consensus mechanism, nodes can participate in dynamic consensus formation based on rules and protocols defined by the consensus model. This process involves the following steps:
+This dynamic consensus design enables developers to adapt different consensus models based on the task, network conditions, requirements, and preferences. As a result, the network maintains efficiency, security, and scalability while accommodating diverse use cases and applications.
 
-1. Nodes communicate with each other using the libp2p protocol to exchange information about their supported consensus models.
-2. Based on the exchanged information, nodes establish a consensus model that best suits their requirements, preferences, and network conditions.
-3. Nodes adopt the selected consensus model and follow its rules and protocols to reach a consensus on specific matters (e.g., validating transactions, ordering events, etc.).
-4. Nodes may periodically re-evaluate the chosen consensus model to ensure optimal performance and adapt to changes in network conditions or requirements.
+Built on top of the [libp2p](https://docs.libp2p.io/) stack, the dynamic consensus mechanism benefits from a robust and modular foundation for P2P communication. Nodes use libp2p to establish direct connections with other nodes in the network, which facilitates efficient and secure data exchange.
 
-As nodes participate in the dynamic consensus process, they model the behavior of the consensus model by simulating its rules and protocols. This modeling process allows nodes to predict the outcome of the consensus process and make decisions accordingly.
+Leveraging this innovative consensus mechanism, nodes can engage in dynamic consensus formation, following rules and protocols specified by the chosen consensus model. This process unfolds in several steps:
 
-Once a consensus is reached, nodes return the results in the flow specified by the consensus model. This flow may involve propagating the results to other nodes, updating local data structures, or triggering additional processes and actions.
+1. The developer outlines the preferred consensus model for a particular function or task within the configuration file.
+2. Based on these specifications, nodes (based on the consensus mechnism, nodes can be execution nodes or stand-alone consensus nodes) create direct connections and ready themselves for consensus formation.
+   Each node executes the consensus within a newly instantiated runtime environment, ensuring secure and efficient processing.
+3. Following several rounds of interaction, the nodes reach a consensus result.
 
-## Benefits of Pluggable Consensus Mechanism
+Upon reaching a consensus, nodes return the results according to the flow dictated by the consensus model. This may involve sharing results with other nodes, updating local data structures, providing consensus proof to a data availability (DA) layer, or initiating additional processes and actions.
 
-A pluggable consensus mechanism provides several benefits for P2P networks:
+## Advantages of the Dynamic Consensus Design
 
-1. Flexibility: Nodes can dynamically adopt different consensus models based on their needs and network conditions, ensuring optimal performance and functionality.
-2. Interoperability: The pluggable consensus mechanism facilitates seamless interaction between nodes running different consensus models, enabling a diverse range of use cases and applications.
-3. Scalability: By allowing nodes to dynamically adapt consensus models, the pluggable consensus mechanism supports network growth and resilience.
-4. Customizability: The modular nature of the pluggable consensus mechanism allows developers to create and implement custom consensus models tailored to specific requirements and use cases.
+The dynamic consensus mechanism offers several benefits for Blockless Network:
 
-## Efficient Task Execution and Resilience in P2P Networks Using Roll Call-Based Process
+- **Flexibility**: By enabling tasks or functions to dynamically adopt various consensus models, the mechanism ensures optimal performance and functionality based on specific needs and network conditions.
+- **Interoperability**: The pluggable nature of the consensus mechanism allows for seamless interactions between nodes employing different consensus models, supporting a wide array of use cases and applications.
+- **Scalability**: The capacity for nodes to adapt consensus models dynamically contributes to the network's growth and resilience, promoting overall scalability.
+- **Customizability**: Thanks to its modular design, the pluggable consensus mechanism empowers developers to create and implement bespoke consensus models that cater to distinct requirements and use cases.
 
-The roll call-based execution process provides several advantages for task execution and resilience in P2P networks:
+## Implementation of the Dynamic Consensus
 
-1. Targeted Node Selection: By broadcasting a roll call message with specific attribute requirements, the process ensures that only nodes with the necessary capabilities and resources participate in the task execution, optimizing network performance.
-2. Dynamic Cluster Formation: The roll call process enables dynamic formation of clusters based on execution factors, such as the number of nodes, failover and resiliency types, and consensus factors. This allows the network to adapt to varying task requirements and network conditions.
-3. Assembly Validation and Caching: Nodes validate and cache assemblies before reporting to the roll call, ensuring that they are prepared for task execution and minimizing delays during the execution process.
-4. Resilience and Failover: The roll call-based process accounts for failover and resiliency types, enabling the network to maintain operational efficiency and recover from node failures or disruptions.
-5. Customizable Consensus Topology: Nodes follow the requested consensus topology during task execution, providing flexibility and adaptability for different use cases and network requirements.
+When implementing the dynamic consensus mechanism, Blockless Network employs the same [randomized selection](./selection.md) or roll call process as a function does.
+
+This implementation approach offers several advantages for task execution and resilience within the Blockless Network:
+
+- **Targeted Node Selection**: The process broadcasts a roll call message with specific attribute requirements, ensuring that only nodes possessing the necessary capabilities and resources participate in consensus formation. This optimizes network performance, particularly for resource-intensive consensus/validation protocols like zero knowledge.
+- **Dynamic Cluster Formation**: The selection and roll call process allows for the dynamic creation of clusters based on execution factors, such as the number of nodes, failover and resiliency types, and consensus factors. This adaptability caters to varying task requirements and network conditions.
+- **Resilience and Failover**: By accounting for failover and resiliency types, the randomized selection-based process enables the consensus subnetwork to maintain operational efficiency and recover from node failures or disruptions.
+- **Customizable Consensus Topology**: During task execution, nodes adhere to the requested consensus topology, providing flexibility and adaptability for different use cases and network requirements.
