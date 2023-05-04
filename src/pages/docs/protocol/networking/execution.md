@@ -1,11 +1,15 @@
 # Execution Process Overview
 
-An execution process in which nodes in a P2P network participate in a roll call procedure to form clusters for executing tasks. The roll call is designed to request nodes with specific attributes that meet self-audit requirements for standing. The number of nodes in the cluster depends on various execution factors, such as the number of nodes, failover and resiliency types, and consensus factors. We will also explore how nodes validate, retrieve, and cache assemblies before reporting to the roll call and the subsequent selection and distribution mechanisms.
+Following the completion of the selection and distribution phases, the task is prepared for execution. This signifies the commencement of the task life cycle's second stage: execution and consensus.
 
-The roll call-based execution process can be divided into the following steps:
+## Acquiring the Execution Binary
 
-1. A roll call message is broadcasted in the network, requesting nodes with specific attributes that meet self-audit requirements for standing.
-2. Nodes that match the execution parameters and have the assembly cached will report their availability for the roll call.
-3. Nodes that match the execution parameters but do not have the assembly cached will first retrieve the assembly and cache it before reporting to the roll call.
-4. If a node reports to the roll call before the specified timeout, it will be entered into the selection and distribution mechanisms.
-5. Once selected, the nodes form a cluster and follow the requested consensus topology to execute the task and return their results.
+During the selection phase, a roll call is initiated before the suitability score calculation and simulated annealing process take place. The task message, along with the task manifest containing the bundle address (IPFS CID), is broadcasted across the network using the gossip protocol. Nodes that have successfully passed the self-audit and are deemed qualified for execution proceed to join the roll call sequence.
+
+Prior to adding the nodes to the selection and distribution queue, or the roll call queue, the presence of the execution binary cache on the node's local machine is checked. If the cache is not available, the node retrieves the execution binary from IPFS. Once completed, the node can participate in the roll call, as well as the ensuing selection and distribution processes.
+
+## Launching the Execution Binary
+
+Once a node is selected based on the task criteria and receives execution rights from the distribution phase, a dedicated runtime environment is established for this specific task. After the execution is finished, the runtime environment is promptly terminated.
+
+For a comprehensive understanding of the Blockless Runtime Environment, please refer to the [Runtime Environment section](../runtime.md).

@@ -1,6 +1,12 @@
 # Node Selection
 
-Node selection is a critical aspect of the Blockless Networking (b7s) module, as it determines the optimal network contributor (node) to execute tasks efficiently and effectively. The selection process aims to identify the most suitable node from a pool of devices, considering various user-defined filters, such as computational capacity, storage availability, and network latency.
+In the Blockless Networking (b7s) module, node selection is a crucial step that ensures the efficient and effective execution of tasks. The selection process aims to identify the optimal network contributors from a pool of devices, taking into account various user-defined filters such as computational capacity, storage availability, and network latency.
+
+Once the selection process is complete, a group of optimal nodes is obtained. This node group serves as the input for the [distribution algorithm](./distribution.md), which randomly selects the requested number of nodes from the node group for task execution.
+
+In this section, we will focus on the node selection step, exploring the criteria and considerations involved in determining the most suitable nodes for task execution.
+
+## Node Selection Algorithm
 
 The node selection algorithm in the b7s module is built upon two primary components:
 
@@ -9,7 +15,7 @@ The node selection algorithm in the b7s module is built upon two primary compone
 
 By integrating these two components, the node selection algorithm effectively navigates the search space, identifying the most appropriate node to handle a given task based on the specified filters. This approach ensures that the b7s module maintains high performance, responsiveness, and adaptability, enabling users to leverage the full potential of the distributed network.
 
-## Suitability Score Calculation
+### Suitability Score Calculation
 
 The suitability score is a crucial component in the node selection algorithm, as it provides a quantitative measure of how well each computer in the pool aligns with the user-defined filters. This numerical assessment enables the algorithm to compare and rank computers based on their adherence to the specified criteria.
 
@@ -31,14 +37,11 @@ The function $f_k$ maps the k-th filter value to a score, which can be either 0 
 
 2. **Range filters**: If the filter value is an object with "min" and "max" properties (e.g., a specified range for computational power), the score is calculated as follows: $f_k(v_{(i, k)})=1$ if $v_{(i, k)}$ falls within the specified range (i.e., the computer meets the minimum and maximum requirements); otherwise, the score is 0.
 
-Here, $i$ represents the index of a computer, $k$ denotes the index of a filter, and $v_{(i, k)}$ is the value of the k-th filter for the i-th computer. The function $f_k$ maps the k-th filter value to a score (either 0 or 1), depending on the filter value type:
+The suitability score calculation enables the node selection algorithm to assign a numerical value to each device based on how closely it adheres to the user's requirements. This quantitative assessment forms the foundation for the subsequent simulated annealing process, which searches for the most suitable device by balancing exploration and exploitation.
 
-If the filter value is a boolean, $f_k(v_{(i, k)}) = 1$ if $v_{(i, k)}$ matches the filter value; otherwise, it equals 0.
-If the filter value is an object with "min" and "max" properties, $f_k(v_{(i, k)}) = 1$ if $v_{(i, k)}$ falls within the specified range; otherwise, it equals 0.
+### Simulated Annealing Process
 
-## Simulated Annealing Process
-
-The simulated annealing process involves the following two formulas:
+The simulated annealing process serves as an essential aspect of the node selection algorithm, facilitating the search for the most appropriate device in the pool while maintaining a balance between exploration and exploitation. This technique is grounded in two main formulas:
 
 $$
 ΔE = S_(i, candidate) - S_(i, current)
@@ -48,18 +51,34 @@ $$
 P_{accept} = min(1, exp(-ΔE/T))
 $$
 
-Here, $S_{(i, candidate)}$ and $S_{(i, current)}$ represent the suitability scores of the candidate and current computers, respectively. The difference in suitability scores is denoted by $ΔE$, while $T$ signifies the temperature, which starts at 10 and decreases by a factor of 0.99 per iteration. The acceptance probability of the candidate computer is represented by $P_{accept}$.
+In these two formulas:
 
-The algorithm iteratively selects a random candidate computer and calculates the acceptance probability. If a random number between 0 and 1 is less than the acceptance probability, the current computer is replaced by the candidate computer. The temperature is reduced in each iteration to gradually converge toward the most suitable computer.
+- $S_{(i, candidate)}$ denotes the suitability score of a randomly chosen candidate device.
+- $S_{(i, current)}$ represents the suitability score of the currently selected device.
+- $ΔE$ signifies the difference in suitability scores between the candidate and the current device.
+- $T$ represents the temperature parameter, which begins at 10 and is reduced by a factor of 0.99 per iteration.
+- $P_{accept}$ is the probability of accepting the candidate device as the new current device.
 
-## Node Selection Workflow
+During the simulated annealing process, the algorithm iteratively selects a random candidate device and calculates its acceptance probability based on the difference in suitability scores and the current temperature. If a random number between 0 and 1 is less than the acceptance probability, the current device is replaced by the candidate device.
 
-1. Filter the list of computers based on user-provided filters.
-2. Set the initial temperature and initiate the loop.
-3. Within the loop, randomly select a candidate computer and compare its suitability score to that of the current computer.
-4. Calculate the acceptance probability of the candidate computer based on the temperature.
-5. If the acceptance probability is met, replace the current computer with the candidate computer.
-6. Repeat the loop until the temperature reaches a minimum value.
-7. Select the best computer based on the filters.
+As the temperature decreases with each iteration, the algorithm becomes more inclined to accept candidate devices with higher suitability scores, eventually converging towards the most suitable device in the pool. This method ensures that the node selection algorithm can explore various devices before settling on the optimal choice according to the specified filters. The simulated annealing process effectively balances the exploration and exploitation aspects of the selection process, resulting in an efficient and robust device selection algorithm.
 
-This algorithm effectively balances exploration (discovering diverse solutions) and exploitation (refining the best solution found so far), ultimately resulting in an efficient and robust computer selection process.
+## Node Selection Process
+
+Given the node selection algorithm, the network operates through the following stages to identify the most suitable device based on user-defined filters:
+
+1. **Filtering**: Apply user-provided filters, such as computational power, storage, or network latency, to create a list of eligible devices that meet the specific requirements.
+
+2. **Initial temperature**: Set the initial temperature (control) parameter and begin the loop. The temperature plays a crucial role in controlling the balance between exploration and exploitation in the simulated annealing process.
+
+3. **Candidate selection**: Within the loop, randomly choose a candidate device and compare its suitability score with the current device's score. This comparison helps in evaluating the devices' adherence to the user-defined filters.
+
+4. **Acceptance probability calculation**: Compute the acceptance probability for the candidate device, taking into account the temperature. The acceptance probability determines whether the candidate device is likely to replace the current device.
+
+5. **Candidate acceptance**: If the acceptance criteria are met, meaning the candidate device has a higher probability of being suitable based on the user-provided filters, replace the current device with the candidate device.
+
+6. **Loop repetition**: Continue the loop, gradually decreasing the temperature until it reaches a minimum value. As the temperature decreases, the algorithm becomes more selective, focusing on devices with higher suitability scores.
+
+7. **Best device selection**: Upon reaching the minimum temperature, select the best device based on the user-defined filters, ensuring an optimal choice for the task at hand.
+
+This algorithm effectively balances exploration (discovering a variety of potential solutions) and exploitation (refining the best solution identified thus far) to create an efficient and robust device selection process tailored to the user's specific requirements.
