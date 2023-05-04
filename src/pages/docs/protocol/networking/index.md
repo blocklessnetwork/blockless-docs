@@ -12,7 +12,7 @@ As a purpose-built execution network optimized for verifiability, the objective 
 
 The entire networking process, from receiving a task to delivering the result to its intended destination, can be divided into two key steps:
 
-1. **Selection and Orchestration**: Upon receiving a task, the network processes its task manifest, which outlines the execution requirements. Based on this information, the network selects a group of nodes that fulfill the specified criteria.
+1. **Selection and Distribution**: Upon receiving a task, the network processes its task manifest, which outlines the execution requirements. Based on this information, the network [selects](./selection.md) a group of nodes that fulfill the specified criteria and [distributes](./distribution.md) the task randomly and evenly for execution.
 
 2. **Execution and Consensus**: The chosen nodes form a task-specific execution subnetwork, where they carry out the assigned work according to the task setup. A modular consensus mechanism, such as data aggregation, pBFT, Raft, or zero-knowledge proofs, can be integrated into the execution subnetwork to validate the accuracy and integrity of the execution process.
 

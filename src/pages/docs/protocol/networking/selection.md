@@ -1,6 +1,12 @@
 # Node Selection
 
-Node selection is a critical aspect of the Blockless Networking (b7s) module, as it determines the optimal network contributor (node) to execute tasks efficiently and effectively. The selection process aims to identify the most suitable node from a pool of devices, considering various user-defined filters, such as computational capacity, storage availability, and network latency.
+In the Blockless Networking (b7s) module, node selection is a crucial step that ensures the efficient and effective execution of tasks. The selection process aims to identify the optimal network contributors from a pool of devices, taking into account various user-defined filters such as computational capacity, storage availability, and network latency.
+
+Once the selection process is complete, a group of optimal nodes is obtained. This node group serves as the input for the [distribution algorithm](./distribution.md), which randomly selects the requested number of nodes from the node group for task execution.
+
+In this section, we will focus on the node selection step, exploring the criteria and considerations involved in determining the most suitable nodes for task execution.
+
+## Node Selection Algorithm
 
 The node selection algorithm in the b7s module is built upon two primary components:
 
@@ -9,7 +15,7 @@ The node selection algorithm in the b7s module is built upon two primary compone
 
 By integrating these two components, the node selection algorithm effectively navigates the search space, identifying the most appropriate node to handle a given task based on the specified filters. This approach ensures that the b7s module maintains high performance, responsiveness, and adaptability, enabling users to leverage the full potential of the distributed network.
 
-## Suitability Score Calculation
+### Suitability Score Calculation
 
 The suitability score is a crucial component in the node selection algorithm, as it provides a quantitative measure of how well each computer in the pool aligns with the user-defined filters. This numerical assessment enables the algorithm to compare and rank computers based on their adherence to the specified criteria.
 
@@ -33,7 +39,7 @@ The function $f_k$ maps the k-th filter value to a score, which can be either 0 
 
 The suitability score calculation enables the node selection algorithm to assign a numerical value to each device based on how closely it adheres to the user's requirements. This quantitative assessment forms the foundation for the subsequent simulated annealing process, which searches for the most suitable device by balancing exploration and exploitation.
 
-## Simulated Annealing Process
+### Simulated Annealing Process
 
 The simulated annealing process serves as an essential aspect of the node selection algorithm, facilitating the search for the most appropriate device in the pool while maintaining a balance between exploration and exploitation. This technique is grounded in two main formulas:
 
@@ -59,7 +65,7 @@ As the temperature decreases with each iteration, the algorithm becomes more inc
 
 ## Node Selection Process
 
-The node selection algorithm operates through the following stages to identify the most suitable device based on user-defined filters:
+Given the node selection algorithm, the network operates through the following stages to identify the most suitable device based on user-defined filters:
 
 1. **Filtering**: Apply user-provided filters, such as computational power, storage, or network latency, to create a list of eligible devices that meet the specific requirements.
 

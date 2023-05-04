@@ -1,53 +1,41 @@
-# Blockless **Task Distribution Algorithm**
+# Task Distribution
 
-The algorithm employs a Greco-Latin square distribution approach to evenly distribute tasks across computers while respecting resource constraints. By arranging tasks in an n x n matrix, the algorithm ensures that each computer receives a balanced workload.
+Task distribution is a crucial step that occurs after the [selection process](./selection.md), where a group of devices that meet the user's criteria is chosen. The objective of task distribution is to effectively allocate tasks in a pseudo-randomized manner among a selected set of workers, while also ensuring a balanced workload and respecting resource constraints.
 
-Upon receiving a set of tasks, the algorithm iteratively evaluates their compatibility with each computer based on the available resources. Compatible tasks are assigned to the corresponding computer, while incompatible tasks are queued for future assignment.
+To achieve this goal, the algorithm employs a [Greco-Latin square](https://en.wikipedia.org/wiki/Latin_square) distribution approach, which evenly distributes tasks across computers while considering the available resources of each device. By doing so, the algorithm achieves two key objectives: maintaining a balanced workload across all workers and optimizing resource utilization by considering compatibility with the available resources on each computer.
 
-Finally, the algorithm flattens the distribution matrix into a result object, returning both the assigned tasks and any remaining queued tasks. This approach allows for efficient allocation of tasks to computers, ensuring a balanced workload while accounting for resource constraints.
+## Task Distribution Algorithm
 
-The core algorithm can be summarized into the following steps:
+![Distribution Workflow](/public/docs/protocol/networking/distribution-workflow.png)
 
-1. Initialize the result object and a queued tasks list.
-2. Create a distribution matrix of size n x n, where n is the number of computers.
-3. Fill the matrix with compatible tasks while keeping track of resource constraints.
-4. Flatten the matrix and return the distributed tasks and queued tasks.
+The task distribution process involves three key elements:
 
-## Matrix Construction and Task Distribution:
+- a list of tasks to be executed
+- the specific requirements for each task
+- the chosen nodes from the node selection process
 
-Given n computers, let M be an n x n matrix such that:
+Utilizing a Greco-Latin square distribution method, the algorithm starts by initializing an empty array for each selected node, designated to hold the tasks it will carry out.
 
-$M = [m_ij], where i = 1, ..., n and j = 1, ..., n$
+The algorithm iteratively assesses each task's compatibility with available computers based on resources. It enters a loop, selecting tasks from a shuffled list and randomly assigning them to a computer. If a task's attribute requirement is less than or equal to the computer's attribute, the task is added to the computer's task array. The loop continues until all tasks are assigned, ultimately yielding a mapping or matrix outlining each computer's assigned tasks.
 
-where each element m_ij is a list of tasks.Algorithm Application:
+As a final step, the algorithm consolidates the distribution matrix into a result object, providing both the allocated tasks and any tasks that remain in the queue.
 
-1. For each task T in the tasks list, determine if it is compatible with the current computer $(C_i)$. A task is compatible if, for all attributes ($A$) and corresponding values ($V$), the computer's attribute value is greater than or equal to the task's attribute value:
-    
-    isCompatible$(T, C_i) = ∀(A, V) ∈ T: C_i[A] ≥ V$
-    
-2. If the task is compatible, add it to the matrix's corresponding row and column based on the current row index: 
-    
-    $M[currentRow][(currentRow n)].push(T)$
-    
-3. If the task is not compatible, add it to the queued tasks list.
-4. Increment the current row index:
-    
-    $currentRow = (currentRow + 1) % n$
-    
-5. Flatten the matrix and return the distributed tasks and queued tasks as a tuple.
+Overall, this method allows for efficient task distribution to computers, ensuring a balanced workload and accommodating resource limitations.
 
-# **Task Distribution Flow Overview**
+## Matrix Construction
 
-Distribution Diagram - this diagram shows how the list of tasks is distributed to the list of eligible computers.
+Given n computers, let M be an n x n matrix defined as follows:
 
-![Untitled](/docs/protocol/networking/distributionUntitled.png)
+$M = [m_{ij}]$, where $i = 1, ..., n$ and $j = 1, ..., n$
 
-The task distribution process is a way to allocate a list of tasks to a set of computers based on certain attributes associated with each computer. The inputs to this process are the list of tasks and a list of computers, along with their associated attributes.
+Each element $m_{ij}$ represents a list of tasks. To apply the algorithm, follow these steps:
 
-The process initializes an empty array for each computer to store the tasks it will perform. Then, it shuffles the list of tasks to ensure that they are distributed randomly.
-
-Next, it enters a loop where it selects the next task in the shuffled list and a computer to assign it to. The computer is chosen randomly based on its index and a random number.
-
-Once a computer is selected, the process checks whether the task's attribute requirement is less than or equal to the selected computer's attribute. If the computer's attribute meets the requirement, the task is added to that computer's array of tasks to perform.
-
-This loop continues until all tasks have been assigned to a computer. Finally, the process returns the mapping of each computer to the tasks it will perform.
+1. For each task $T$ in the tasks list, evaluate its compatibility with the current computer $(C_i)$.
+   1. A task is deemed compatible if, for all attributes ($A$) and corresponding values ($V$), the computer's attribute value is greater than or equal to the task's attribute value:
+      $isCompatible(T, C_i) = ∀(A, V) ∈ T: C_i[A] ≥ V$
+   2. If the task is compatible, append it to the matrix's corresponding row and column based on the current row index:
+      $M[currentRow][(currentRow \; mod \; N)].push(T)$
+   3. If the task is incompatible, add it to a list of queued tasks.
+2. Increment the current row index, wrapping around when necessary:
+   $currentRow = (currentRow + 1) \; mod \; N$
+3. Flatten the matrix and return the distributed tasks along with the queued tasks as a tuple, ensuring a comprehensive and robust distribution of tasks.
