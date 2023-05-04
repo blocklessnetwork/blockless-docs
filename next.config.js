@@ -26,6 +26,7 @@ const withNextra = nextra({
   themeConfig: './theme.config.tsx',
   latex: true,
   defaultShowCopyCode: true,
+  staticImage: false
 })
  
 module.exports = withNextra(nextConfig)
