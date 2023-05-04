@@ -10,12 +10,12 @@ This protocol involves exchanging messages between nodes within a mesh sub-netwo
 
 In the Blockless Network, message propagation can be represented using a mathematical model that takes into account various factors affecting the speed and efficiency of information exchange. The equation for this model is as follows:
 
-$Propagation_Time = Base_Delay + RTT * log(N) / log(D)$
+$PropagationTime = BaseDelay + RTT * log(N) / log(D)$
 
 where:
 
-- $Propagation_Time$ represents the duration required for a message to propagate through the network.
-- $Base_Delay$ accounts for the inherent delay in the GossipSub protocol, encompassing message encoding, decoding, and processing.
+- $PropagationTime$ represents the duration required for a message to propagate through the network.
+- $BaseDelay$ accounts for the inherent delay in the GossipSub protocol, encompassing message encoding, decoding, and processing.
 - $RTT$ (Round-Trip Time) denotes the average duration for a message to travel from one node to another and back, reflecting the network's latency.
 - $N$ stands for the total number of nodes present in the network.
 - $D$ refers to the average node degree, which is the average number of neighbors a node has in the network.
