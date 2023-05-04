@@ -6,7 +6,7 @@ To achieve this goal, the algorithm employs a [Greco-Latin square](https://en.wi
 
 ## Task Distribution Algorithm
 
-![Distribution Workflow](/public/docs/protocol/networking/distribution-workflow.png)
+![Distribution Workflow](/docs/protocol/networking/distribution-workflow.png)
 
 The task distribution process involves three key elements:
 
