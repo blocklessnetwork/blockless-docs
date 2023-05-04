@@ -5,19 +5,19 @@
 	"selection": {
 		"title": "Selection"
 	},
-	"communication": {
-		"title": "Communication"
+	"distribution": {
+		"title": "Distribution"
 	},
 	"execution": {
 		"title": "Execution"
 	},
+	"consensus": {
+		"title": "Consensus"
+	},
 	"deployment": {
 		"title": "Deployment"
 	},
-	"distribution": {
-		"title": "Distribution"
-	},
-	"consensus": {
-		"title": "Consensus"
+	"communication": {
+		"title": "Communication"
 	}
 }
