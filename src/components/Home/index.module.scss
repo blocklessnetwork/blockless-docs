@@ -14,14 +14,14 @@
 	}
 
 	.help_header {
-    position: relative;
-    z-index: 1;
+		position: relative;
+		z-index: 1;
 		width: 100vw;
 		background: #fcfcfc;
 		top: 0;
 		left: 50%;
 		transform: translateX(-50%);
-    padding-bottom: 50px;
+		padding-bottom: 50px;
 
 		.title {
 			padding-top: 53px;
@@ -85,7 +85,7 @@
 			}
 			.search_bg {
 				position: absolute;
-        width: calc(100% + 70px);
+				width: calc(100% + 70px);
 				max-width: 676px;
 				height: 133px;
 				top: 50%;
@@ -93,11 +93,11 @@
 				transform: translateX(-50%) translateY(-50%);
 				background: url('../../assets/imgs/home/input-bg.svg') no-repeat center;
 				background-size: 100% 100%;
-        @media screen and (max-width: $media-md) {
-          width: calc(100% + 10px);
-        }
+				@media screen and (max-width: $media-md) {
+					width: calc(100% + 10px);
+				}
 				@media screen and (max-width: $media-sm) {
-          width: 100%;
+					width: 100%;
 					background: url('../../assets/imgs/home/input-bg-sm.svg') no-repeat center;
 					background-size: 100% 100%;
 				}
@@ -106,31 +106,33 @@
 	}
 
 	.product_wrapper {
-    position: relative;
+		position: relative;
 		display: flex;
 		flex-wrap: wrap;
 		gap: 28px;
-    padding-top: 72px;
-    @media screen and (max-width: $media-sm) {
+		padding-top: 72px;
+		@media screen and (max-width: $media-sm) {
 			padding-top: 32px;
 		}
 
-    &:after{
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 50%;
-      display: block;
-      width: 100vw;
-      height: 191px;
-      transform: translateX(-50%);
-      background: #fcfcfc;
-      // background: #CCC;
-      z-index: -1;
-      @media screen and (max-width: $media-sm) {
-        height: 151px;
-      }
-    }
+		&:after {
+			content: '';
+			position: absolute;
+			top: 0;
+			left: 50%;
+			display: block;
+			width: 100vw;
+			height: 191px;
+			transform: translateX(-50%);
+			background: #fcfcfc;
+			z-index: -1;
+      @media screen and (max-width: $media-md) {
+				height: 240px;
+			}
+			@media screen and (max-width: $media-sm) {
+				height: 90px;
+			}
+		}
 
 		@media screen and (max-width: $media-sm) {
 			gap: 25px;
@@ -148,15 +150,16 @@
 
 		.product_item {
 			height: 258px;
-			background: linear-gradient(180deg, #ffffff 48.06%, #f6f5f9 100%);
 			box-shadow: 0px 0px 31px rgba(0, 0, 0, 0.08);
 			border-radius: 12px;
 			flex-grow: 1;
 			flex-shrink: 1;
 			padding: 28px;
-			&:hover {
-				transition: transform 0.2s;
-				transform: translateY(-4px);
+      @media screen and (min-width: 900px) {
+				&:hover {
+          transition: transform 0.2s;
+          transform: translateY(-4px);
+        }
 			}
 
 			@media screen and (max-width: 900px) {
@@ -194,7 +197,9 @@
 
 			&.protocol {
 				max-width: 381px;
-				background: url('../../assets/imgs/home/protocol.svg') no-repeat;
+				background: url('../../assets/imgs/home/protocol.png') no-repeat,
+					linear-gradient(180deg, #ffffff 48.06%, #f6f5f9 100%);
+				background-size: 381px 258px;
 				background-position: right bottom;
 
 				.desc {
@@ -211,11 +216,15 @@
 
 			&.functions {
 				max-width: 791px;
-				background: url('../../assets/imgs/home/functions.svg') no-repeat;
-				background-position: center -16px;
+				background: url('../../assets/imgs/home/functions.png') no-repeat,
+        linear-gradient(180deg, #ffffff 48.06%, #f6f5f9 100%);
+				background-position: calc(100% + 20px) calc(100% + 16px);
+        background-size: 806px 321px;
 				@media screen and (max-width: $media-sm) {
-					background: url('../../assets/imgs/home/functionsMobile.svg') no-repeat;
-					background-position: center 0;
+					background: url('../../assets/imgs/home/functionsMobile.png') no-repeat,
+					linear-gradient(180deg, #ffffff 48.06%, #f6f5f9 100%);
+					background-position: calc(100% + 15px) calc(100% + 15px);
+					background-size: 343px 215px;
 				}
 				.desc {
 					max-width: 735px;
@@ -231,15 +240,21 @@
 
 			&.developer {
 				max-width: 791px;
-				background: url('../../assets/imgs/home/developer.svg') no-repeat;
+				background: url('../../assets/imgs/home/developer.png') no-repeat,
+        linear-gradient(360deg, #FFFFFF 31.98%, #F6F5F9 192.83%);
 				background-position: center 92px;
+        background-size: 853px 197px;
 				@media screen and (max-width: $media-md) {
-					background: url('../../assets/imgs/home/developerPad.svg') no-repeat;
+					background: url('../../assets/imgs/home/developerPad.png') no-repeat,
+          linear-gradient(360deg, #FFFFFF 31.98%, #F6F5F9 192.83%);
 					background-position: center 92px;
+          background-size: 768px 197px;
 				}
 				@media screen and (max-width: $media-sm) {
-					background: url('../../assets/imgs/home/developerMobile.svg') no-repeat;
-					background-position: center 50px;
+					background: url('../../assets/imgs/home/developerMobile.png') no-repeat,
+          linear-gradient(360deg, #FFFFFF 31.98%, #F6F5F9 192.83%);
+					background-size: 375px 197px;
+					background-position: center calc(100% + 32px);
 				}
 				.desc {
 					max-width: 721px;
@@ -255,11 +270,13 @@
 
 			&.references {
 				max-width: 381px;
-				background: url('../../assets/imgs/home/references.svg') no-repeat;
+				background: url('../../assets/imgs/home/references.svg') no-repeat,
+        linear-gradient(180deg, #ffffff 48.06%, #f6f5f9 100%);
 				background-position: center bottom;
 				position: relative;
 				@media screen and (max-width: $media-md) {
-					background: url('../../assets/imgs/home/referencesPad.svg') no-repeat;
+					background: url('../../assets/imgs/home/referencesPad.svg') no-repeat,
+					linear-gradient(180deg, #ffffff 48.06%, #f6f5f9 100%);
 					background-position: center bottom;
 				}
 				.desc {
