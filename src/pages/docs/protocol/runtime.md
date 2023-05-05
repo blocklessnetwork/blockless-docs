@@ -1,15 +1,29 @@
 # Blockless Runtime Environment
 
-The Blockless Runtime Environment is built on WebAssembly (WASM) technology, which provides a secure and isolated sandbox for executing arbitrary tasks. It supports standard bytecode programs compiled from various programming languages, including C/C++, Rust, Swift, AssemblyScript, and Kotlin, with the ability to mix these languages. 
+The Blockless Runtime Environment is a powerful and versatile system built on WebAssembly (WASM) technology. It offers a secure and isolated sandbox for executing arbitrary tasks using various programming languages, such as C/C++, Rust, Swift, AssemblyScript, and Kotlin. The Blockless Runtime Environment also supports mixing these languages, enabling flexibility and interoperability in software development.
 
-In addition, the runtime is built with an optimizing code generator to quickly generate high-quality machine code. It is optimized for efficient instantiation, low-overhead transitions between the embedder and WASM, and scalability of concurrent instances.
+## Key Features and Benefits
 
-The WASM-based runtime is lightweight and can run on any device that runs a browser, allowing for a future where idle personal devices can join and serve the network at will, contributing to a self-sovereign web with ease.
+### Optimized Code Generation and Execution
 
-The runtime also supports a configurable file, which offers various options such as additional restrictions on WebAssembly beyond its basic guarantees, including CPU and memory consumption. This allows for a customizability of the runtime to better suit the needs of the user.
+The Blockless Runtime Environment includes a code generator designed to quickly produce high-quality machine code. It is optimized for efficient instantiation, low-overhead transitions between the embedder and WASM, and the scalability of concurrent instances.
 
-The Blockless Runtime utilizes the WebAssembly System Interface (WASI), which provides a standard interface for interacting with the host operating system. WASI supports a set of system calls and extensions that allow WebAssembly modules to interact with the file system, network, and other system-level resources in a safe and controlled manner.
+### Lightweight and Universal Compatibility
 
-The WASI interface also supports a dynamic extension system, meaning that extensions can be added to the interface without requiring modifications to the WASM module. This enables the Blockless network to be extended with existing service clients using the Common Gateway Interface (CGI) technology.
+The Blockless Runtime Environment is lightweight and capable of running on any device that supports a browser. This feature enables idle personal devices to join and serve the network effortlessly, contributing to the creation of a self-sovereign web.
 
-For more information about the security of Blockless Runtime, find [here](https://blockless.network/docs/protocol/security/runtime-security).
+### Customizable Configurations
+
+Users can configure the runtime using a customizable file, which allows for additional restrictions on WebAssembly beyond its basic guarantees. These restrictions can include limitations on CPU and memory consumption, tailoring the runtime to better suit the user's requirements.
+
+## WebAssembly System Interface (WASI) Support
+
+The Blockless Runtime utilizes the WebAssembly System Interface (WASI), providing a standardized method for interacting with the host operating system. WASI supports system calls and extensions that allow WebAssembly modules to interact safely and efficiently with the file system, network, and other system or service level resources.
+
+### Dynamic Extension System
+
+The WASI interface also features a dynamic extension system, enabling extensions to be added to the interface without modifying the WASM module. This functionality allows the Blockless Network to integrate existing service clients using Common Gateway Interface (CGI) technology.
+
+## **Security**
+
+The Blockless Runtime Environment is designed with security-first principle. For further details, please refer to the [security](./security/runtime-security.md) section.

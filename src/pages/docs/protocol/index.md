@@ -10,24 +10,20 @@ We envision the Blockless Network as a central hub that seamlessly connects vari
 
 ## Technical Features
 
-### Ultra-Portable Node Software
+### Randomized Node Orchestration
 
-Utilizing WebAssembly (WASM) and the WebAssembly System Interface (WASI), the Blockless Protocol enables effortless network contributions using personal computers.
-
-### Fully Extendable Runtime
-
-The Blockless Runtime is highly adaptable, supporting internal, external, and CGI extensions. This flexibility allows developers to seamlessly integrate existing packages or libraries within the project binary or directly on the host. With CGI extensions, developers can also harness capabilities written in different languages.
-
-### Automatic and Randomized Node Orchestration
-
-Function deployments are managed with our advanced selection and distribution algorithm, ensuring the most efficient execution of your program.
+Function deployments are matched and distributed to their unique node sub-network with pseudo-randomness via our advanced [selection](./networking/selection) and [distribution](./networking/distribution.md) algorithms, ensuring the most efficient execution of your program.
 
 ### Customizable and Dynamic Consensus
 
-Select the ideal consensus mechanism for your dApp logic, with customizable options such as data aggregation, pBFT, or Raft.
+Select the ideal [consensus](./networking/consensus.md) mechanism for your dApp logic, with customizable options such as data aggregation, pBFT, or Raft.
 
 The Blockless Network further enhances security and transparency by offering optional computation verifiability through zero-knowledge proofs.
 
-### Hands-Free Scaling
+## Other Notable Features
 
-Experience a serverless development environment with the Blockless Protocol, as it dynamically allocates resources to accommodate fluctuating workloads, allowing developers to focus on building innovative applications.
+- **Ultra-portable node software**: Utilizing WebAssembly (WASM) and the WebAssembly System Interface (WASI), the Blockless Protocol enables effortless network contributions using personal computers.
+
+- **Fully extendable runtime**: The Blockless Runtime is highly adaptable, supporting internal, external, and CGI extensions. This flexibility allows developers to seamlessly integrate existing packages or libraries within the project binary or directly on the host. With CGI extensions, developers can also harness capabilities written in different languages.
+
+- **Hands-free scaling**: Experience a serverless development environment with the Blockless Protocol, as it dynamically allocates resources to accommodate fluctuating workloads, allowing developers to focus on building innovative applications.
