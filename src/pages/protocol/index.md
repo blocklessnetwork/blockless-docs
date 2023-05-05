@@ -2,6 +2,8 @@
 
 Blockless Protocol revolutionizes decentralized networks by providing an optimized platform for verifiable computation, enabling the next generation of distributed systems.
 
+You can start using Blockless Protocol and deploying your first function via [Blockless Functions](../functions/index.md). 
+
 ## Vision
 
 The goal for the Blockless Network is to create a global edge network that offers low-latency and high-availability computing, empowering developers to better serve regional users while minimizing trust within the network.
