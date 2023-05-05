@@ -3,6 +3,10 @@
     {
       "source": "/docs/static/:path((?!docs/).*)",
       "destination": "/static/:path*"
+    },
+    {
+      "source": "/docs/_vercel/:path*",
+      "destination": "/_vercel/:path*"
     }
   ]
 }
