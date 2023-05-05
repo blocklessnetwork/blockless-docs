@@ -1,10 +1,9 @@
 import { FC } from 'react'
 import styles from './index.module.scss'
-import { useRouter } from 'next/router'
 import Image from 'next/image'
 import Link from 'next/link'
 import classname from 'classnames'
-import { communityLinks, documentationIndexList } from '@/src/utils/constants/links'
+import { communityLinks } from '@/src/utils/constants/links'
 import { useConfig } from '@/nextra-theme-docs/src/contexts'
 import { renderComponent } from '@/nextra-theme-docs/src/utils'
 import referencesBlockIcon from '@/src/assets/imgs/home/references_block.svg'
@@ -42,14 +41,14 @@ const Home: FC = () => {
 
 			<div className={styles.product_wrapper}>
 				<div className={styles.row}>
-					<Link href="/docs/protocol" className={classname(styles.product_item, styles.protocol)}>
+					<Link href="/protocol" className={classname(styles.product_item, styles.protocol)}>
 						<div className={styles.title}>Protocol</div>
 						<div className={styles.desc}>
 							Discover the next generation decentralized network optimized for verifiable
 							computation
 						</div>
 					</Link>
-					<Link href="/docs/functions" className={classname(styles.product_item, styles.functions)}>
+					<Link href="/functions" className={classname(styles.product_item, styles.functions)}>
 						<div className={styles.title}>Functions</div>
 						<div className={styles.desc}>
 							Get started and deploy your first application on Blockless
@@ -58,7 +57,7 @@ const Home: FC = () => {
 				</div>
 				<div className={styles.row}>
 					<Link
-						href="/docs/developer-tools"
+						href="/developer-tools"
 						className={classname(styles.product_item, styles.developer)}
 					>
 						<div className={styles.title}>Developer Tools</div>
@@ -68,7 +67,7 @@ const Home: FC = () => {
 						</div>
 					</Link>
 					<Link
-						href="/docs/reference/networking"
+						href="/reference/networking"
 						className={classname(styles.product_item, styles.references)}
 					>
 						<div className={styles.title}>References</div>

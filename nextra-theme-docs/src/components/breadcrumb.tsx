@@ -10,11 +10,21 @@ export function Breadcrumb({
 }: {
   activePath: Item[]
 }): ReactElement {
+  const Home = {
+    kind: "Folder",
+    name: "Home",
+    route:  "/",
+    title: "Home",
+    type: "page",
+    children: [],
+    withIndexPage: true,
+  }
+  const _activePath = [Home, ...activePath]
   return (
     <div className="nextra-breadcrumb nx-mt-1.5 nx-flex nx-items-center nx-gap-1 nx-overflow-hidden nx-text-sm nx-text-gray-500 contrast-more:nx-text-current">
-      {activePath.map((item, index) => {
+      {_activePath.map((item, index) => {
         const isLink = !item.children || item.withIndexPage
-        const isActive = index === activePath.length - 1
+        const isActive = index === _activePath.length - 1
 
         return (
           <Fragment key={item.route + item.name}>
@@ -35,7 +45,11 @@ export function Breadcrumb({
               {isLink && !isActive ? (
                 <Anchor href={item.route}>{item.title}</Anchor>
               ) : (
-                item.title
+                item.children && item.children.length && item.children[0].name === "index" ? (
+                  <Anchor href={item.children[0].route}>{item.title}</Anchor>
+                ) : (
+                  item.title
+                )
               )}
             </div>
           </Fragment>

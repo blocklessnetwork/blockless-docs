@@ -7,17 +7,7 @@ const nextConfig = {
     return config;
   },
   pageExtensions: ["md", "mdx", "js", "jsx", "ts", "tsx"],
-  assetPrefix: '/docs',
-  async rewrites() {
-    return {
-      beforeFiles: [
-        {
-          source: `/docs/_next/data/:path*`,
-          destination: '/_next/data/:path*'
-        }
-      ]
-    }
-  },
+  basePath: '/docs',
 }
 
 const withNextra = nextra({
@@ -26,7 +16,6 @@ const withNextra = nextra({
   themeConfig: './theme.config.tsx',
   latex: true,
   defaultShowCopyCode: true,
-  staticImage: false
 })
  
 module.exports = withNextra(nextConfig)
