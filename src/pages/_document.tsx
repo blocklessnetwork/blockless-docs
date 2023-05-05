@@ -14,7 +14,7 @@ export default function Document() {
           href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600&display=swap"
           rel="stylesheet"
         />
-        <script defer src="https://cdn.vercel-insights.com/v1/script.js"></script>
+        <script data-endpoint="/docs/_vercel/insights" src="/docs/_vercel/insights/script.js" defer></script>
 			</Head>
 			<body>
 				<Main />

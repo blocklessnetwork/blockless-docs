@@ -14,7 +14,7 @@ const nextConfig = {
         {
           source: `/docs/_next/data/:path*`,
           destination: '/_next/data/:path*'
-         },
+        }
       ]
     }
   },
