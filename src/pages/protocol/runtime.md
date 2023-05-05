@@ -24,6 +24,6 @@ The Blockless Runtime utilizes the WebAssembly System Interface (WASI), providin
 
 The WASI interface also features a dynamic extension system, enabling extensions to be added to the interface without modifying the WASM module. This functionality allows the Blockless Network to integrate existing service clients using Common Gateway Interface (CGI) technology.
 
-## **Security**
+## Security
 
 The Blockless Runtime Environment is designed with security-first principle. For further details, please refer to the [security](./security/runtime-security.md) section.
