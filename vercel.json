@@ -1,6 +1,10 @@
 {
   "rewrites": [
     {
+      "source": "/docs/static/:path((?!docs/).*)",
+      "destination": "/static/:path*"
+    },
+    {
       "source": "/docs/_vercel/:path((?!docs/).*)",
       "destination": "/_vercel/:path*"
     }
