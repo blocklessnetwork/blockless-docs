@@ -2,7 +2,7 @@
 	"token-economics": {
 		"title": "Token Economics"
 	},
-	"initial-node-offerings": {
-		"title": "Initial Node Offerings"
+	"initial-node-offering": {
+		"title": "Initial Node Offering"
 	}
 }
