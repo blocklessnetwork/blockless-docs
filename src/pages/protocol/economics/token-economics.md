@@ -10,14 +10,12 @@ Four times a day, the orchestration chain collects payments from authorized wall
 2. **Token Burn** - 10%
 3. **Protocol Grants** - 10%
 
-## **Payment Types:**
+## Payment Types
 
 For the mainnet, Blockless offers two pricing mechanisms: Pay-as-you-go, where users pay for Blockless Functions based on the resources their invocations consume, and Timed Payment, where users pay for Blockless App Engine according to how long they wish to rent and utilize dedicated servers.
 
-## **Node and User Staking:**
+## Node and User Staking
 
 Aspiring execution node operators must stake the Blockless (BLS) token to join the network. The amount of work a node can perform depends on its hardware capacity and the amount of BLS staked. Developers can also stake BLS tokens to unlock additional benefits, such as discounted rates and access to new Blockless Hosted Services.
 
 ![Token value flow @2x.png](/docs/protocol/economics/Token_value_flow_2x.png)
-
-##
