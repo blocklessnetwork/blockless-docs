@@ -1,45 +1,24 @@
 {
 	"*": {
-		"display": "hidden"
+		"type": "page"
 	},
 	"index": {
-		"type": "page",
 		"title": "Home",
-		"display": "hidden",
-		"theme": {
-			"layout": "full"
-		}
-	},
-	"docs": {
-		"type": "page",
-		"title": "Home",
-		"display": "normal",
 		"theme": {
 			"layout": "full"
 		}
 	},
 	"protocol": {
-		"type": "page",
-		"title": "Protocol",
-		"display": "normal",
-		"href": "/docs/protocol"
+		"title": "Protocol"
 	},
-	"function": {
-		"type": "page",
-		"title": "Functions",
-		"display": "normal",
-		"href": "/docs/functions"
+	"functions": {
+		"title": "Functions"
 	},
 	"developer-tools": {
-		"type": "page",
-		"title": "Developer Tools",
-		"display": "normal",
-		"href": "/docs/developer-tools"
+		"title": "Developer Tools"
 	},
 	"reference": {
-		"type": "page",
 		"title": "Reference",
-		"display": "normal",
-		"href": "/docs/reference/networking"
+		"href": "/reference/networking"
 	}
 }

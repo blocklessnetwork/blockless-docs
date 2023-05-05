@@ -30,7 +30,7 @@ const Header: FC<headerProps> = (props) => {
 
 	useEffect(() => {
 		setOpen(false)
-		setShowSearch(router.pathname.startsWith("/docs/"))
+		setShowSearch(router.pathname !== '/')
 	}, [router.pathname])
 
 	useEffect(() => {
@@ -48,7 +48,7 @@ const Header: FC<headerProps> = (props) => {
 						<a href="/">
 							<Image src={logoNameIcon} alt="blockless" className={styles.logo_name} />
 						</a>
-						<Link href="/docs" className={styles.logo_docs}>
+						<Link href="/" className={styles.logo_docs}>
 							<span className={styles.separator}>/</span>
 							<span className={styles.support}>Docs</span>
 						</Link>

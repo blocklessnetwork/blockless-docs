@@ -6,7 +6,6 @@
     "./nextra-theme-docs/src/polyfill.ts"
   ],
   "dependencies": {
-    "@docsearch/react": "3",
     "@headlessui/react": "^1.7.10",
     "@popperjs/core": "^2.11.6",
     "@types/node": "^16.18.3",
