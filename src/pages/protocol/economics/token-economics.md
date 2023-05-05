@@ -1,21 +1,31 @@
-# Fee Distribution in the Blockless Execution Network
+# Token Economics
 
-In the Blockless execution network, the primary economic incentive for node participation is direct payments from developers who deploy and run applications on Blockless.
+The Blockless Network's token economic mechanism is founded on the direct interaction between the developer user, who deploys and runs applications on Blockless, and the node operator or contributor, who supplies hardware resources to the network.
 
-When a developer deploys a function, they deposit funds into a smart contract wallet authorized to conduct payments for invocations. When a function is invoked, the nodes selected for execution check with the orchestration chain to confirm that the owner of the function has sufficient funds available for the execution.
+When a developer deploys a function, they deposit funds into a smart contract wallet across various blockchain ecosystems, which manages the emission of funds. As the developer's application receives execution requests, the designated funds are transferred to the node contributor.
 
-Four times a day, the orchestration chain collects payments from authorized wallets and distributes rewards to nodes in the execution network. The fee collected is distributed as follows:
+From the total fee collected from the developer user, 80% is allocated directly to the node operator as compensation for their hardware contribution. The remaining 20% is split into two parts: 10% is burned, effectively reducing the token supply and promoting long-term value; the other 10% is deposited into the protocol treasury, which funds network improvements and ongoing development.
 
-1. **Execution Nodes** - 80%
-2. **Token Burn** - 10%
-3. **Protocol Grants** - 10%
+- **Execution Nodes** - 80%
+- **Token Burn** - 10%
+- **Protocol Improvement Funds** - 10%
 
-## Payment Types
+## Node Incentive Distribution
 
-For the mainnet, Blockless offers two pricing mechanisms: Pay-as-you-go, where users pay for Blockless Functions based on the resources their invocations consume, and Timed Payment, where users pay for Blockless App Engine according to how long they wish to rent and utilize dedicated servers.
+The Blockless Network's randomized node selection and distribution process requires a balanced and fair incentive distribution mechanism that accommodates varying commitment levels of node operators while maintaining network security.
 
-## Node and User Staking
+Recognizing that not all nodes can serve the network perpetually or in a long-running manner, Blockless incorperates a novel tiering system, dividing nodes into two categories: time-commitment (full) nodes and freelance (lite) nodes.
 
-Aspiring execution node operators must stake the Blockless (BLS) token to join the network. The amount of work a node can perform depends on its hardware capacity and the amount of BLS staked. Developers can also stake BLS tokens to unlock additional benefits, such as discounted rates and access to new Blockless Hosted Services.
+**Time-commitment nodes** require staking as a timed SLA (denoted in hours) is established between the node operator and the network. In exchange, the network guarantees a variable yield for time-commitment nodes and prioritizes their fee distribution. This arrangement ensures that dedicated node operators receive appropriate compensation for their commitment.
 
-![Token value flow @2x.png](/docs/protocol/economics/Token_value_flow_2x.png)
+**Freelance nodes** do not require staking, although it may be enforced to enhance network security. Freelance nodes can join and exit the network at their discretion, and they are compensated after all time-commitment nodes are rewarded. This means that freelance nodes may receive no incentives when node resources are abundant, ensuring that only the most active and dedicated nodes receive a significant share of the rewards.
+
+## Network Currency
+
+Although the Blockless native token, BLS, is planned as the default network currency, the Blockless protocol offers the flexibility to accept any token for staking and payments. This adaptability opens the door to a variety of innovative use cases.
+
+For instance, Blockless can seamlessly integrate with a blockchain ecosystem by utilizing its native token (e.g., Ethereum) or liquid staking tokens for staking and transactions. This effectively makes Blockless an integral part of the blockchain ecosystem's external execution layer, enhancing its overall capabilities and security.
+
+Another intriguing use case is Initial Node Offering (INO), which leverage the developer's own tokens as a form of payment. This approach offers multiple benefits: nodes have the opportunity to acquire project tokens early on, while developers can use their own tokens to cover infrastructure costs, reducing overall expenses.
+
+By embracing diverse tokens and use cases, the Blockless Network remains agile and adaptable to the evolving needs of its users. We envision a combination of tokens being utilized for staking and payments, with respective use cases introduced incrementally to the protocol and service stack.
