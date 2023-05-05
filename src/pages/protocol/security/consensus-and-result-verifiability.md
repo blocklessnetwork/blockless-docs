@@ -1,11 +1,15 @@
-# Blockless Secret Management
+# Consensus and Result Verifiability
 
-![General Architecture.jpg](/docs/protocol/security/General_Architecture.jpg)
+In an open and trustless system like Blockless, ensuring the correctness and verifiability of execution and data is paramount. To achieve this, Blockless verifies the execution of WASM functions through a combination of state-machine replication (consensus) and zk-SNARK proofs.
 
-The Blockless Network uses a general MPC Network to store secrets and retrieve them for the execution of the WASM archive. A MPC Network is a decentralized network of microcontrollers that can communicate with each other and store data in a secure and tamper-proof manner. 
+## State-machine Replication
 
-We use blockchain storage, such as IPFS, to store the secrets securely and ensure their integrity. The process starts with the user uploading the secret data to the blockchain storage. This data can be any confidential information, such as private keys, API keys, or other sensitive data required for the execution of the WASM archive. The secret data is then encrypted and stored on the blockchain, ensuring its confidentiality.
+State-machine replication involves multiple machines executing the same task, allowing users to trust the results produced by the majority of machines. This is a common design used in the majority of blockchain networks.
 
-When the WASM archive is executed, it requests the required secrets from the MPC Network. The MPC Network retrieves the secrets from the blockchain storage and decrypts them using the appropriate encryption key. The decrypted secrets are then provided to the WASM archive for execution.
+However, different systems and applications may require varying levels of security and performance. To accommodate these diverse requirements in the production setting, Blockless Protocol offers several system-level consensus modules, including data aggregation (off-chain reporting), pBFT, and Raft. Developers can choose from these options based on the desired security and performance trade-offs.
 
-This process ensures that sensitive information is stored securely and can only be accessed by authorized parties. The decentralized nature of the MPC Network and blockchain storage ensures that the system is tamper-proof and resistant to attacks.
+For example, a financial application handling millions of dollars would prioritize security and assurance for its underlying computations and executions, often sacrificing performance. In contrast, an automation system updating smart contracts based on real-world events may require extremely fast execution, opting for the results from the quickest responding worker. In this context, a security mechanism involving global consensus among hundreds of nodes would not suffice.
+
+## Result Verifiability
+
+In addition to state-machine replication, developers can choose to generate zk-SNARK proofs, which provide mathematical evidence for the validity and correctness of their execution and results. Blockless leverages zkWASM technology to generate zk-SNARK proofs directly from users' WASM binaries, uploading the generated zero-knowledge proofs to designated verifiers on-chain. This added layer of verifiability ensures that the integrity of the computations remains uncompromised, providing users with confidence in the accuracy and trustworthiness of the executed tasks.
