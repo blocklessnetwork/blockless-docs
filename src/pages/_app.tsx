@@ -1,5 +1,4 @@
 import React, { Suspense, useEffect } from "react";
-import { Analytics } from '@vercel/analytics/react';
 import "@/src/styles/globals.css";
 import "@/src/components/DocSearch/style/_variables.css";
 import "@/src/components/DocSearch/style/button.css";
@@ -35,10 +34,7 @@ const App = ({ Component, pageProps, router }: any) => {
   })
 
   return (
-    <>
-      <Suspense fallback={<>loading...</>}><Component {...pageProps} /></Suspense>
-      <Analytics />
-    </>
+    <Suspense fallback={<>loading...</>}><Component {...pageProps} /></Suspense>
   );
 };
 
