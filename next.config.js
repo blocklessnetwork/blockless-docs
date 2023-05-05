@@ -14,7 +14,11 @@ const nextConfig = {
         {
           source: `/docs/_next/data/:path*`,
           destination: '/_next/data/:path*'
-         },
+        },
+        {
+          source: `/docs/_vercel/:path*`,
+          destination: '/_vercel/:path*'
+        }
       ]
     }
   },
