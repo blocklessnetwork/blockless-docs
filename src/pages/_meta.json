@@ -1,45 +1,45 @@
 {
-  "*": {
-    "display": "hidden"
-  },
-  "index": {
-    "type": "page",
-    "title": "Home",
-    "display": "hidden",
-    "theme": {
-      "layout": "full"
-    }
-  },
-  "docs": {
-    "type": "page",
-    "title": "Home",
-    "display": "normal",
-    "theme": {
-      "layout": "full"
-    }
-  },
-  "protocol": {
-    "type": "page",
-    "title": "Protocol",
-    "display": "normal",
-    "href": "/docs/protocol"
-  },
-  "function": {
-    "type": "page",
-    "title": "Function",
-    "display": "normal",
-    "href": "/docs/functions"
-  },
-  "developer-tools": {
-    "type": "page",
-    "title": "Developer Tools",
-    "display": "normal",
-    "href": "/docs/developer-tools"
-  },
-  "reference": {
-    "type": "page",
-    "title": "Reference",
-    "display": "normal",
-    "href": "/docs/reference/networking"
-  }
+	"*": {
+		"display": "hidden"
+	},
+	"index": {
+		"type": "page",
+		"title": "Home",
+		"display": "hidden",
+		"theme": {
+			"layout": "full"
+		}
+	},
+	"docs": {
+		"type": "page",
+		"title": "Home",
+		"display": "normal",
+		"theme": {
+			"layout": "full"
+		}
+	},
+	"protocol": {
+		"type": "page",
+		"title": "Protocol",
+		"display": "normal",
+		"href": "/docs/protocol"
+	},
+	"function": {
+		"type": "page",
+		"title": "Functions",
+		"display": "normal",
+		"href": "/docs/functions"
+	},
+	"developer-tools": {
+		"type": "page",
+		"title": "Developer Tools",
+		"display": "normal",
+		"href": "/docs/developer-tools"
+	},
+	"reference": {
+		"type": "page",
+		"title": "Reference",
+		"display": "normal",
+		"href": "/docs/reference/networking"
+	}
 }
