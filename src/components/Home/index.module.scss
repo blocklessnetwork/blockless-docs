@@ -197,10 +197,16 @@
 
 			&.protocol {
 				max-width: 381px;
-				background: url('../../assets/imgs/home/protocol.png') no-repeat,
+				background: url('../../assets/imgs/home/protocol2x.png') no-repeat,
 					linear-gradient(180deg, #ffffff 48.06%, #f6f5f9 100%);
 				background-size: 381px 258px;
 				background-position: right bottom;
+        @media screen and (max-width: $media-md) {
+					background: url('../../assets/imgs/home/protocol.png') no-repeat,
+					linear-gradient(180deg, #ffffff 48.06%, #f6f5f9 100%);
+				  background-size: 381px 258px;
+				  background-position: right bottom;
+				}
 
 				.desc {
 					max-width: 292px;
@@ -216,7 +222,7 @@
 
 			&.functions {
 				max-width: 791px;
-				background: url('../../assets/imgs/home/functions.png') no-repeat,
+				background: url('../../assets/imgs/home/functions2x.png') no-repeat,
         linear-gradient(180deg, #ffffff 48.06%, #f6f5f9 100%);
 				background-position: calc(100% + 20px) calc(100% + 16px);
         background-size: 806px 321px;
@@ -240,7 +246,7 @@
 
 			&.developer {
 				max-width: 791px;
-				background: url('../../assets/imgs/home/developer.png') no-repeat,
+				background: url('../../assets/imgs/home/developer2x.png') no-repeat,
         linear-gradient(360deg, #FFFFFF 31.98%, #F6F5F9 192.83%);
 				background-position: center 92px;
         background-size: 853px 197px;
