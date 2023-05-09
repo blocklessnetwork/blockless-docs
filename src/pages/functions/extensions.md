@@ -32,7 +32,7 @@ External extensions, or on-demand extensions, are extensions that are installed 
 
 - When you need access to resources provided by the host machine.
 - When you need to use functionality that cannot be compiled into your WASM binary.
-- When you want to leverage existing system resources or tools
+- When you want to leverage existing system resources or tools.
 
 ### Example
 
