@@ -2,7 +2,7 @@
 
 Blockless Protocol revolutionizes decentralized networks by providing an optimized platform for verifiable computation, enabling the next generation of distributed systems.
 
-You can start using Blockless Protocol and deploying your first function via [Blockless Functions](../functions/index.md). 
+You can start using Blockless Protocol and deploying your first function via [Blockless Functions](../functions). 
 
 ## Vision
 
@@ -14,11 +14,11 @@ We envision the Blockless Network as a central hub that seamlessly connects vari
 
 ### Randomized Node Orchestration
 
-Function deployments are matched and distributed to their unique node sub-network with pseudo-randomness via our advanced [selection](./networking/selection) and [distribution](./networking/distribution.md) algorithms, ensuring the most efficient execution of your program.
+Function deployments are matched and distributed to their unique node sub-network with pseudo-randomness via our advanced [selection](./protocol/networking/selection) and [distribution](./protocol/networking/distribution.md) algorithms, ensuring the most efficient execution of your program.
 
 ### Customizable and Dynamic Consensus
 
-Select the ideal [consensus](./networking/consensus.md) mechanism for your dApp logic, with customizable options such as data aggregation, pBFT, or Raft.
+Select the ideal [consensus](./protocol/networking/consensus.md) mechanism for your dApp logic, with customizable options such as data aggregation, pBFT, or Raft.
 
 The Blockless Network further enhances security and transparency by offering optional computation verifiability through zero-knowledge proofs.
 
