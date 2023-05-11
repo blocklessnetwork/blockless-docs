@@ -3,7 +3,7 @@
 This guide will walk you through logging in to the Blockless Network to deploying your first Function.
 
 > **Try the Blockless Dashboard**  
-> The quickest way to experiment with Blockless Functions is through the [Blockless Dashboard](https://dashboard/blockless.network). The only thing you need is to link your Web3 wallet and GitHub account. After that, you can deploy a sample project to preview and test a Functions script immediately.
+> The quickest way to experiment with Blockless Functions is through the [Blockless Dashboard](https://dashboard.blockless.network). The only thing you need is to link your Web3 wallet and GitHub account. After that, you can deploy a sample project to preview and test a Functions script immediately.
 
 ## **Start a New Project with the Blockless CLI**
 
