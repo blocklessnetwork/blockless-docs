@@ -107,5 +107,5 @@ bls sites build --experimental
 You can preview and test your site project with the local Blockless worker node instance. Simply run this command:
 
 ```bash
-blas sites preview --experimental
+bls sites preview --experimental
 ```
