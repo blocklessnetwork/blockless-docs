@@ -11,14 +11,8 @@
 	"protocol": {
 		"title": "Protocol"
 	},
-	"functions": {
-		"title": "Functions"
-	},
-	"sites": {
-		"title": "Sites"
-	},
-	"triggers": {
-		"title": "Triggers"
+	"network": {
+		"title": "Network"
 	},
 	"developer-tools": {
 		"title": "Developer Tools"

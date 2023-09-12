@@ -42,16 +42,15 @@ const Home: FC = () => {
 			<div className={styles.product_wrapper}>
 				<div className={styles.row}>
 					<Link href="/protocol" className={classname(styles.product_item, styles.protocol)}>
-						<div className={styles.title}>Protocol</div>
+						<div className={styles.title}>Blockless Protocol</div>
 						<div className={styles.desc}>
-							Discover the next generation decentralized network optimized for verifiable
-							computation
+							Discover the key technologies supporting Network Neutral Applications
 						</div>
 					</Link>
 					<Link href="/functions" className={classname(styles.product_item, styles.functions)}>
-						<div className={styles.title}>Functions</div>
+						<div className={styles.title}>Blockless Network</div>
 						<div className={styles.desc}>
-							Get started and deploy your first application on Blockless
+							Get started and deploy your first Network Neutral Application on Blockless
 						</div>
 					</Link>
 				</div>
