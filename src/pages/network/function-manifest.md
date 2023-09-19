@@ -42,19 +42,19 @@ content_type = "json"
 
 ### name `string` `Required`
 
-The `name` property is a string that represents the unique identifier for your function or site.
+The `name` property is a string that represents the unique identifier for your function.
 
 ### version `string` `Optional`
 
-The `version` property is an optional string that represents the version of your function or site.
+The `version` property is an optional string that represents the version of your function.
 
 ### type `string` `Optional`
 
-The `type` property is an optional string that determines the type of deployment. Currently, the type field can be either `"function"` or `"site"`. If not provided, it defaults to `"function"`.
+The `type` property is an optional string that determines the type of deployment. Currently, the type field needs to be `"function"`.
 
 ### content_type `string` `Optional`
 
-The `content_type` property is an optional string that defines the content type for the response returned by your function or site. Some type examples are: `"json"`, `"html"`, or `"text"`. If not provided, it defaults to `"text"`.
+The `content_type` property is an optional string that defines the content type for the response returned by your function. Some type examples are: `"json"`, `"html"`, or `"text"`. If not provided, it defaults to `"text"`.
 
 ## Deployment Configuration `[deployment]`
 
@@ -72,11 +72,11 @@ permissions = [
 
 ### **nodes `integer` `Optional`**
 
-The `nodes` property is an optional integer that represents the number of nodes to be deployed for your function or site. If not provided, it defaults to `1`.
+The `nodes` property is an optional integer that represents the number of nodes to be deployed for your function. If not provided, it defaults to `1`.
 
 ### **permissions `array of strings` `Conditional`**
 
-The `permissions` property is an array of strings that represents the list of extension (and subsequent URL) your function or site is allowed to make requests to. This property is required only if your function or site makes external requests.
+The `permissions` property is an array of strings that represents the list of extensions (and subsequent URL) your function is allowed to make requests to. This property is required only if your function makes external requests.
 
 ## Build Configuration `[build]`
 

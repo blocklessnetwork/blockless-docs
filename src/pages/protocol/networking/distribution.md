@@ -1,6 +1,6 @@
 # Task Distribution
 
-Task distribution is a crucial step that occurs after the [selection process](./selection.md), where a group of devices that meet the user's criteria is chosen. The objective of task distribution is to effectively allocate tasks in a pseudo-randomized manner among a selected set of workers, while also ensuring a balanced workload and respecting resource constraints.
+Task distribution is a crucial step that occurs after the [selection process](./selection.md), where a group of devices that meet the nnApp's criteria is chosen. The objective of task distribution is to effectively allocate tasks in a pseudo-randomized manner among a selected set of workers, while also ensuring a balanced workload and respecting resource constraints.
 
 To achieve this goal, the algorithm employs a [Greco-Latin square](https://en.wikipedia.org/wiki/Latin_square) distribution approach, which evenly distributes tasks across computers while considering the available resources of each device. By doing so, the algorithm achieves two key objectives: maintaining a balanced workload across all workers and optimizing resource utilization by considering compatibility with the available resources on each computer.
 

@@ -20,11 +20,11 @@ This means that applications no longer have to sacrifice performance and usabili
 
 ## Technical Features
 
-### Randomized Orchestration
+### Automated Orchestration
 
 Workloads deployed on Blockless are matched and distributed to most the suitable nodes with pseudo-randomness via our advanced [selection](./protocol/networking/selection) and [distribution](./protocol/networking/distribution.md) algorithms, ensuring the most efficient execution for your application.
 
-### Customizable and Dynamic Consensus
+### Dynamic Consensus and Verification
 
 Select the ideal [consensus](./protocol/networking/consensus.md) mechanism for your nnApp, with customizable options such as data aggregation, pBFT, or RAFT.
 
@@ -32,6 +32,6 @@ Blockless further enhances security and transparency by offering optional comput
 
 ## Other Notable Features
 
-- **Ultra-portable node software**: Utilizing WebAssembly (WASM) and the WebAssembly System Interface (WASI), Blockless Network enables effortless network contributions with personal computers.
+- **Ultra-portable node software**:  Utilizing WebAssembly (WASM) and the WebAssembly System Interface (WASI), Blockless enables communities to use a wide range of personal computers (including laptops and phones) to empower network neutral applications and a new modular paradigm for Web3. 
 
-- **Fully extendable runtime**: The Blockless Runtime is highly adaptable, supporting internal, external, and CGI extensions. This flexibility allows developers to seamlessly integrate existing packages or libraries within the project binary or directly on the host. With CGI extensions, developers can also harness capabilities written in different languages.
+- **Fully extendable runtime**: Blockless dynamically allocates network resources to accommodate fluctuating workloads of nnApps, allowing developers to focus on building innovative applications instead of manually managing the performance and uptime of their specialized networks.

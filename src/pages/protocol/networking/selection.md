@@ -1,10 +1,10 @@
 # Node Selection
 
-In the Blockless Networking (b7s) module, node selection is a crucial step that ensures the efficient and effective execution of tasks. The selection process aims to identify the optimal network contributors from a pool of devices, taking into account various user-defined filters such as computational capacity, storage availability, and network latency.
+In the Blockless Networking (b7s) module, node selection is a crucial step that ensures the efficient and effective operation of nnApps. The selection process aims to identify the optimal network contributors from a pool of devices, taking into account various user-defined filters such as computational capacity, storage availability, and network latency.
 
-Once the selection process is complete, a group of optimal nodes is obtained. This node group serves as the input for the [distribution algorithm](./distribution.md), which randomly selects the requested number of nodes from the node group for task execution.
+Once the selection process is complete, a group of optimal nodes is obtained. This node group serves as the input for the [distribution algorithm](./distribution.md), which randomly selects the requested number of nodes from the node group for the formation of a nnApp’s network.
 
-In this section, we will focus on the node selection step, exploring the criteria and considerations involved in determining the most suitable nodes for task execution.
+In this section, we will focus on the node selection step, exploring the criteria and considerations involved in determining the most suitable nodes for a specific nnApp.
 
 ## Node Selection Algorithm
 
@@ -37,7 +37,7 @@ The function $f_k$ maps the k-th filter value to a score, which can be either 0 
 
 2. **Range filters**: If the filter value is an object with "min" and "max" properties (e.g., a specified range for computational power), the score is calculated as follows: $f_k(v_{(i, k)})=1$ if $v_{(i, k)}$ falls within the specified range (i.e., the computer meets the minimum and maximum requirements); otherwise, the score is 0.
 
-The suitability score calculation enables the node selection algorithm to assign a numerical value to each device based on how closely it adheres to the user's requirements. This quantitative assessment forms the foundation for the subsequent simulated annealing process, which searches for the most suitable device by balancing exploration and exploitation.
+The suitability score calculation enables the node selection algorithm to assign a numerical value to each device based on how closely it adheres to the user's (nnApp’s) requirements. This quantitative assessment forms the foundation for the subsequent simulated annealing process, which searches for the most suitable device by balancing exploration and exploitation.
 
 ### Simulated Annealing Process
 
