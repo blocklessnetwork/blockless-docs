@@ -16,8 +16,9 @@ Payment process for users' calls and invocations are automated via on-chain cust
 
 To set up a Blockless account, users generate an authorized on-chain custodial account associated with their Web3 address. This Web3 address serves as a unique identifier for the account and is used for various purposes, including service payment, request authorization, and account access.
 
-Upon depositing funds into the smart contract, users can leverage the Blockless network to execute serverless applications and perform other actions, with the associated fees being automatically deducted from their account balance. By utilizing a smart contract for managing funds, the Blockless account system ensures transparency, security, and ease of use.
+Upon depositing funds into the smart contract, users can leverage Blockless to create specialized networks for their network neutral applications, with the associated fees being automatically deducted from their account balance. By utilizing a smart contract for managing funds, the Blockless account system ensures transparency, security, and ease of use.
 
-## Public Beta Notice
 
-Blockless currently supports all EVM and Cosmos blockchain addresses. Users can connect to Blockless with MetaMask, Keplr Wallet, and Martian Wallet. Please note that the payment system is currently disabled during the public beta phase.
+## Testnet Notice
+
+Blockless currently supports all EVM and Cosmos blockchain addresses. Users can connect to Blockless with MetaMask, Keplr Wallet, and Martian Wallet. Please note that the payment system is currently disabled during testnet.

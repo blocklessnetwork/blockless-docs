@@ -1,6 +1,6 @@
 # Secret Management
 
-Blockless Network employs a robust secret management system to securely store and retrieve sensitive data required for the execution of WASM archives. This system is built on a combination of threshold signature Multi-Party Computation (MPC) networks and decentralized storage technologies, ensuring both confidentiality and integrity.
+Blockless employs a robust secret management system to securely store and retrieve sensitive data required for nnApps. This system is built on a combination of threshold signature Multi-Party Computation (MPC) networks and decentralized storage technologies, ensuring both confidentiality and integrity.
 
 ## Multi-Party Computation Network
 

@@ -2,7 +2,7 @@
 
 Upon the conclusion of the selection and distribution phases, the task is ready for deployment and execution.
 
-Blockless utilizes a two-stage deployment and execution process, allowing the execution binary to be installed and run on a set of randomly selected devices efficiently. This process first involves the notification of deployments, which initiates a pre-cache procedure. Subsequently, a runtime environment is instantiated for task execution.
+Blockless utilizes a two-stage deployment and execution process, allowing the execution binary to be efficiently installed and run on a set of randomly selected devices for a nnApp. This process first involves the notification of deployments, which initiates a pre-cache procedure. Subsequently, a runtime environment is instantiated for task execution.
 
 ## Acquiring the Execution Binary (Pre-Cache)
 

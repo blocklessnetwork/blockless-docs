@@ -8,11 +8,11 @@ In Blockless, extensions are considered safe by default, allowing node operators
 
 ## Dynamic Extension Query
 
-Blockless Network enables the runtime to query and enumerate available extensions on the local host, enabling dynamic method execution and feature querying. This functionality expands the capabilities of the Blockless compute network, delivering more efficient and scalable solutions.
+Blockless enables the runtime to query and enumerate available extensions on the local host, enabling dynamic method execution and feature querying. This functionality expands the capabilities of the nnApps built on Blockless, delivering more efficient and scalable solutions.
 
 ## Example: Redis Extension
 
-The Redis extension for Blockless improves performance and scalability for applications and services built on the platform. It allows for more efficient storage and retrieval of data. Benefits of using the Redis extension include:
+The Redis extension improves performance and scalability for nnApps built on the platform. It allows for more efficient storage and retrieval of data. Benefits of using the Redis extension include:
 
 1. **Faster Performance**: Redis is an in-memory data store, providing faster read and write speeds compared to traditional disk-based databases.
 2. **Scalability**: Redis is designed for high scalability, making it suitable for applications handling large amounts of data.
@@ -20,4 +20,5 @@ The Redis extension for Blockless improves performance and scalability for appli
 4. **Lower Storage Costs**: As an in-memory data store, Redis reduces overall storage costs associated with large-scale networks.
 5. **Improved Data Analysis**: Redis offers powerful data analysis and aggregation features, helping developers gain deeper insights into network performance and usage patterns.
 
-The Redis extension can help dApp builders achieve higher levels of performance, scalability, and reliability in Blockless, especially for large-scale, mission-critical applications.
+The Redis extension can help nnApp builders achieve higher levels of performance, scalability, and reliability in using Blockless, especially for large-scale, mission-critical use cases.
+
