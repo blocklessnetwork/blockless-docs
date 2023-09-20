@@ -1,29 +1,26 @@
 {
-  "index": {
-    "title": "Overview"
-  },
-  "core-concepts": {
-    "title": "Core Concepts"
-  },
-  "networking": {
-    "title": "Networking"
-  },
-  "runtime": {
-    "title": "Runtime Environment"
-  },
-  "security": {
-    "title": "Security"
-  },
-  "extension": {
-    "title": "Extension"
-  },
-  "account": {
-    "title": "Account"
-  },
-  "nodes": {
-    "title": "Nodes"
-  },
-  "economics": {
-    "title": "Economics"
-  }
+	"index": {
+		"title": "Overview"
+	},
+	"core-concepts": {
+		"title": "Core Concepts"
+	},
+	"networking": {
+		"title": "Networking"
+	},
+	"runtime": {
+		"title": "Runtime Environment"
+	},
+	"security": {
+		"title": "Security"
+	},
+	"extension": {
+		"title": "Extension"
+	},
+	"account": {
+		"title": "Account"
+	},
+	"nodes": {
+		"title": "Nodes"
+	}
 }
