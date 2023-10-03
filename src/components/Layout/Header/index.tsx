@@ -49,7 +49,6 @@ const Header: FC<headerProps> = (props) => {
 							<Image src={logoNameIcon} alt="blockless" className={styles.logo_name} />
 						</a>
 						<Link href="/" className={styles.logo_docs}>
-							<span className={styles.separator}>/</span>
 							<span className={styles.support}>Docs</span>
 						</Link>
 					</div>
@@ -81,7 +80,7 @@ const Header: FC<headerProps> = (props) => {
 							target="_blank"
 							rel="noopener noreferrer"
 						>
-							<Button label="Login" />
+							<Button label="Dashboard" />
 						</a>
 					</div>
 				</header>

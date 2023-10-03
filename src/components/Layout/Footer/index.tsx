@@ -13,33 +13,30 @@ const Footer: FC = () => {
 				<div className={styles.block_links}>
 					<div className={styles.logo}>
 						<a href="/">
-							<Image src={logoIcon} alt="blockless logo" />
-						</a>
-						<a href="/">
-							<Image src={logoNameIcon} alt="blockless" className={styles.logo_name} />
+							<Image src={logoIcon} alt="blockless logo" width="24" />
 						</a>
 					</div>
-					<div className={styles.link_columns}>
-						<div className={styles.community}>
-							<p className={styles.block_title}>Community</p>
-							<ul>
-								{footerLinks.community.map((item) => (
-									<li key={item.id} className={styles.link_item}>
-										{item.isExternal ? (
-											<a href={item.path} target="_blank" rel="noreferrer">
-												{item.label}
-											</a>
-										) : (
-											<Link href={item.path}>{item.label}</Link>
-										)}
-									</li>
-								))}
-							</ul>
-						</div>
+					<div className="nx-flex nx-gap-10">
+						{footerLinks.map((item, key) => (
+							<div key={key} className={styles.link_columns}>
+								<div className={styles.community}>
+									<p className={styles.block_title}>Community</p>
+									<ul>
+										{item.children.map((nav, k) => (
+											<li key={k} className={styles.link_item}>
+												<Link href={nav.link} target={nav.isExternal ? '_blank' : '_self'}>
+													{nav.label}
+												</Link>
+											</li>
+										))}
+									</ul>
+								</div>
+							</div>
+						))}
 					</div>
 				</div>
 				<p className={styles.block_copyright}>
-					Copyright © {new Date().getFullYear()} TX Labs, Inc. All rights reserved.
+					© {new Date().getFullYear()} TX Labs Foundation Ltd.
 				</p>
 			</footer>
 		</article>

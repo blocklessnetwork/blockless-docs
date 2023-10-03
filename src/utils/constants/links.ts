@@ -5,6 +5,9 @@ import zkIcon from '@/src/assets/icons/docIndex/zk.svg'
 import discordIcon from '@/src/assets/icons/community/discord.svg'
 import githubIcon from '@/src/assets/icons/community/github.svg'
 import telegramIcon from '@/src/assets/icons/community/telegram.svg'
+import protocolIcon from '@/src/assets/imgs/home/protocol.svg'
+import networkIcon from '@/src/assets/imgs/home/network.svg'
+import toolsIcon from '@/src/assets/imgs/home/tools.svg'
 
 export const twitterLink = 'https://twitter.com/theblockless'
 
@@ -46,37 +49,43 @@ export const communityLinks = [
 	}
 ]
 
-export const footerLinks = {
-	resources: [
-		{
-			id: 'use-cases',
-			label: 'Use Cases',
-			path: 'https://blockless.network/use-cases',
-			isExternal: true
-		},
-		{
-			id: 'customers',
-			label: 'Customers',
-			path: 'https://blockless.network/customers',
-			isExternal: true
-		}
-	],
-	community: communityLinks.slice(1),
-	company: [
-		{
-			id: 'blog',
-			label: 'Blog',
-			path: 'https://blockless.network/blog',
-			isExternal: true
-		},
-		{
-			id: 'careers',
-			label: 'Careers',
-			path: 'https://txlabs.freshteam.com/jobs',
-			isExternal: true
-		}
-	]
-}
+export const footerLinks = [
+	{
+		label: 'Developers',
+		children: [
+			{
+				label: 'Documentation',
+				link: '/',
+				isExternal: false
+			},
+			{
+				label: 'GitHub',
+				link: 'https://github.com/blocklessnetwork',
+				isExternal: true
+			}
+		]
+	},
+	{
+		label: 'Community',
+		children: [
+			{
+				label: 'X',
+				link: twitterLink,
+				isExternal: true
+			},
+			{
+				label: 'Telegram',
+				link: 'https://t.me/blocklessofficial',
+				isExternal: true
+			},
+			{
+				label: 'Discord',
+				link: 'https://discord.com/invite/9eeRHxSCTZ',
+				isExternal: true
+			}
+		]
+	}
+]
 
 export const loginLink = 'https://dashboard.blockless.network/'
 
@@ -108,5 +117,87 @@ export const documentationIndexList = [
 		desc: 'Zero Knowledge, Zero Effort',
 		icon: zkIcon,
 		link: ''
+	}
+]
+
+export const homeNavList = [
+	{
+		label: 'Blockless Protocol',
+		description: 'Discover the key technologies supporting Network Neutral Applications.',
+		link: '/protocol',
+		icon: protocolIcon,
+		links: [
+			{
+				label: 'Core Concepts',
+				link: '/protocol/core-concepts'
+			},
+			{
+				label: 'Networking',
+				link: '/protocol/networking'
+			},
+			{
+				label: 'Runtime',
+				link: '/protocol/runtime'
+			}
+		]
+	},
+	{
+		label: 'Blockless Network',
+		description: 'Get started and deploy your first Network Neutral Application on Blockless.',
+		link: '/network',
+		icon: networkIcon,
+		links: [
+			{
+				label: 'Blockless Functions',
+				link: '/network'
+			},
+			{
+				label: 'Quick Start',
+				link: '/network/quick-start'
+			},
+			{
+				label: 'Tutorials',
+				link: '/network/tutorials'
+			}
+		]
+	},
+	{
+		label: 'Tools and References',
+		description:
+			'Learn how to use the Blockless developer tools to build, test, and manage applications.',
+		link: '/developer-tools',
+		icon: toolsIcon,
+		links: [
+			{
+				label: 'Command-Line Interface (CLI)',
+				link: '/developer-tools/cli/quick-start'
+			},
+			{
+				label: 'Software Development Kit (SDK)',
+				link: '/developer-tools/sdks'
+			},
+			{
+				label: 'References',
+				link: '/reference/networking'
+			}
+		]
+	}
+]
+
+export const communitiesList = [
+	{
+		label: 'Discord',
+		icon: discordIcon,
+		link: 'https://discord.com/invite/9eeRHxSCTZ'
+	},
+	{
+		label: 'Telegram',
+		icon: telegramIcon,
+		link: 'https://t.me/blocklessofficial'
+	},
+	{
+		label: 'GitHub',
+		icon: githubIcon,
+		link: 'https://github.com/blocklessnetwork'
 	}
 ]

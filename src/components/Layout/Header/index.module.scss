@@ -2,8 +2,7 @@
 @import '@/src/styles/breakpoints';
 
 .header_wrapper {
-  height: 122px;
-  border-bottom: 1px solid $primary-gray4;
+  border-bottom: 1px solid $border;
   backdrop-filter: blur(6px);
   background-color: hsla(0,0%,100%,.85);
   position: sticky;
@@ -31,7 +30,7 @@
     align-items: center;
     justify-content: center;
     height: 65px;
-    border-bottom: 1px solid $primary-gray4;
+    border-bottom: 1px solid $border;
 
     @media screen and (max-width: $media-md) {
       border-bottom: none;
@@ -46,7 +45,8 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 56px;
+    height: 52px;
+    background: $muted;
 
     @media screen and (max-width: $media-md) {
       display: none;
@@ -87,8 +87,7 @@
       }
 
       .logo_icon {
-        min-width: 28px;
-        height: 30px;
+        height: 24px;
 
         @media screen and (max-width: $media-sm) {
           min-width: 22px;
@@ -97,38 +96,27 @@
       }
 
       .logo_name {
-        margin-left: 7px;
+        height: 20px;
 
         @media screen and (max-width: 680) {
           display: none;
         }
       }
       .logo_docs{
+        height: 20px;
         @media screen and (max-width: 680) {
           display: none;
         }
       }
 
-      .separator {
-        margin-left: 9px;
-        margin-right: 6px;
-        font-weight: 600;
-        font-size: 24px;
-        line-height: 29px;
-        text-transform: uppercase;
-        color: $primary-gray6;
-
-        @media screen and (max-width: $media-sm) {
-          display: none;
-        }
-      }
-
       .support {
+        height: 20px;
         font-weight: 500;
-        font-size: 24px;
-        line-height: 29px;
+        font-size: 20px;
+        line-height: 22px;
         letter-spacing: -0.02em;
-        color: $primary-blue;
+        color: $muted-foreground;
+        display: inline-block;
 
         @media screen and (max-width: $media-sm) {
           display: none;

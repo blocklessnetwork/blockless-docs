@@ -61,11 +61,11 @@
 				display: flex;
 
 				.block_title {
-					margin-bottom: 16px;
-					font-weight: 400;
+					margin-bottom: 10px;
+					font-weight: 500;
 					font-size: 14px;
-					line-height: 17px;
-					color: $primary-black;
+					line-height: 20px;
+					color: $muted-foreground;
 				}
 
 				ul {
@@ -77,24 +77,10 @@
 				.link_item {
 					font-weight: 400;
 					font-size: 14px;
-					line-height: 173.74%;
-					color: $primary-gray3;
-					padding-left: 14px;
+					line-height: 1.42em;
+					color: $primary;
 					position: relative;
-
-					&::before {
-						position: absolute;
-						top: calc(50% - 3px);
-						left: 0;
-						content: '';
-						display: block;
-						width: 6px;
-						height: 6px;
-						background-image: url('../../../assets/icons/arrow-link.svg');
-						background-position: center;
-						background-size: 100%;
-						background-repeat: no-repeat;
-					}
+          margin-bottom: 10px;
 
 					&:hover {
 						color: $primary-blue;

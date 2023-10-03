@@ -27,7 +27,6 @@ const Navbar: FC<NavbarProps> = (props) => {
 						})}
 					>
 						<Link href={path}>{item.title}</Link>
-            <div className={styles.line} />
 					</li>
 				)
 			})}
