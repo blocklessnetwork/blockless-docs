@@ -12,9 +12,9 @@ const Home: FC = () => {
 	const config = useConfig()
 
 	return (
-		<div className="nx-pt-[48px]">
+		<div className="md:nx-pt-[48px]">
 			<div className="nx-flex nx-justify-between nx-gap-[120px] nx-border-b nx-border-border">
-				<div className="nx-grow nx-pt-[48px] nx-pb-[72px]">
+				<div className="nx-grow nx-pt-[48px] nx-pb-[72px] max-md:nx-py-[36px]">
 					<p className="nx-text-4xl/[44px] nx-font-medium nx-text-foreground">How can we help?</p>
 					<p className="nx-mt-4 nx-text-xl/[28px] nx-text-mutedForeground">
 						Discover solutions in our{' '}
@@ -24,7 +24,7 @@ const Home: FC = () => {
 					{renderComponent(config.search.component, {
 						directories: [],
 						className:
-							'md:nx-w-full nx-w-full nx-h-[40px] nx-border nx-border-solid nx-border-border nx-rounded-[6px] nx-mt-[48px]',
+							'md:nx-w-full nx-w-full nx-h-[40px] nx-border nx-border-solid nx-border-border nx-rounded-[6px] md:nx-mt-[48px] nx-mt-[24px]',
 						inputClassName: 'nx-bg-white',
 						resultClassName: '!nx-max-w-full !nx-top-[calc(100%_+_8px)]'
 					})}
@@ -33,7 +33,7 @@ const Home: FC = () => {
 					<Image src={helpIcon} width="360" alt="help" />
 				</div>
 			</div>
-			<div className="nx-mt-[48px] md:nx-pt-[36px] nx-pb-[72px] nx-grid md:nx-grid-cols-3 nx-grid-cols-1 nx-gap-12">
+			<div className="md:nx-my-[48px] nx-my-[36px] md:nx-pt-[48px] md:nx-pb-[72px] nx-pt-0 nx-pb-0  nx-grid md:nx-grid-cols-3 nx-grid-cols-1 nx-gap-12">
 				{homeNavList.map((item, key) => (
 					<div key={key}>
 						<Link href={item.link}>
@@ -49,7 +49,7 @@ const Home: FC = () => {
 								<Link href={nav.link}>
 									<p
 										key={k}
-										className="nx-text-mutedForeground nx-text-sm/[1.7em] nx-font-medium nx-underline nx-underline-offset-[3px]"
+										className="md:nx-text-mutedForeground nx-text-foreground  nx-text-sm/[1.7em] md:nx-text-left nx-text-center nx-font-medium md:nx-underline nx-no-underline nx-underline-offset-[3px] nx-border md:nx-border-none nx-border-border nx-py-2 md:nx-py-0 nx-rounded-md md:nx-rounded-none"
 									>
 										{nav.label}
 									</p>
@@ -59,14 +59,14 @@ const Home: FC = () => {
 					</div>
 				))}
 			</div>
-			<div className="nx-py-[72px] nx-px-[16px] nx-bg-muted nx-w-screen nx-relative nx-left-1/2 nx--translate-x-2/4 nx-flex nx-flex-col nx-items-center">
+			<div className="md:nx-py-[72px] nx-py-[36px] nx-px-[16px] nx-bg-muted nx-w-screen nx-relative nx-left-1/2 nx--translate-x-2/4 nx-flex nx-flex-col nx-items-center">
 				<p className="nx-text-foreground nx-text-lg/[28px] nx-font-semibold">
 					Get your questions answered in our communities.
 				</p>
-				<div className='nx-flex nx-mt-6 nx-gap-6'>
+				<div className='nx-flex nx-mt-6 nx-mb-6 md:nx-mb-0 nx-gap-6 md:nx-flex-row nx-flex-col nx-w-full md:nx-w-fit'>
 					{communitiesList.map((item, key) => (
 						<Link key={key} href={item.link} target='_blank'>
-							<div className='nx-flex nx-bg-white nx-border nx-border-border nx-rounded-[6px] nx-py-2 nx-px-4 nx-gap-2'>
+							<div className='nx-flex nx-bg-white nx-border nx-border-border nx-rounded-[6px] nx-py-2 nx-px-4 nx-gap-2 nx-justify-center'>
 								<Image src={item.icon} width="16" className='nx-shrink-0' alt="" />
 								<p className='nx-text-sm/[1.7em] nx-text-foreground nx-font-medium'>{item.label}</p>
 							</div>

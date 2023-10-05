@@ -41,7 +41,7 @@ const NavbarMobile: FC<navMobileProps> = (props) => {
 			{activeType !== 'page' && <DocsNavigation docsDirectories={docsDirectories} />}
 			<div className={styles.login_wrapper}>
 				<a className="login-button" href={loginLink} target="_blank" rel="noopener noreferrer">
-					<Button label="Login" />
+					<Button label="Dashboard" />
 				</a>
 			</div>
 		</nav>
