@@ -2,179 +2,109 @@
 @import '@/src/styles/breakpoints';
 
 .header_wrapper {
-  border-bottom: 1px solid $border;
-  backdrop-filter: blur(6px);
-  background-color: hsla(0,0%,100%,.85);
-  position: sticky;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 99;
+	border-bottom: 1px solid $border;
+	background-color: #fff;
+	position: sticky;
+	top: 0;
+	left: 0;
+	right: 0;
+	z-index: 99;
 
-  @media screen and (max-width: $media-md) {
-    height: 66px;
-    padding-left: 24px;
-    padding-right: 24px;
-  }
+	.header_logo_wrapper {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		height: 65px;
+		@media screen and (max-width: $media-md) {
+			padding-left: 24px;
+			padding-right: 24px;
+		}
 
-  @media screen and (max-width: $media-sm) {
-    display: flex;
-    align-items: center;
-    // height: 57px;
-    padding-left: 16px;
-    padding-right: 16px;
-  }
+		@media screen and (max-width: $media-sm) {
+			padding-left: 16px;
+			padding-right: 16px;
+		}
 
-  .header_logo_wrapper {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 65px;
-    border-bottom: 1px solid $border;
+		@media screen and (max-width: $media-md) {
+			border-bottom: none;
+		}
 
-    @media screen and (max-width: $media-md) {
-      border-bottom: none;
-    }
+		@media screen and (max-width: $media-sm) {
+			width: 100%;
+		}
+	}
 
-    @media screen and (max-width: $media-sm) {
-      width: 100%;
-    }
-  }
+	.header_nav_wrapper {
+		align-items: center;
+		justify-content: center;
+		height: 52px;
+		background: $muted;
+		border-top: 1px solid $border;
 
-  .header_nav_wrapper {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 52px;
-    background: $muted;
+		@media screen and (max-width: $media-md) {
+			padding-left: 24px;
+			padding-right: 24px;
+		}
 
-    @media screen and (max-width: $media-md) {
-      display: none;
-    }
+		@media screen and (max-width: $media-sm) {
+			padding-left: 16px;
+			padding-right: 16px;
+		}
 
-    header{
-      height: 100%;
-    }
-  }
+		header {
+			height: 100%;
+		}
+	}
 
-  header {
-    max-width: 1248px;
-    padding: 0 24px;
-    flex-grow: 1;
-    margin-left: auto;
-    margin-right: auto;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+	header {
+		max-width: 1248px;
+		padding: 0 24px;
+		flex-grow: 1;
+		margin-left: auto;
+		margin-right: auto;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
 
-    @media screen and (max-width: $media-md) {
-      width: 100%;
-      padding: 0;
-    }
+		@media screen and (max-width: $media-md) {
+			width: 100%;
+			padding: 0;
+		}
 
-    & > button, .login_button {
-      @media screen and (max-width: $media-md) {
-        display: none;
-      }
-    }
+		& > button,
+		.login_button {
+			@media screen and (max-width: $media-md) {
+				display: none;
+			}
+		}
 
-    .logo {
-      display: flex;
-      align-items: center;
+		.logo {
+			display: flex;
+			align-items: center;
 
-      a{
-        // flex-shrink: 0;
-      }
+			.logo_icon {
+				height: 24px;
 
-      .logo_icon {
-        height: 24px;
+				@media screen and (max-width: $media-sm) {
+					min-width: 22px;
+					height: 24px;
+				}
+			}
 
-        @media screen and (max-width: $media-sm) {
-          min-width: 22px;
-          height: 24px;
-        }
-      }
+			.logo_name {
+				height: 20px;
 
-      .logo_name {
-        height: 20px;
+				@media screen and (max-width: 680) {
+					display: none;
+				}
+			}
+		}
 
-        @media screen and (max-width: 680) {
-          display: none;
-        }
-      }
-      .logo_docs{
-        height: 20px;
-        @media screen and (max-width: 680) {
-          display: none;
-        }
-      }
-
-      .support {
-        height: 20px;
-        font-weight: 500;
-        font-size: 20px;
-        line-height: 22px;
-        letter-spacing: -0.02em;
-        color: $muted-foreground;
-        display: inline-block;
-
-        @media screen and (max-width: $media-sm) {
-          display: none;
-        }
-      }
-    }
-
-    .header_right{
-      justify-content: flex-end;
-      align-items: center;
-      flex-grow: 1;
-      display: flex;
-      gap: 20px;
-      margin-left: 24px;
-    }
-
-    .search_wrapper {
-      // width: 360px;
-      height: 33px;
-
-      @media screen and (max-width: $media-md) {
-        width: initial;
-        height: 33px;
-        display: block;
-        flex-grow: 1;
-      }
-      @media screen and (max-width: $media-sm) {
-        // display: none;
-      }
-    }
-
-    .menu_wrapper {
-      display: none;
-      position: relative;
-
-      .menu_overlay {
-        display: flex;
-        position: fixed;
-        top: 66px;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        width: 0;
-        height: calc(100vh - 66px);
-        z-index: 10;
-        background: $primary-gray1;
-        overflow: hidden;
-        margin-left: auto;
-        transition: width 0.3s;
-
-        &.overlay_active {
-          width: 100vw;
-        }
-      }
-
-      @media screen and (max-width: $media-md) {
-        display: block;
-      }
-    }
-  }
+		.header_right {
+			justify-content: flex-end;
+			align-items: center;
+			flex-grow: 1;
+			gap: 12px;
+		}
+	}
 }

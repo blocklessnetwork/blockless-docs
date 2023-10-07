@@ -1,46 +1,92 @@
-import { FC, memo } from 'react'
-import styles from './index.module.scss'
-import logoIcon from '@/src/assets/icons/logo.svg'
-import logoNameIcon from '@/src/assets/icons/logo-name.svg'
 import Link from 'next/link'
 import Image from 'next/image'
-import { footerLinks } from '@/src/utils/constants/links'
+import logoIcon from '@/src/assets/icons/logo.svg'
+import ContainerW1080 from '@/src/components/container/container-w-1080'
 
-const Footer: FC = () => {
+export default function Footer() {
 	return (
-		<article className={styles.footer_wrapper}>
-			<footer>
-				<div className={styles.block_links}>
-					<div className={styles.logo}>
-						<a href="/">
-							<Image src={logoIcon} alt="blockless logo" width="24" />
-						</a>
-					</div>
-					<div className="nx-flex nx-gap-10">
-						{footerLinks.map((item, key) => (
-							<div key={key} className={styles.link_columns}>
-								<div className={styles.community}>
-									<p className={styles.block_title}>Community</p>
-									<ul>
-										{item.children.map((nav, k) => (
-											<li key={k} className={styles.link_item}>
-												<Link href={nav.link} target={nav.isExternal ? '_blank' : '_self'}>
-													{nav.label}
-												</Link>
-											</li>
-										))}
-									</ul>
-								</div>
+		<div className='nx-border-t'>
+			<ContainerW1080>
+				<div className="nx-pt-16">
+					{/* Logo + Site Map */}
+					<div className="nx-flex nx-w-full nx-flex-row nx-justify-between nx-pb-24">
+						{/* Logo */}
+						<Link href="/">
+							<button className="nx-flex-grow nx-flex-row nx-items-center nx-gap-2">
+								<Image src={logoIcon} width={24.75} height={27} alt="logo"></Image>
+							</button>
+						</Link>
+
+						{/* Site map */}
+						<div className="nx-flex nx-flex-row nx-gap-10">
+							{/* Products 
+            <div className="flex flex-col gap-2">
+              <div className="text-sm font-medium text-slate-950">
+                Products
+              </div>
+              <ul className="flex flex-col gap-1">
+                {NavItem(
+                  "https://blockless.network/docs",
+                  "Blockless Protocol",
+                )}
+                {NavItem("https://blockless.network/docs", "Functions")}
+                {NavItem("https://blockless.network/docs", "Sites")}
+              </ul>
+            </div>
+            */}
+
+							{/* Developers */}
+							<div className="nx-flex nx-flex-col nx-gap-2">
+								<div className="nx-text-sm nx-font-medium nx-text-slate-950">Developers</div>
+								<ul className="nx-flex nx-flex-col nx-gap-1">
+									{NavItem('https://blockless.network/docs', 'Documentation')}
+									{NavItem('https://github.com/blocklessnetwork', 'GitHub')}
+								</ul>
 							</div>
-						))}
+
+							{/* Resources 
+            <div className="flex flex-col gap-2">
+              <div className="text-sm font-medium text-slate-950">
+                Resources
+              </div>
+              <ul className="flex flex-col gap-1">
+                {NavItem("https://blockless.network/docs", "Pricing")}
+                {NavItem("https://blockless.network/docs", "Status")}
+              </ul>
+            </div>
+            */}
+
+							{/* Community */}
+							<div className="nx-flex nx-flex-col nx-gap-2">
+								<div className="nx-text-sm nx-font-medium nx-text-slate-950">Community</div>
+								<ul className="nx-flex nx-flex-col nx-gap-1">
+									{NavItem('https://x.com/theblockless', 'X')}
+									{NavItem('https://t.me/blocklessofficial', 'Telegram')}
+									{NavItem('https://discord.com/invite/9eeRHxSCTZ', 'Discord')}
+								</ul>
+							</div>
+						</div>
+					</div>
+
+					<div className="nx-pb-6 nx-text-[13px] nx-text-slate-600">
+						© 2023 TX Labs Foundation Ltd.
 					</div>
 				</div>
-				<p className={styles.block_copyright}>
-					© {new Date().getFullYear()} TX Labs Foundation Ltd.
-				</p>
-			</footer>
-		</article>
+			</ContainerW1080>
+		</div>
 	)
 }
 
-export default Footer
+function NavItem(href: any, title: string) {
+	return (
+		<li>
+			<Link
+				href={href}
+				target="_blank"
+				className="nx-text-[13px] nx-text-slate-600 hover:nx-text-slate-900"
+			>
+				{title}
+			</Link>
+		</li>
+	)
+}

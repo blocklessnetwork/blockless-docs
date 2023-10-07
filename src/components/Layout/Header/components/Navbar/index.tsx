@@ -14,7 +14,7 @@ const Navbar: FC<NavbarProps> = (props) => {
 	const router = useRouter()
 
 	return (
-		<ul className={styles.list_wrapper}>
+		<ul className={cls(styles.list_wrapper,'nx-overflow-x-scroll scrollbar-hidden')}>
 			{directories.map((item: any) => {
 				// @ts-ignore
 				const path = item.href || item.route
@@ -22,7 +22,7 @@ const Navbar: FC<NavbarProps> = (props) => {
 				return (
 					<li
 						key={item.name}
-						className={cls({
+						className={cls('nx-whitespace-nowrap',{
 							[styles.active]: isActive
 						})}
 					>

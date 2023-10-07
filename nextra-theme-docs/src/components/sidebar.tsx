@@ -51,7 +51,7 @@ const classes = {
     'contrast-more:nx-border-transparent contrast-more:hover:nx-border-gray-900 contrast-more:dark:hover:nx-border-gray-50'
   ),
   active: cn(
-    'nx-bg-[#D8E0FF] nx-font-semibold nx-text-[#405BFF] dark:nx-bg-primary-400/10 dark:nx-text-primary-600',
+    'nx-font-semibold nx-text-slate-900 dark:nx-bg-primary-400/10 dark:nx-text-primary-600',
     'contrast-more:nx-border-primary-500 contrast-more:dark:nx-border-primary-500'
   ),
   list: cn('nx-flex nx-flex-col nx-gap-1'),

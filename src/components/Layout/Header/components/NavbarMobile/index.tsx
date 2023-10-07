@@ -8,42 +8,30 @@ import DocsNavigation from '@/src/components/DocsLeftNav'
 import { isActiveMenu } from '@/src/utils/helpers'
 import { loginLink } from '@/src/utils/constants/links'
 import type { Item, PageItem } from 'nextra/normalize-pages'
+import Navbar from '../Navbar'
 
 interface navMobileProps {
 	activeType: string | undefined
 	docsDirectories: PageItem[]
 	directories: Item[]
+	showSubNav: boolean
 }
 const NavbarMobile: FC<navMobileProps> = (props) => {
-	const { activeType, docsDirectories, directories } = props
+	const { activeType, docsDirectories, directories, showSubNav } = props
 	const router = useRouter()
 
 	return (
 		<nav className={styles.navbar}>
-      <ul className={styles.list_wrapper}>
-        {directories.map((item) => {
-          // @ts-ignore
-          const path = item.href || item.route
-          const isActive = isActiveMenu(router.pathname, path)
-          return (
-            <li
-              key={item.name}
-              className={cls(styles.menu_item, {
-                [styles.active]: isActive
-              })}
-            >
-              <Link href={path}>{item.title}</Link>
-              <div className={styles.line} />
-            </li>
-          )
-        })}
-      </ul>
+			<div className={cls(styles.header_nav_wrapper, showSubNav ? 'nx-hidden' : 'nx-flex')}>
+				<Navbar directories={directories} />
+			</div>
+
 			{activeType !== 'page' && <DocsNavigation docsDirectories={docsDirectories} />}
-			<div className={styles.login_wrapper}>
+			{/* <div className={styles.login_wrapper}>
 				<a className="login-button" href={loginLink} target="_blank" rel="noopener noreferrer">
 					<Button label="Dashboard" />
 				</a>
-			</div>
+			</div> */}
 		</nav>
 	)
 }
