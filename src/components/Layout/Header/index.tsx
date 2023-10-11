@@ -27,7 +27,7 @@ const Header: FC<headerProps> = (props) => {
 	const router = useRouter()
 
 	const [showSearch, setShowSearch] = useState(false)
-	const [isHome, setIsHome] = useState(false)
+	const [isHome, setIsHome] = useState(true)
 	const [open, setOpen] = useState(false)
 
 	const { scrollY } = useScroll()
@@ -44,7 +44,7 @@ const Header: FC<headerProps> = (props) => {
 
 	useEffect(() => {
 		setOpen(false)
-		setIsHome(router.pathname !== '/')
+		setIsHome(router.pathname === '/')
 	}, [router.pathname])
 
 	useEffect(() => {
@@ -65,34 +65,41 @@ const Header: FC<headerProps> = (props) => {
 									className={styles.logo_icon}
 								/>
 							</a>
-							<a
-								href="/"
-								className={classNames(
-									'nx-ml-2 nx-text-xl nx-text-foreground nx-font-medium nx-block',
-									!showSubNav && 'md:nx-hidden',
-									showSearch && 'nx-hidden'
-								)}
+							<motion.div
+								className="nx-flex nx-items-center"
+								animate={{
+									width: showSearch ? '0' : 'auto',
+									overflow: showSearch ? 'hidden' : 'initial',
+									transition: { duration: 0.3, ease: 'linear' }
+								}}
 							>
-								Blockless
-							</a>
+								<a
+									href="/"
+									className={classNames(
+										'nx-ml-2 nx-text-xl nx-text-foreground nx-font-medium nx-block',
+										!showSubNav && 'md:nx-hidden'
+									)}
+								>
+									Blockless
+								</a>
 
-							<Link
-								href="/"
-								className={classNames(
-									'nx-ml-2 nx-text-xl/[20px] nx-h-5 nx-font-medium nx-tracking-tight nx-text-mutedForeground',
-									!showSubNav && 'md:nx-text-foreground',
-									showSearch && 'nx-hidden'
-								)}
-							>
-								Docs
-							</Link>
+								<Link
+									href="/"
+									className={classNames(
+										'nx-ml-2 nx-text-xl/[20px] nx-h-5 nx-font-medium nx-tracking-tight nx-text-mutedForeground',
+										!showSubNav && 'md:nx-text-foreground'
+									)}
+								>
+									Docs
+								</Link>
+							</motion.div>
 						</div>
 						<div className={classNames('nx-ml-6 nx-hidden', !showSubNav && 'md:nx-block')}>
 							<Navbar directories={directories} />
 						</div>
 					</div>
 					<div className="nx-flex nx-grow nx-justify-end nx-h-full nx-items-center">
-						{isHome && !showSubNav && (
+						{!isHome && !showSubNav && (
 							<div className="nx-ml-6 nx-hidden md:nx-block">
 								{renderComponent(config.search.component, {
 									directories: [],
@@ -106,15 +113,16 @@ const Header: FC<headerProps> = (props) => {
 
 						<div className={classNames(styles.header_right, 'nx-flex nx-block md:nx-hidden')}>
 							<motion.div
-								className="nx-flex nx-items-center nx-overflow-hidden nx-h-full"
+								className="nx-flex nx-items-center nx-h-full nx-overflow-hidden nx-w-0"
 								animate={{
-									width: showSearch ? 'auto' : 0,
+									width: showSearch ? '100%' : 0,
+									overflow: showSearch ? 'initial' : 'hidden',
 									transition: { duration: 0.3, ease: 'linear' }
 								}}
 							>
 								{renderComponent(config.search.component, {
 									directories: [],
-									className: 'nx-border nx-border-solid nx-border-border nx-rounded-[6px]',
+									className: 'nx-border nx-border-solid nx-border-border nx-rounded-[6px] nx-grow',
 									inputClassName: 'nx-bg-white ',
 									resultClassName:
 										'!nx-top-[calc(100%_+_8px)] max-md:nx-max-w-full !nx-bg-white !nx-backdrop-filter-none'
@@ -126,29 +134,33 @@ const Header: FC<headerProps> = (props) => {
 							>
 								<Image src={searchIcon} width="16" alt="" />
 							</div>
-							<div
-								className="nx-p-1.5 nx-border nx-border-border nx-rounded-full nx-flex-shrink-0"
-								onClick={() => setOpen(!open)}
-							>
-								<Image src={open ? closeIcon : menuIcon} width="16" alt="" />
-							</div>
-							<div
-								className={cls(
-									'nx-flex nx-fixed nx-bottom-0 nx-left-0 nx-right-0',
-									'nx-z-10 nx-bg-white nx-overflow-hidden nx-ml-auto nx-transition-[width] nx-duration-300',
-									open ? 'nx-w-screen' : 'nx-w-0',
-									showSubNav
-										? 'nx-h-[calc(100vh_-_66px_-_52px)] nx-t-[calc(66px_+_52px)]'
-										: 'nx-h-[calc(100vh_-_66px)] nx-t-[66px]'
-								)}
-							>
-								<NavbarMobile
-									activeType={activeType}
-									docsDirectories={docsDirectories}
-									directories={directories}
-									showSubNav={showSubNav}
-								/>
-							</div>
+							{!isHome && (
+								<>
+									<div
+										className="nx-p-1.5 nx-border nx-border-border nx-rounded-full nx-flex-shrink-0"
+										onClick={() => setOpen(!open)}
+									>
+										<Image src={open ? closeIcon : menuIcon} width="16" alt="" />
+									</div>
+									<div
+										className={cls(
+											'nx-flex nx-fixed nx-bottom-0 nx-left-0 nx-right-0',
+											'nx-z-10 nx-bg-white nx-overflow-hidden nx-ml-auto nx-transition-[width] nx-duration-300',
+											open ? 'nx-w-screen' : 'nx-w-0',
+											showSubNav
+												? 'nx-h-[calc(100vh_-_66px_-_52px)] nx-t-[calc(66px_+_52px)]'
+												: 'nx-h-[calc(100vh_-_66px)] nx-t-[66px]'
+										)}
+									>
+										<NavbarMobile
+											activeType={activeType}
+											docsDirectories={docsDirectories}
+											directories={directories}
+											showSubNav={showSubNav}
+										/>
+									</div>
+								</>
+							)}
 						</div>
 					</div>
 				</header>
@@ -156,7 +168,7 @@ const Header: FC<headerProps> = (props) => {
 			<div className={classNames(styles.header_nav_wrapper, showSubNav ? 'nx-flex' : 'nx-hidden')}>
 				<header>
 					<Navbar directories={directories} />
-					{isHome &&
+					{!isHome &&
 						renderComponent(config.search.component, {
 							directories: [],
 							className:
