@@ -1,6 +1,6 @@
 # Blockless Network
 
-Blockless Network is a platform designed to launch, integrate, and secure specialized trustless networks. These networks, in turn, support the operation of Network Neutral Applications (nnApps).
+Blockless Network implements the Blockless Protocol and is a platform designed to launch, integrate, and secure specialized trustless networks. These networks, in turn, support the operation of Network Neutral Applications (nnApps).
 
 ## nnApp Architecture
 
