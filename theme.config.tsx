@@ -41,6 +41,9 @@ const config: DocsThemeConfig = {
     text: 'Edit this page on GitHub'
   },
   darkMode: false,
+  search:{
+    placeholder: 'Documentation',
+  },
   gitTimestamp: ({ timestamp }) => {
     const { locale = 'en-US', pathname } = useRouter()
     if(!pathname.startsWith('/docs/')) return null;

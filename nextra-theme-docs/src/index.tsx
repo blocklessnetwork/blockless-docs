@@ -62,7 +62,7 @@ const Body = ({
 	const content = (
 		<>
 			{children}
-			{gitTimestampEl}
+			{/* {gitTimestampEl} */}
 			{navigation}
 		</>
 	)

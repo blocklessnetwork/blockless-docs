@@ -2,81 +2,109 @@
 @import '@/src/styles/breakpoints';
 
 .navbar {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
 
-  .list_wrapper {
-    display: flex;
-    margin-top: 0;
-    margin-bottom: 0;
-    padding: 0 24px;
-    background: $primary-gray1;
-    border-bottom: 1px solid $primary-gray4;
-    overflow-y: scroll;
-    height: 55px;
-    flex-shrink: 0;
-    
-    .menu_item {
-      display: flex;
-      flex-wrap: wrap;
-      align-items: center;
-      margin-right: 24px;
-      list-style: none;
-      position: relative;
-      font-weight: 600;
-      font-size: 16px;
-      line-height: 16px;
-      color: $primary-black;
-      flex-shrink: 0;
+	.header_nav_wrapper {
+		// display: flex;
+		align-items: center;
+		justify-content: center;
+		height: 52px;
+		flex-shrink: 0;
+		background: $muted;
+		border-bottom: 1px solid $border;
 
-      @media screen and (max-width: $media-sm) {
-        font-size: 14px;
-        line-height: 17px;
-        margin-right: 18px;
-      }
+		@media screen and (max-width: $media-md) {
+			padding-left: 24px;
+			padding-right: 24px;
+		}
 
-      .line{
-        display: none;
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        width: 100%;
-        height: 2px;
-        background: $primary-blue;
-      }
+		@media screen and (max-width: $media-sm) {
+			padding-left: 16px;
+			padding-right: 16px;
+		}
 
-      span {
-        cursor: pointer;
-      }
+		header {
+			height: 100%;
+		}
+	}
 
-      &:hover {
-        color: $primary-blue;
-      }
+	.list_wrapper {
+		display: flex;
+		margin-top: 0;
+		margin-bottom: 0;
+		padding: 0 24px;
+		background: $primary-gray1;
+		border-bottom: 1px solid $primary-gray4;
+		overflow-y: scroll;
+		height: 52px;
+		flex-shrink: 0;
 
-      &:last-child {
-        margin-right: 0;
-        padding-right: 0;
-      }
+		&::-webkit-scrollbar {
+			display: none;
+		}
 
-      &.active {
-        color: $primary-blue;
-        .line{
-          display: block;
-        }
-      }
-    }
-  }
+		.menu_item {
+			display: flex;
+			flex-wrap: wrap;
+			align-items: center;
+			margin-right: 24px;
+			list-style: none;
+			position: relative;
+			font-weight: 600;
+			font-size: 16px;
+			line-height: 16px;
+			color: $primary-black;
+			flex-shrink: 0;
 
-  .login_wrapper {
-    display: flex;
-    justify-content: flex-end;
-    margin-top: auto;
-    margin-left: 24px;
-    margin-right: 24px;
-    padding-top: 24px;
-    padding-bottom: 31px;
-    border-top: 1px solid $primary-gray4;
-  }
+			@media screen and (max-width: $media-sm) {
+				font-size: 14px;
+				line-height: 17px;
+				margin-right: 18px;
+			}
+
+			.line {
+				display: none;
+				position: absolute;
+				bottom: 0;
+				left: 0;
+				width: 100%;
+				height: 2px;
+				background: $primary-blue;
+			}
+
+			span {
+				cursor: pointer;
+			}
+
+			&:hover {
+				color: $primary-blue;
+			}
+
+			&:last-child {
+				margin-right: 0;
+				padding-right: 0;
+			}
+
+			&.active {
+				color: $primary-blue;
+				.line {
+					display: block;
+				}
+			}
+		}
+	}
+
+	.login_wrapper {
+		display: flex;
+		justify-content: flex-end;
+		margin-top: auto;
+		margin-left: 24px;
+		margin-right: 24px;
+		padding-top: 24px;
+		padding-bottom: 31px;
+		border-top: 1px solid $primary-gray4;
+	}
 }
