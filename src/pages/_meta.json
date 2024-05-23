@@ -14,6 +14,9 @@
 	"network": {
 		"title": "Network"
 	},
+	"run-a-node": {
+		"title": "Run a Node"
+	},
 	"developer-tools": {
 		"title": "Developer Tools"
 	},
