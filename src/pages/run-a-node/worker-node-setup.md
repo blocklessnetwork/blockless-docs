@@ -3,8 +3,8 @@
 ## Current Boot Nodes
 The following nodes are used to boot into the network:
 
-`/ip4/146.190.197.136/tcp/31775/p2p/12D3KooWMUFNmnPBEZY5y7qqB8F6eVEzfPXG7KAd1v1FV1Q44A6d` 
-`/ip4/209.38.5.92/tcp/30564/p2p/12D3KooWEPEDU2ftLTSyR3wWQMzLwFUtLpZ2UsmfemANcVie4Nuz`
+`/ip4/146.190.197.136/tcp/31783/p2p/12D3KooWMUFNmnPBEZY5y7qqB8F6eVEzfPXG7KAd1v1FV1Q44A6d`
+`/ip4/209.38.5.92/tcp/30564/p2p/12D3KooWK2qKNvmuYeQ7TFSkja8wqgSdvpfEYKgqkvRSf1GtpHEN`
 
 
 ## Prerequisites
