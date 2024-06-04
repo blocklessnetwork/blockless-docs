@@ -41,3 +41,27 @@ Edit the metadata.json, with the details of your new operator
 }
 ```
 
+Upload metadata.json to a public URL. Then update the `operator.yaml` attribute `metadata_url` with the url to `metadata.json`.
+
+Execute the following command, to register the operator.
+
+```bash
+eigenlayer operator register operator.yaml
+```
+
+If the previous command was successful the following output should be seen in the terminal
+
+```bash
+✅ Operator is registered successfully to EigenLayer
+```
+
+To update this metadata in the future you can run
+
+```bash
+eigenlayer operator update operator.yaml
+```
+
+After your operator has been registered, it will be reflected on the EigenLayer operator page.
+Testnet: https://holesky.eigenlayer.xyz/operator
+
+
