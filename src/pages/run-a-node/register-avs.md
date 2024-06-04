@@ -74,7 +74,7 @@ eigenlayer operator status operator.yaml
 
 Create the Environment File `blockless-operator.env` for `Docker`. This allows seamless passing of options for Opt-In and Opt-Out.
 
-```toml
+```env
 METADATA_URI=https://path/to/metadata.json
 
 # Modify to the Home Directory
