@@ -72,7 +72,25 @@ eigenlayer operator status operator.yaml
 
 ## Opt In / Opt Out the Operator for Blockless AVS
 
-Opt In to the Blockless AVS by running the following command, assuming `Docker` is available.
+Create the Environment File `blockless-operator.env` for `Docker`. This allows seamless passing of options for Opt-In and Opt-Out.
+
+```toml
+METADATA_URI=https://path/to/metadata.json
+
+# Modify to the Home Directory
+USER_HOME=${HOME}
+
+# Modify these if different than the default ~/.eigenlayer/
+EIGENLAYER_HOME=${USER_HOME}/.eigenlayer
+NODE_ECDSA_KEY_FILE_HOST=${EIGENLAYER_HOME}/operator_keys/opr.ecdsa.key.json
+NODE_BLS_KEY_FILE_HOST=${EIGENLAYER_HOME}/operator_keys/opr.bls.key.json
+
+# Provide the decryption password
+OPERATOR_BLS_KEY_PASSWORD=
+OPERATOR_ECDSA_KEY_PASSWORD=
+```
+
+**Opt-In** to the Blockless AVS by running the following command, assuming `Docker` is available.
 
 ```bash
   docker run --env-file blockless-operator.env \
@@ -83,7 +101,7 @@ Opt In to the Blockless AVS by running the following command, assuming `Docker` 
   register-operator-with-avs
 ```
 
-Out Out of the Blockless AVS By Running the following command, assuming `Docker` is available. 
+**Opt-Out** of the Blockless AVS By Running the following command, assuming `Docker` is available. 
 
 ```bash
   docker run --env-file blockless-operator.env \
