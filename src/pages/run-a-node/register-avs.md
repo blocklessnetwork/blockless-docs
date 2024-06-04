@@ -3,11 +3,11 @@
 This guide is broken down into two parts.
 
 1. Setting up an EigenLayer Operator
-2. Registering the Operator for Blockless AVS
+2. Opt In / Opt Out the Operator for Blockless AVS
 
 You may skip part 1 if you already have an Operator registered with EigenLayer Holskey.
 
-## From Scratch Operator setup
+## Setting up an EigenLayer Operator
 
 * Follow EigenLayer guide and Install EigenLayer CLI
 * Generate ECDSA and BLS keypair using the following command
@@ -64,4 +64,11 @@ eigenlayer operator update operator.yaml
 After your operator has been registered, it will be reflected on the EigenLayer operator page.
 Testnet: https://holesky.eigenlayer.xyz/operator
 
+The status of an operator can be checked using 
+
+```bash
+eigenlayer operator status operator.yaml
+```
+
+## Opt In / Opt Out the Operator for Blockless AVS
 
