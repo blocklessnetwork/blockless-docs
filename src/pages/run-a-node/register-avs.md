@@ -2,8 +2,8 @@
 
 This guide is broken down into two parts.
 
-1. Setting up an EigenLayer Operator
-2. Opt In / Opt Out the Operator for Blockless AVS
+1. [Setting up an EigenLayer Operator](#setting-up-an-eigenlayer-operator)
+2. [Opt In / Opt Out the Operator for Blockless AVS](#opt-in--opt-out-the-operator-for-blockless-avs)
 
 You may skip part 1 if you already have an Operator registered with EigenLayer Holskey.
 
@@ -72,3 +72,24 @@ eigenlayer operator status operator.yaml
 
 ## Opt In / Opt Out the Operator for Blockless AVS
 
+Opt In to the Blockless AVS by running the following command, assuming `Docker` is available.
+
+```bash
+  docker run --env-file blockless-operator.env \
+  --rm \
+  --volume "${NODE_ECDSA_KEY_FILE_HOST}":/app/operator_keys/ecdsa_key.json \
+  --volume "${NODE_BLS_KEY_FILE_HOST}":/app/operator_keys/bls_key.json \
+  ghcr.io/blocklessnetwork/bls-avs-tools:latest \
+  register-operator-with-avs
+```
+
+Out Out of the Blockless AVS By Running the following command, assuming `Docker` is available. 
+
+```bash
+  docker run --env-file blockless-operator.env \
+  --rm \
+  --volume "${NODE_ECDSA_KEY_FILE_HOST}":/app/operator_keys/ecdsa_key.json \
+  --volume "${NODE_BLS_KEY_FILE_HOST}":/app/operator_keys/bls_key.json \
+  ghcr.io/blocklessnetwork/bls-avs-tools:latest \
+  deregister-operator-with-avs
+```
