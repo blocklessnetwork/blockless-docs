@@ -9,7 +9,7 @@ You may skip part 1 if you already have an Operator registered with EigenLayer H
 
 ## Setting up an EigenLayer Operator
 
-* Follow EigenLayer guide and Install <a href="https://docs.eigenlayer.xyz/eigenlayer/operator-guides/operator-installation#installation-1" target="_new">EigenLayer CLI</a>
+* Follow EigenLayer guide and Install <a href="https://docs.eigenlayer.xyz/eigenlayer/operator-guides/operator-installation#installation-1" target="_blank">EigenLayer CLI</a>
 * Generate ECDSA and BLS keypair using the following command
 
 ```bash
