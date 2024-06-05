@@ -13,8 +13,8 @@ You may skip part 1 if you already have an Operator registered with EigenLayer H
 * Generate ECDSA and BLS keypair using the following command
 
 ```bash
-eigenlayer operator keys create --key-type ecdsa [keyname]
-eigenlayer operator keys create --key-type bls [keyname]
+echo "password" | eigenlayer operator keys create --key-type ecdsa [keyname]
+echo "password" | eigenlayer operator keys create --key-type bls [keyname]
 ```
 
 > **Please ensure you backup your private keys to a safe location. By default, the encrypted keys will be stored in `~/.eigenlayer/operator_keys/`**
