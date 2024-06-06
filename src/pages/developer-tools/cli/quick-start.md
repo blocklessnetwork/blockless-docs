@@ -9,7 +9,7 @@ With the Blockless CLI, you can connect to the network with your on-chain identi
 With `curl`:
 
 ```bash
-sudo sh -c "curl <https://raw.githubusercontent.com/BlocklessNetwork/cli/main/download.sh> | bash"
+sudo sh -c "curl -sSL https://raw.githubusercontent.com/BlocklessNetwork/cli/main/download.sh | bash"
 ```
 
 Or with `wget`:
