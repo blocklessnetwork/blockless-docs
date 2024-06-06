@@ -86,7 +86,6 @@ METADATA_URI=https://path/to/metadata.json
 OPERATOR_BLS_KEY_PASSWORD=
 OPERATOR_ECDSA_KEY_PASSWORD=
 
-
 # can leave
 USER_HOME=/app
 EIGENLAYER_HOME=/app
@@ -94,7 +93,7 @@ NODE_ECDSA_KEY_FILE_HOST=/app/operator_keys/opr.ecdsa.key.json
 NODE_BLS_KEY_FILE_HOST=/app/operator_keys/opr.bls.key.json
 ```
 
-Create the operator configuration file, this will be used on the registration step, and later by the AVS
+Create the operator configuration file `operator.config.yaml`, this will be used in the registration step, and later by the AVS
 
 ```yaml
 production: false
