@@ -41,7 +41,7 @@ docker run --platform=linux/amd64 -d \
 -e KEY_PATH=${YOUR BUCKET PATH} \
 -e KEY_PASSWORD=${YOUR BACKUP PASSWORD} \
 -e S3_HOST=https://s3.us-west-1.amazonaws.com \
--e BOOT_NODES=/ip4/146.190.197.136/tcp/31775/p2p/12D3KooWMUFNmnPBEZY5y7qqB8F6eVEzfPXG7KAd1v1FV1Q44A6d,/ip4/209.38.5.92/tcp/30564/p2p/12D3KooWK2qKNvmuYeQ7TFSkja8wqgSdvpfEYKgqkvRSf1GtpHEN \
+-e BOOT_NODES=/ip4/146.190.197.136/tcp/31783/p2p/12D3KooWMUFNmnPBEZY5y7qqB8F6eVEzfPXG7KAd1v1FV1Q44A6d,/ip4/209.38.5.92/tcp/30564/p2p/12D3KooWK2qKNvmuYeQ7TFSkja8wqgSdvpfEYKgqkvRSf1GtpHEN \
 ghcr.io/blocklessnetwork/b7s:v0.6.2
 ```
 
@@ -52,7 +52,7 @@ To run the node as a worker using a local or Docker-managed mount for key storag
 docker run --platform=linux/amd64 -d \
 -e NODE_ROLE=worker \
 -e S3_HOST=https://s3.us-west-1.amazonaws.com \
--e BOOT_NODES=/ip4/146.190.197.136/tcp/31775/p2p/12D3KooWMUFNmnPBEZY5y7qqB8F6eVEzfPXG7KAd1v1FV1Q44A6d,/ip4/209.38.5.92/tcp/30564/p2p/12D3KooWK2qKNvmuYeQ7TFSkja8wqgSdvpfEYKgqkvRSf1GtpHEN \
+-e BOOT_NODES=/ip4/146.190.197.136/tcp/31783/p2p/12D3KooWMUFNmnPBEZY5y7qqB8F6eVEzfPXG7KAd1v1FV1Q44A6d,/ip4/209.38.5.92/tcp/30564/p2p/12D3KooWK2qKNvmuYeQ7TFSkja8wqgSdvpfEYKgqkvRSf1GtpHEN \
 -v /path/to/your/local/keys:/app/keys \
 -v /path/to/your/local/db_path:/app/db \
 -p 9527:9527 \
