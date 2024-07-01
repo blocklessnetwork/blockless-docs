@@ -13,7 +13,7 @@ Visit blockless.network/docs to read the documentation online or follow the inst
 ## Running Locally
 
 ```sh
-git clone https://github.com/blocklessnetwork/blockless-docs.git
+git clone https://github.com/blocklessnetwork/blockless-docs.git ([here](https://blockless.network/docs))
 yarn install
 yarn run dev
 ```
