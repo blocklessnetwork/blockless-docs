@@ -51,7 +51,6 @@ To run the node as a worker using a local or Docker-managed mount for key storag
 ```bash
 docker run --platform=linux/amd64 -d \
 -e NODE_ROLE=worker \
--e S3_HOST=https://s3.us-west-1.amazonaws.com \
 -e BOOT_NODES=/ip4/146.190.197.136/tcp/31783/p2p/12D3KooWMUFNmnPBEZY5y7qqB8F6eVEzfPXG7KAd1v1FV1Q44A6d,/ip4/209.38.5.92/tcp/30564/p2p/12D3KooWK2qKNvmuYeQ7TFSkja8wqgSdvpfEYKgqkvRSf1GtpHEN \
 -v /path/to/your/local/keys:/app/keys \
 -v /path/to/your/local/db_path:/app/db \
