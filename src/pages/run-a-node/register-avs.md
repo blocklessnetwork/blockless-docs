@@ -137,7 +137,7 @@ avs_service_manager_addr: 0xFb309198FEf7Ea7BC1c1d10c0E7A37A0549EECc1 # Blockless
   docker run --env-file /path/to/blockless-operator.env \
   --rm \
   --volume "/path/to/opr.ecdsa.key.json":/app/operator_keys/opr.ecdsa.key.json \
-  --volume "/path/to/opr.bls.key.json ":/app/operator_keys/opr.bls.key.json \
+  --volume "/path/to/opr.bls.key.json":/app/operator_keys/opr.bls.key.json \
   --volume "/path/to/operator.config.yaml":/app/operator.config.yaml \
   ghcr.io/blocklessnetwork/blockless-avs-tools:v0.0.3 \
   --config /app/operator.config.yaml \
