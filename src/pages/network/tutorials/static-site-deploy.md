@@ -2,44 +2,6 @@
 
 This is a simple application that will deploy a static Vite web application.
 
-## BLS Login
-
-Login into the Blockless Network
-
-```bash
-bls login
-```
-
-You will be prompted to navigate to your localhost and connect your wallet.
-
-```bash
-Open Browser at http://0.0.0.0:8651 to complete login
--OR- Open Browser at http://127.0.0.1:8651 to complete login
-```
-
-Connect your preferred wallet.
-
-![login page](assets/img/login-with-crypto-wallet.png "Login with Crypto Wallet")
-
-![login page](assets/img/login-with-crypto-wallet-1.png "Login with Crypto Wallet")
-
-![login page](assets/img/login-with-crypto-wallet-2.png "Login with Crypto Wallet")
-
-You should see and verification message in your console.
-
-```bash
-Authentication Completed!
-You have successfully authenticated with the server.
-```
-
-You can always check if you are logged in with the following command:
-
-```bash
-bls whoami
-```
-
-![login verification](assets/img/login-verification.png "Login verification")
-
 ## BLS Sites
 
 Initialize your static site.
@@ -92,9 +54,9 @@ You will be prompted to navigate to a localhost address.
   ➜  press h + enter to show help
 ```
 
-![vite static site](assets/img/vite-static-site.png "Vite static site")
+![vite static site](./assets/img/vite-static-site.png "Vite static site")
 
-You can now develope this Vite site as you would any other site. Once you are ready to deploy move to the next section.
+You can now develop this Vite site as you would any other site. Once you are ready to deploy move to the next section.
 
 ## BLS Sites Preview
 
@@ -116,7 +78,7 @@ Serving http://127.0.0.1:3000 ...
 
 Navigate to http://127.0.0.1:3000 to view your project.
 
-![vite static site preview](assets/img/vite-static-site-preview.png "Vite static site preview")
+![vite static site preview](./assets/img/vite-static-site-preview.png "Vite static site preview")
 
 You are now ready to deploy!
 
@@ -141,6 +103,6 @@ CID:    bafybeib4fsqkqlup7nbuk7nhcvipue4y665rhxaeayzy63n62gkknqfjbq
 
 Navigate to the URL shown in the console.
 
-![vite static site preview](assets/img/vite-static-site-preview.png "Vite static site preview")
+![vite static site preview](./assets/img/vite-static-site-preview.png "Vite static site preview")
 
 Congratulations! You have successful deployed a static web application on the Blockless Network.
