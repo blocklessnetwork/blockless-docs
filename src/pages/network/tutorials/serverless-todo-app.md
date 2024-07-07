@@ -440,8 +440,16 @@ export function main(): void {
 
 With the main function defined, you can now build and run your todo application. You can use the Blockless CLI to compile your AssemblyScript code and deploy it to the Blockless Network.
 
+Build
+
 ```bash
-$ bls function build$ bls function deploy
+$ bls function build
+```
+
+Deploy
+
+```bash
+$ bls function deploy
 ```
 
 To test your application, you can use the bls function invoke command to run the main function and interact with it via the command line.
