@@ -4,5 +4,11 @@
   },
   "serverless-todo-app": {
     "title": "Serverless Todo App"
+  },
+  "static-site-deploy": {
+    "title": "Static Site Deploy Example"
+  },
+  "function-site-deploy": {
+    "title": "Function Site Deploy Example"
   }
 }
