@@ -1,4 +1,4 @@
-# Blockless Static Site Deploy Example
+# Static Site Deploy
 
 This is a simple application that will deploy a static Vite web application.
 
@@ -58,11 +58,27 @@ You will be prompted to navigate to a localhost address.
 
 You can now develop this Vite site as you would any other site. Once you are ready to deploy move to the next section.
 
-## BLS Sites Preview
+## BLS Sites Build
 
 Stop your development server by clicking on CTRL+C (macos).
 
-Preview your project locally. This will create the build that will be deployed to the Blockless Network and preview it locally.
+Build your site.
+
+```bash
+bls site build
+```
+
+You will see a build success message in your console.
+
+```bash
+Build successful!
+```
+
+You are now ready to preview your static site locally.
+
+## BLS Sites Preview
+
+Preview your project locally. This will create the build that can be deployed to the Blockless Network and preview it locally.
 
 ```bash
 bls sites preview
@@ -71,8 +87,6 @@ bls sites preview
 You should see the following success message in the console:
 
 ```bash
-Build successful!
-
 Serving http://127.0.0.1:3000 ...
 ```
 
