@@ -45,7 +45,7 @@ Open Browser at http://0.0.0.0:8651 to complete login
 -OR- Open Browser at http://127.0.0.1:8651 to complete login
 ```
 
-Connect your preferred wallet.
+This will redirect you to the https://dashboard.blockless.network page where you can your preferred wallet.
 
 ![login page](./assets/img/login-with-crypto-wallet.png "Login with Crypto Wallet")
 
