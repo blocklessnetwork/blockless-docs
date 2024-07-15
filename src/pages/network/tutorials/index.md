@@ -13,7 +13,7 @@ To install the Blockless CLI, you can either use `curl` or `wget`.
 Installing Blockless CLI with `curl`:
 
 ```bash
-sudo sh -c "curl <https://raw.githubusercontent.com/BlocklessNetwork/cli/main/download.sh> | bash"
+sudo sh -c "curl https://raw.githubusercontent.com/BlocklessNetwork/cli/main/download.sh | bash"
 ```
 
 Installing Blockless CLI with `wget`:
