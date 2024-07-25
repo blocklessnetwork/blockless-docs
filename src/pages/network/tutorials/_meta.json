@@ -8,6 +8,9 @@
   "static-site-deploy": {
     "title": "Static Site Deploy"
   },
+  "static-site-dynamic-routes": {
+    "title": "Static Site Dynamic Routes"
+  },
   "serverless-todo-app": {
     "title": "Serverless Todo App"
   }
