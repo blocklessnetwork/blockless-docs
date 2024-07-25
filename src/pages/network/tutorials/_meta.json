@@ -2,6 +2,12 @@
   "index": {
     "title": "Overview"
   },
+  "function-site-deploy": {
+    "title": "Function Site Deploy"
+  },
+  "static-site-deploy": {
+    "title": "Static Site Deploy"
+  },
   "serverless-todo-app": {
     "title": "Serverless Todo App"
   }

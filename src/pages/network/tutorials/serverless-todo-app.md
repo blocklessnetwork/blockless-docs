@@ -1,4 +1,4 @@
-# Build a Serverless To-Do App with Blockless Functions
+# Serverless To-Do App with Blockless Functions
 
 In this tutorial, we will show you how to build a simple todo application using the Blockless Network and a variety of modules and tools. We will cover how to connect to the network using the Blockless CLI, read data from the standard input and environment variables using the memory module, interact with the InterPlanetary File System (IPFS) using the ipfs module, send HTTP requests and receive responses from servers using the http module, and store data in the cloud using the AWS s3 module.
 
@@ -12,44 +12,6 @@ By following the steps in this tutorial, you will learn how to use these powerfu
 - Build the Todo Application
 
 By the end of this tutorial, you will have a fully functional todo application that you can deploy and run on the Blockless Network. Let’s get started!
-
-## Connecting to the Blockless Network
-
-The Blockless Command Line Interface (CLI) is a tool that allows you to interact with the Blockless Network and manage your applications from the command line.
-
-To install the Blockless CLI, you can use the following command:
-
-```bash
-$ sudo sh -c "curl https://raw.githubusercontent.com/BlocklessNetwork/cli/main/download.sh | bash"
-```
-
-or
-
-```bash
-$ sudo sh -c "wget https://raw.githubusercontent.com/BlocklessNetwork/cli/main/download.sh -v -O download.sh; chmod +x download.sh; ./download.sh; rm -rf download.sh"
-```
-
-To connect to the Blockless Network, you need to use the login command:
-
-```bash
-$ bls login
-```
-
-You will be prompted to enter your on-chain identity and password. Enter the credentials that you created when you set up your account on the Blockless Network.
-
-Once you are logged in, you can use the Blockless CLI to deploy and manage your applications on the network.
-
-```bash
-$ bls function deploy
-$ bls function list
-$ bls function logs
-```
-
-For a complete list of available commands, you can use the help command:
-
-```bash
-$ bls help
-```
 
 ## Reading from the Standard Input
 
@@ -178,11 +140,11 @@ import { http } from "../assembly";
 
 To send an HTTP request, you can use the http.HttpOpen function. This function takes a URL and an HttpOptions object as arguments and returns an HttpHandle object.
 
-Here is an example of how to send a GET request to the URL “http://httpbin.org/anything”:
+Here is an example of how to send a GET request to the URL “http://httpbin.org/json:
 
 ```tsx
 let handle = http.HttpOpen(
-  "http://httpbin.org/anything",
+  "http://httpbin.org/json",
   new http.HttpOptions("GET")
 );
 ```
@@ -478,8 +440,16 @@ export function main(): void {
 
 With the main function defined, you can now build and run your todo application. You can use the Blockless CLI to compile your AssemblyScript code and deploy it to the Blockless Network.
 
+Build
+
 ```bash
-$ bls function build$ bls function deploy
+$ bls function build
+```
+
+Deploy
+
+```bash
+$ bls function deploy
 ```
 
 To test your application, you can use the bls function invoke command to run the main function and interact with it via the command line.
