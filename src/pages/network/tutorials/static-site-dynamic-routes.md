@@ -65,15 +65,15 @@ Create the file `src/config.ts`.
 ```ts
 // src/config.ts
 interface Config {
-	get: {
-		allPostsApiUrl: string;
-	};
+  get: {
+    allPostsApiUrl: string;
+  };
 }
 
 const config: Config = {
-	get: {
-		allPostsApiUrl: `/api/test_multiple`,
-	},
+  get: {
+    allPostsApiUrl: `/api/test_multiple`,
+  },
 };
 
 export default config;
@@ -201,3 +201,65 @@ const App: React.FC = () => {
 export default App;
 ```
 
+## Dynamic Assembly Routes
+
+Blockless has built in dynamic routes for easy API access.
+
+Create a directory name `assembly` in the root of your application. Inside of that create another directory called `api` then inside of that folder create a file called `test_multiple.ts`.
+
+    ├── assembly
+    │   └── api
+    │       └── test_multiple.ts
+    └── src
+
+Paste the following into `test_multiple.ts`.
+
+```ts
+import { http } from "@blockless/sdk/assembly";
+
+export function GET(req: http.Request): http.Response {
+const response = new http.Client().getList(
+  "https://jsonfakery.com/blogs/random/10",
+);
+
+return new http.Response(response.stringify())
+  .header("Content-Type", "application/json")
+  .status(200);
+}
+```
+
+This will fetch 10 random blog posts from `jsonfakery.com` using the config and custom hook we created above.
+
+## Preview and Deploy
+
+Verify that you are logged into Blockless.
+
+```bash
+bls login
+```
+
+Preview site on http://localhost:3000.
+
+```bash
+bls sites preview
+```
+
+Deploy
+
+```bash
+bls sites deploy
+```
+
+Congratulations you have successfully deployed!!!
+
+
+
+```bash
+Publish successful!
+
+Deploying react-dynamic-routes ...
+Deployment successful!
+Name:   react-dynamic-routes
+URL:    https://react-dynamic-routes-41cce589.bls.dev
+CID:    bafybeihhb3zogxsyik7i6aqhhgghilia57op
+```
