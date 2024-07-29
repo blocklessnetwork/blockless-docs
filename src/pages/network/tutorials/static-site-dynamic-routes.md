@@ -151,8 +151,8 @@ const Table: React.FC = () => {
   }
 
   return (
-    <div className="manage-page card p-4">
-      <table className="table">
+    <div>
+      <table>
         <thead>
           <tr>
             <th>Title</th>
