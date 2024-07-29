@@ -65,7 +65,7 @@ Stop your development server by clicking on CTRL+C (macos).
 Build your site.
 
 ```bash
-bls site build
+bls sites build
 ```
 
 You will see a build success message in your console.
