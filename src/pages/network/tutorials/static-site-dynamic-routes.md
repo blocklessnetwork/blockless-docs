@@ -29,7 +29,7 @@ Select React (Typescript) from the prompts.
 
 ## Install Dependencies
 
-Install react-router-dom and axios.
+Install `react-router-dom` and `axios`.
 
 ```bash
 npm install react-router-dom axios
@@ -41,7 +41,7 @@ yarn add react-router-dom axios
 
 ## Define Types and Configure API
 
-Create a folder called `src/data-model/data-model-types.ts`.
+Create a file called `src/data-model/data-model-types.ts`.
 
 ```ts
 // src/data-model/data-model-types.ts
