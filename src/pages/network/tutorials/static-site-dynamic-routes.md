@@ -244,15 +244,15 @@ Preview site on http://localhost:3000.
 bls sites preview
 ```
 
-Deploy
+![react-dynamic-routes](./assets/img/react-dynamic-routes.png)
+
+Deploy application on Blockless.
 
 ```bash
 bls sites deploy
 ```
 
 Congratulations you have successfully deployed!!!
-
-
 
 ```bash
 Publish successful!
