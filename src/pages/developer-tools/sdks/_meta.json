@@ -4,5 +4,8 @@
 	},
 	"assemblyscript": {
 		"title": "AssemblyScript SDK"
+	},
+	"typescript": {
+		"title": "Typescript SDK"
 	}
 }
