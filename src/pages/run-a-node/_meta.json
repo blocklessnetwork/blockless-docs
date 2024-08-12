@@ -19,5 +19,8 @@
 	},
 	"worker-node-setup": {
 		"title": "Worker Node Setup"
+	},
+	"register-avs": {
+		"title": "Register AVS"
 	}
 }
