@@ -13,15 +13,25 @@
 
 * DEVELOPER TOOLS
 
-* [Dashboard](dashboard/)
+* [Overview](developer-tools/)
 
-* [CLI](cli/)
+* [Dashboard](developer-tools/dashboard/)
 
-* [SDKs](sdks/)
-  * [AssemblyScript](sdks/assembly-script.md)
-  * [TypeScript](sdks/typescript.md)
-  * [Rust](sdks/rust.md)
-  * [Golang](sdks/golang.md)
+* [CLI](developer-tools/cli/)
+
+* [SDKs](developer-tools/sdks/)
+  * [Assembly Script](developer-tools/sdks/assembly-script.md)
+  * [TypeScript](developer-tools/sdks/typescript.md)
+  * [Rust](developer-tools/sdks/rust.md)
+  * [Golang](developer-tools/sdks/golang.md)
+
+</br>
+
+* REFERENCE
+
+* [b7s Networking Daemon](reference/b7s-networking-daemon/)
+
+* [Runtime Environment](reference/runtime-environment/)
 
 </br>
 
@@ -58,8 +68,6 @@
 * [Overview]()
 
 * [Quick Start]()
-
-* [Extension]()
 
 * [Extensions]()
 

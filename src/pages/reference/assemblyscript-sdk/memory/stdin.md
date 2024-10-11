@@ -1,4 +1,4 @@
-## **Stdin**
+## Stdin
 
 Read data passed from the networking layer directly from host memory. Source code can be found on [GitHub](https://github.com/blocklessnetwork/sdk-assemblyscript/blob/main/assembly/memory/index.ts).
 

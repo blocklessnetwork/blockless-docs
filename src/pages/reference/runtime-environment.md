@@ -2,7 +2,7 @@
 
 The Blockless Runtime Environment leverages WebAssembly (Wasm) technology to deliver fast, compatible, and customizable features. This environment supports a variety of programming languages, such as C/C++, Rust, Swift, AssemblyScript, and Kotlin, while also allowing for the integration of these languages (e.g., using Rust to implement a JavaScript API).
 
-## **Key Features**
+## Key Features
 
 The Blockless runtime environment provides the following standout features:
 
@@ -80,7 +80,7 @@ Below is an example of the runtime environment configuration file:
 
 `drivers_root_path`: Specifies the root path for the drivers used by the runtime environment.
 
-## **Command Line Interface**
+## Command Line Interface
 
 The runtime requires input from stdin and also accepts environment variables passed as a list separated by a semicolon through the BLS_LIST_VARS variable. Here's an example of how to run the app:
 
