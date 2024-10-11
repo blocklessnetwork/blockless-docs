@@ -66,7 +66,7 @@ The adapted algorithm allows for the evaluation of computing performance using a
 3. **Machine Attributes Matching Compute Requests** $(A)$: In addition to the completeness of computing and response time, the algorithm also considers the relevance of the computer's attributes to the specific compute requests. Points are awarded for each attribute that matches the compute request requirements, with a higher total indicating a better-suited computer for the given tasks.
 4. **Bonus Points:** The algorithm may include additional bonus points based on other relevant factors that influence computing performance. These factors can be tailored to specific use cases or industries, allowing the algorithm to be customized as needed.
 
-# **Execution Node Ranking Flow Overview**
+## Execution Node Ranking Flow Overview
 
 This diagram shows how the Elo ranking of Execution Nodes is updated based on their results.
 

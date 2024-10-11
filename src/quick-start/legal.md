@@ -1,4 +1,0 @@
-# Legal
-
-## New Legal
-

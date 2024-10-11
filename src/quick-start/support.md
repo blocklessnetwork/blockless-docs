@@ -1,4 +1,0 @@
-# Support
-
-## New Support
-

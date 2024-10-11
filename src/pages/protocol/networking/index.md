@@ -4,11 +4,11 @@ The Blockless Networking Module (b7s) is the core infrastructure that connects n
 
 The Blockless Networking module (b7s) is open-sourced and can be found on [GitHub](https://github.com/blocklessnetwork/b7s).
 
-## Goal
+#### Goal
 
 As a purpose-built platform that ensures nnApp fault-tolerance and execution verifiability, the objective of the Blockless Networking Module is to create an efficient execution system that enables the selection of the optimal group of nodes based on nnApp workload requirements, and to execute tasks securely and efficiently within the individual specialized networks of nnApps. 
 
-## Networking Procedure Overview
+#### Networking Procedure Overview
 
 The entire networking process, from receiving a task to delivering the result to its intended destination, can be divided into two key steps:
 
