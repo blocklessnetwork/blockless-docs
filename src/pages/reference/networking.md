@@ -4,7 +4,7 @@ b7s is a peer-to-peer networking daemon for the Blockless Network, designed to f
 
 You can find the repository on [GitHub](https://github.com/blocklessnetwork/b7s).
 
-## **Installation**
+## Installation
 
 You can install b7s using either curl, wget, or Docker:
 
@@ -79,7 +79,7 @@ b7s depends on the following repositories:
 - blocklessnetwork/runtime
 - blocklessnetwork/orchestration-chain
 
-## **Contributing**
+## Contributing
 
 For information on contributing to the b7s project, refer to the src/README file within the project repository.
 
