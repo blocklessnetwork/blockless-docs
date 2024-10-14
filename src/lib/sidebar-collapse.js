@@ -1,3 +1,5 @@
+const { ShieldEllipsis } = require('lucide-react')
+
 ;(function (global, factory) {
 	typeof exports === 'object' && typeof module !== 'undefined'
 		? factory()
@@ -105,11 +107,10 @@
 		document.querySelector('.sidebar-nav').addEventListener(
 			'click',
 			function (e) {
-
-        let elp = e.target.parentElement // parent
-        let elpg = elp.parentElement // grandparent
-
-        // parent
+				let elp = e.target.parentElement // parent
+				let elpg = elp.parentElement // grandparent
+				console.log('click :')
+				// parent
 				if (e.target.tagName === 'A') {
 					if (elp.tagName === 'LI' || elp.tagName === 'P') {
 						if (elp.classList.contains('open')) {
@@ -130,17 +131,16 @@
 					}
 				}
 
-        // grandparent
-        if (elpg.classList.contains('open')) {
-          requestAnimationFrame(function () {
-            elpg.classList.remove('open')
-          })
-        } else {
-          requestAnimationFrame(function () {
-            elpg.classList.add('open')
-          })
-        }
-
+				// grandparent
+				if (elpg.classList.contains('open')) {
+					requestAnimationFrame(function () {
+						elpg.classList.remove('open')
+					})
+				} else {
+					requestAnimationFrame(function () {
+						elpg.classList.add('open')
+					})
+				}
 			},
 			true
 		)
