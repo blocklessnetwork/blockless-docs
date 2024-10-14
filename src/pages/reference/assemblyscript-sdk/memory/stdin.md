@@ -1,8 +1,8 @@
-## **Stdin**
+## Stdin
 
 Read data passed from the networking layer directly from host memory. Source code can be found on [GitHub](https://github.com/blocklessnetwork/sdk-assemblyscript/blob/main/assembly/memory/index.ts).
 
-```tsx
+```js
 import 'wasi'
 import { Console } from 'as-wasi/assembly'
 import { memory } from '../assembly'

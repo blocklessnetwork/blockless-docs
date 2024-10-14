@@ -32,6 +32,10 @@ Blockless further enhances security and transparency by offering optional comput
 
 ## Other Notable Features
 
-- **Ultra-portable node software**:  Utilizing WebAssembly (WASM) and the WebAssembly System Interface (WASI), Blockless enables communities to use a wide range of personal computers (including laptops and phones) to empower network neutral applications and a new modular paradigm for Web3. 
+### Ultra-portable node software
 
-- **Fully extendable runtime**: Blockless dynamically allocates network resources to accommodate fluctuating workloads of nnApps, allowing developers to focus on building innovative applications instead of manually managing the performance and uptime of their specialized networks.
+Utilizing WebAssembly (WASM) and the WebAssembly System Interface (WASI), Blockless enables communities to use a wide range of personal computers (including laptops and phones) to empower network neutral applications and a new modular paradigm for Web3. 
+
+### Fully extendable runtime
+
+Blockless dynamically allocates network resources to accommodate fluctuating workloads of nnApps, allowing developers to focus on building innovative applications instead of manually managing the performance and uptime of their specialized networks.
