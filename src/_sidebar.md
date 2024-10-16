@@ -34,25 +34,25 @@
 
 * [Core Concepts](protocol/core-concepts.md)
 
-* [Networking](pages/protocol/networking/index.md)
-  * [Node Selection](pages/protocol/networking/selection.md)
-  * [Task Distribution](pages/protocol/networking/distribution.md)
-  * [Deployment and Execution](pages/protocol/networking/execution.md)
-  * [Dynamic Consensus](pages/protocol/networking/consensus.md)
-  * [Node Communication](pages/protocol/networking/communication.md)
+* [Networking](protocol/networking.md)
+  * [Node Selection](protocol/networking/selection.md)
+  * [Task Distribution](protocol/networking/distribution.md)
+  * [Deployment and Execution](protocol/networking/execution.md)
+  * [Dynamic Consensus](protocol/networking/consensus.md)
+  * [Node Communication](protocol/networking/communication.md)
 
-* [Runtime Environment](pages/protocol/runtime.md)
+* [Runtime Environment](protocol/runtime-environment.md)
 
-* [Security](pages/protocol/security/index.md)
-  * [Runtime Security](pages/protocol/security/runtime-security.md)
-  * [Consensus and Result Verifiability](pages/protocol/security/consensus-and-result-verifiability.md)
-  * [Secret Management](pages/protocol/security/secret-management.md)
+* [Security](protocol/security.md)
+  * [Runtime Security](protocol/security/runtime-security.md)
+  * [Consensus and Result Verifiability](protocol/security/consensus-and-result-verifiability.md)
+  * [Secret Management](protocol/security/secret-management.md)
 
-* [Extension](pages/protocol/extension.md)
+* [Extension](protocol/extension.md)
 
-* [Account](pages/protocol/account.md)
+* [Account](protocol/account.md)
 
-* [Node Ranking](pages/protocol/nodes/ranking.md)
+* [Nodes Ranking](protocol/nodes/ranking.md)
 
 <h4 style="padding-left: 24px; margin-bottom: 0;">NETWORK</h4>
 

@@ -1,0 +1,1 @@
+[secret-management](../../pages/protocol/security/secret-management.md ':include')
