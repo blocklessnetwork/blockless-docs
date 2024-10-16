@@ -56,19 +56,17 @@
 
 <h4 style="padding-left: 24px; margin-bottom: 0;">NETWORK</h4>
 
-* [Overview]()
+* [Overview](network/)
 
-* [Quick Start]()
+* [Quick Start](network/quick-start.md)
 
-* [Extensions]()
+* [Extensions](network/extensions.md)
 
-* [Functions Workflow]()
-  * [Overview]
-  * [Requesting Data from Host]()
+* [Functions Workflow](network/functions-workflow/)
+  * [Requesting Data from Host](network/functions-workflow/requesting-data.md)
+  * [Passing Data to Other Functions](network/functions-workflow/passing-data.md)
 
-* [Passing Data to Other Functions](pages/developer-tools/network/functions-workflow/passing-data.md)
-
-* [Token Economics]()
+* [Token Economics](network/economics/)
 
 <h4 style="padding-left: 24px; margin-bottom: 0;">RUN A NODE</h4>
 

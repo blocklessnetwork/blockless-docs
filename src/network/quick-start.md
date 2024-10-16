@@ -1,0 +1,1 @@
+[quick-start](../pages/network/quick-start.md ':include')
