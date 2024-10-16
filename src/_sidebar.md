@@ -30,9 +30,9 @@
 
 <h4 style="padding-left: 24px; margin-bottom: 0;">PROTOCOL</h4>
 
-* [Overview](pages/protocol/index.md)
+* [Overview](protocol/)
 
-* [Core Concepts](pages/protocol/core-concepts.md)
+* [Core Concepts](protocol/core-concepts.md)
 
 * [Networking](pages/protocol/networking/index.md)
   * [Node Selection](pages/protocol/networking/selection.md)
