@@ -1,0 +1,1 @@
+[worker-node-setup](../pages/run-a-node/worker-node-setup.md ':include')

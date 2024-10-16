@@ -52,7 +52,7 @@ Common Gateway Interface (CGI) extensions allow you to access packages or librar
 
 Use the LIT CGI extension to check the validity of a given JWT token:
 
-```jsx
+```js
 import 'wasi'
 
 import { Console } from 'as-wasi/assembly'

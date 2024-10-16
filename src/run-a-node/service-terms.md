@@ -1,0 +1,1 @@
+[service-terms](../pages/run-a-node/service-terms.md ':include')

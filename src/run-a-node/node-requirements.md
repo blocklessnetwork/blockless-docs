@@ -1,0 +1,1 @@
+[node-requirements](../pages/run-a-node/node-requirements.md ':include')

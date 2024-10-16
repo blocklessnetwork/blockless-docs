@@ -21,7 +21,6 @@
   * [Rust](developer-tools/sdks/rust.md)
   * [Golang](developer-tools/sdks/golang.md)
 
-
 <h4 style="padding-left: 24px; margin-bottom: 0;">REFERENCE</h4>
 
 * [b7s Networking Daemon](reference/b7s-networking-daemon/)
@@ -70,16 +69,18 @@
 
 <h4 style="padding-left: 24px; margin-bottom: 0;">RUN A NODE</h4>
 
-* [Roles of Nodes](developer-tools/test.md)
+* [Overview](run-a-node/)
 
-* [Node Requirements]()
+* [Roles of Nodes](run-a-node/roles-of-nodes.md)
 
-* [Slashing]()
+* [Node Requirements](run-a-node/node-requirements.md)
 
-* [Incentives]()
+* [Slashing](run-a-node/slashing.md)
 
-* [Service Terms]()
+* [Incentives](run-a-node/incentives.md)
 
-* [Worker Node Setup]()
+* [Service Terms](run-a-node/service-terms.md)
 
-* [Register AVS]()
+* [Worker Node Setup](run-a-node/worker-node-setup.md)
+
+* [Register AVS](run-a-node/register-avs.md)
