@@ -1,0 +1,1 @@
+[extension](../pages/protocol/extension.md ':include')

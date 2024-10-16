@@ -1,0 +1,1 @@
+[consensus-and-result-verifiability](../../pages/protocol/security/consensus-and-result-verifiability.md ':include')

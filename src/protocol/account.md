@@ -1,0 +1,1 @@
+[account](../pages/protocol/account.md ':include')

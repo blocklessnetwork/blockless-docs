@@ -21,7 +21,6 @@
   * [Rust](developer-tools/sdks/rust.md)
   * [Golang](developer-tools/sdks/golang.md)
 
-
 <h4 style="padding-left: 24px; margin-bottom: 0;">REFERENCE</h4>
 
 * [b7s Networking Daemon](reference/b7s-networking-daemon/)
@@ -34,54 +33,54 @@
 
 * [Core Concepts](protocol/core-concepts.md)
 
-* [Networking](pages/protocol/networking/index.md)
-  * [Node Selection](pages/protocol/networking/selection.md)
-  * [Task Distribution](pages/protocol/networking/distribution.md)
-  * [Deployment and Execution](pages/protocol/networking/execution.md)
-  * [Dynamic Consensus](pages/protocol/networking/consensus.md)
-  * [Node Communication](pages/protocol/networking/communication.md)
+* [Networking](protocol/networking.md)
+  * [Node Selection](protocol/networking/selection.md)
+  * [Task Distribution](protocol/networking/distribution.md)
+  * [Deployment and Execution](protocol/networking/execution.md)
+  * [Dynamic Consensus](protocol/networking/consensus.md)
+  * [Node Communication](protocol/networking/communication.md)
 
-* [Runtime Environment](pages/protocol/runtime.md)
+* [Runtime Environment](protocol/runtime-environment.md)
 
-* [Security](pages/protocol/security/index.md)
-  * [Runtime Security](pages/protocol/security/runtime-security.md)
-  * [Consensus and Result Verifiability](pages/protocol/security/consensus-and-result-verifiability.md)
-  * [Secret Management](pages/protocol/security/secret-management.md)
+* [Security](protocol/security.md)
+  * [Runtime Security](protocol/security/runtime-security.md)
+  * [Consensus and Result Verifiability](protocol/security/consensus-and-result-verifiability.md)
+  * [Secret Management](protocol/security/secret-management.md)
 
-* [Extension](pages/protocol/extension.md)
+* [Extension](protocol/extension.md)
 
-* [Account](pages/protocol/account.md)
+* [Account](protocol/account.md)
 
-* [Node Ranking](pages/protocol/nodes/ranking.md)
+* [Nodes Ranking](protocol/nodes/ranking.md)
 
 <h4 style="padding-left: 24px; margin-bottom: 0;">NETWORK</h4>
 
-* [Overview]()
+* [Overview](network/)
 
-* [Quick Start]()
+* [Quick Start](network/quick-start.md)
 
-* [Extensions]()
+* [Extensions](network/extensions.md)
 
-* [Functions Workflow]()
-  * [Overview]
-  * [Requesting Data from Host]()
+* [Functions Workflow](network/functions-workflow/)
+  * [Requesting Data from Host](network/functions-workflow/requesting-data.md)
+  * [Passing Data to Other Functions](network/functions-workflow/passing-data.md)
 
-* [Passing Data to Other Functions](pages/developer-tools/network/functions-workflow/passing-data.md)
-
-* [Token Economics]()
+* [Token Economics](network/economics/)
 
 <h4 style="padding-left: 24px; margin-bottom: 0;">RUN A NODE</h4>
 
-* [Roles of Nodes](developer-tools/test.md)
+* [Overview](run-a-node/)
 
-* [Node Requirements]()
+* [Roles of Nodes](run-a-node/roles-of-nodes.md)
 
-* [Slashing]()
+* [Node Requirements](run-a-node/node-requirements.md)
 
-* [Incentives]()
+* [Slashing](run-a-node/slashing.md)
 
-* [Service Terms]()
+* [Incentives](run-a-node/incentives.md)
 
-* [Worker Node Setup]()
+* [Service Terms](run-a-node/service-terms.md)
 
-* [Register AVS]()
+* [Worker Node Setup](run-a-node/worker-node-setup.md)
+
+* [Register AVS](run-a-node/register-avs.md)

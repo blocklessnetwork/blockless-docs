@@ -1,0 +1,1 @@
+[communication](../../pages/protocol/networking/communication.md ':include')

@@ -4,7 +4,7 @@ Since the function runs inside the WASM-based runtime environment, the permissio
 
 If you requested permission in the function manifest and the request is granted, host information can be retrieved by importing `memory` from Blockless SDK. Here's an example of reading the `stdin` interface from memory:
 
-```tsx
+```js
 import 'wasi'
 import { Console } from 'as-wasi/assembly'
 import { memory } from '@blockless/sdk'

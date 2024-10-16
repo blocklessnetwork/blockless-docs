@@ -4,7 +4,7 @@ If you need to pass your execution results to another function, you should retur
 
 Here's an example of returning a results object, with the value of `1000`:
 
-```tsx
+```js
 import 'wasi'
 import { Console } from 'as-wasi/assembly'
 import { json } from '@blockless/sdk'

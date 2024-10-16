@@ -24,7 +24,11 @@
 				margin-right: 12px;
 				border: 1px solid gainsboro;
 			}
-			
+
+			.active > a {
+				color: #ff8200 !important;
+				font-weight: 600 !important;
+			}
 		</style>
 	</head>
 	<body>
@@ -37,7 +41,7 @@
 				loadSidebar: true,
 				subMaxLevel: 2,
 				auto2top: true,
-				routerMode: 'hash',
+				routerMode: 'history',
 				search: {
 					maxAge: 86400000, // Expiration time, the default one day
 					paths: 'auto',

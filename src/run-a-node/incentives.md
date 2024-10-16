@@ -1,0 +1,1 @@
+[incentives](../pages/run-a-node/incentives.md ':include')

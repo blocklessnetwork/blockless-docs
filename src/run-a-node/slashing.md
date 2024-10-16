@@ -1,0 +1,1 @@
+[slashing](../pages/run-a-node/slashing.md ':include')
