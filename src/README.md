@@ -1,15 +1,7 @@
 # Blockless Docs
 
-new intro
+Blockless Docs provides comprehensive resources for developers to build, deploy, and manage decentralized applications (nnApps) on the Blockless network. 
 
-## Support
+Docs covers key topics such as the protocol, network architecture, node setup, and developer tools like SDKs and CLI. The docs include tutorials, quick start guides, and details on token economics, making it easier for developers to run nodes and create serverless applications efficiently. Explore the documentation to unlock the potential of network-neutral nnApp development.
 
-- GitHub Issues
-- Zendesk integration
-
-## TODOs
-
-- [x] Finish links/paths for NETWORK and RUN A NODE
-- [ ] Add into and other headings to this page
-- [x] fix code highlighting for code blocks
-- [x] fix paths for images
+Get started with [here](quick-start/).
