@@ -68,7 +68,7 @@ Below is a list of commonly used commands:
 - `bls components`: Manages your local environment components, including the local worker agent and orchestrator agent. **Note: If this is your first time building and testing your function, you need to use the `$ bls components install` command to install the local runtime components (which include the Blockless WASM Runtime Environment and the b7s networking module)**.
 - `bls function`: Build, test, and manage your projects and functions.
 
-## Glboal flags
+## Global flags
 
 Other than the help (`-h` or `--help`) global flag, there are two more flags that you can use globally.
 
